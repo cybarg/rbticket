@@ -1,0 +1,167 @@
+.filter-list {
+    &__wrapper {
+        background: #f0f0f0;
+    }
+    &__content,
+    &__list {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__filters {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        @include tablet {
+            padding: 30px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-flex: 0;
+            -o-box-flex: 0;
+            box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            margin-left: calc((99.99% - 10px)*.090909090909091 + 10px);
+            width: calc((99.99% - 10px)*18/22 - 10px);
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        }
+    }
+    &__filter {
+        width: 100%;
+        margin-bottom: 10px;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        //flex-grow: 1;
+        @include tablet {
+            width: auto;
+            max-width: 400px;
+            margin: 0 10px;
+        }
+    }
+}
+
+
+/* Select 2 theming */
+
+$dropdown-padding: 11px 5px 11px 15px;
+.dropdown {
+    position: relative;
+    &__text {
+        padding: $dropdown-padding;
+        display: inline-block;
+    }
+    &__reset-button {
+        display: inline-block;
+        margin-right: 0;
+        position: absolute;
+        z-index: 10;
+        right: 50px;
+        top: 5px;
+        width: 45px;
+        height: 40px;
+        margin: auto;
+        border-right: 1px solid #e2e3e5;
+        cursor: pointer;
+        pointer-events: auto;
+        background: url(../img/fb-rbcom-rbtickets-button-delete.svg) center center no-repeat;
+        background-size: 50%;
+        
+    }
+    &__open-button {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        pointer-events: auto;
+        margin: auto 0;
+        background: url(../img/f-rbcom-rbtickets-icon-accordion-closed-50x50.svg) center center no-repeat;
+    }
+    &__item-count {
+        display: none;
+        padding: 11px 0;
+        color: #8a909a;
+        font-size: 16px;
+        display: none;
+    }
+    .select2-container {
+        width: 100% !important;
+        min-width: 300px !important;
+        @include desktop {
+            width: 300px !important;
+        }
+    }
+}
+
+.select2-container {
+    cursor: pointer;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1b222e;
+}
+
+.select2-selection--single {
+    border: none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    outline: none;
+}
+
+.select2-selection__arrow {
+    display: none;
+}
+
+.select2-selection__rendered {
+    display: flex !important;
+    padding: 0px !important;
+}
+
+.select2-dropdown {
+    border: none !important;
+    background-color: #ededed;
+    &--below {
+        .dropdown__open-button,
+        .dropdown__reset-button {
+            display: none;
+        }
+        .dropdown__item-count {
+            display: inline-block;
+        }
+    }
+}
+
+.select2-container--default.select2-container--open {
+    .dropdown__open-button {
+        background: url(../img/f-rbcom-rbtickets-icon-accordion-expanded-50x50.svg) center center no-repeat;
+    }
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: initial;
+    color: #1b222e;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: #fff;
+    color: $rbred;
+}
+
+.selection {
+    width: 100%;
+}

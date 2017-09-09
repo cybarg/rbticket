@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,14 +23,58 @@
                     </div>
                 </header>
             </div>
-            
+
             <!--HERO SMALL -- Event overview version -->
             <div class="page__panel">
 
                 <div class="hero-small">
                     <div class="hero-small__content">
-                       <img class="hero-small__logo hero-small__logo--square" src="img/f-rbcom-rbtickets-logo-dark.svg">
+                        <img class="hero-small__logo hero-small__logo--square" src="img/f-rbcom-rbtickets-logo-dark.svg">
                         <h1 class="hero-small__overview-title">THE WORLD’s best events AT YOUR FINGERTIPS</h1>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--  EVENT-OVERVIEV filter-panel-->
+            <div class="page-panel">
+                <div class="filter-panel__container">
+                    <div class="filter-panel__filters">
+                        <div class="filter-list">
+                            <div class="filter-list__wrapper">
+                                <div class="filter-list__content">
+                                    <ul class="filter-list__filters">
+                                        <li class="filter-list__filter">
+                                            <div class="form-item">
+                                                <div class="dropdown dropdown__resetable">
+                                                    <span class="dropdown__reset-button js-is-hidden"></span>
+                                                    <select class="js-filter dropdown__select">
+                                                        <option value="all">All countries</option>
+                                                        <option value="at">Austria</option>
+                                                        <option value="de">Germany</option>
+                                                        <option value="hu">Hungary</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter-list__filter">
+                                            <div class="form-item">
+                                                <div class="dropdown dropdown__resetable">
+                                                    <span class="dropdown__reset-button js-is-hidden"></span>
+                                                    <select class="js-filter dropdown__select">
+                                                        <option value="all">All locations</option>
+                                                        <option value="where_ever">Wherever</option>
+                                                        <option value="where_ever_else">Wherever else</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -64,7 +111,46 @@
 
         </div>
     </main>
+    <script type="text/javascript">
+        // function to format select2 dropdown with item numbers and reset button
+        function formatOptions(selectedItem) {
 
+            // get this data from data attributes of options, or whatever method you prefer
+            var itemNumbers = {
+                at: 5,
+                de: 8,
+                hu: 2
+            };
+
+            var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
+
+            var $formattedItem = $(
+                '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
+            );
+            return $formattedItem;
+        };
+
+        // select2 init
+        $('.js-filter').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatOptions,
+            templateSelection: formatOptions
+        });
+        
+
+        // Reset button functionality
+        $('.js-filter').on('change', function (evt) {
+            var $resetButton =  $(this).prev('.dropdown__reset-button');
+            $(this).val() == 'all' ? $resetButton.addClass('js-is-hidden') : $resetButton.removeClass('js-is-hidden');
+        });
+
+
+        $('.dropdown__reset-button').click(function (event) {
+            $(this).next('.js-filter').val('all').trigger('change');
+
+
+        });
+    </script>
 </body>
 
 </html>
