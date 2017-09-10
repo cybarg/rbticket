@@ -80,7 +80,6 @@ $dropdown-padding: 11px 5px 11px 15px;
         pointer-events: auto;
         background: url(../img/fb-rbcom-rbtickets-button-delete.svg) center center no-repeat;
         background-size: 50%;
-        
     }
     &__open-button {
         display: inline-block;
@@ -101,9 +100,8 @@ $dropdown-padding: 11px 5px 11px 15px;
     }
     .select2-container {
         width: 100% !important;
-        min-width: 300px !important;
-        @include desktop {
-            width: 300px !important;
+        @include tablet {
+            min-width: 300px !important;
         }
     }
 }
