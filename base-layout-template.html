@@ -111,6 +111,9 @@
 
         </div>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
     <script type="text/javascript">
         // function to format select2 dropdown with item numbers and reset button
         function formatOptions(selectedItem) {
@@ -136,11 +139,38 @@
             templateResult: formatOptions,
             templateSelection: formatOptions
         });
-        
+        // Custom Scrollbar
+        $('.js-filter').on('select2:open', function (evt) {
+            $('.select2-dropdown .select2-results__options').niceScroll({
+                horizrailenabled: false,
+                zindex: 9999,
+                cursorwidth: 3,
+                cursorfixedheight: 30,
+                autohidemode: true,
+                hwacceleration: true,
+                //smoothscroll: true,
+                // sensitiverail: true,
+                railpadding: {
+                    top: 0,
+                    right: 5,
+                    left: 0,
+                    bottom: 0
+                        //bottom: topPadding * -1
+                },
+                cursorcolor: '#8a909a',
+                //  background: 'rgba(4, 14, 16, 0.1)', // will produce shadow
+                cursorborder: 'none',
+                cursorborderradius: 2.5,
+            });
+
+        });
+
+
+
 
         // Reset button functionality
         $('.js-filter').on('change', function (evt) {
-            var $resetButton =  $(this).prev('.dropdown__reset-button');
+            var $resetButton = $(this).prev('.dropdown__reset-button');
             $(this).val() == 'all' ? $resetButton.addClass('js-is-hidden') : $resetButton.removeClass('js-is-hidden');
         });
 
