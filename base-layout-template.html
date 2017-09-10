@@ -84,8 +84,27 @@
             </div>
 
             <div class="placeholder-temporary">
+                <div class="wrapper-temporary">
+                    <div class="dropdown dropdown__resetable">
+                        <span class="dropdown__reset-button js-is-hidden"></span>
+                        <select class="js-filter dropdown__select">
+                            <option value="all">All locations</option>
+                            <option value="where_ever">Wherever</option>
+                            <option value="where_ever_else">Wherever else</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="wrapper-temporary">
+                    <div class="dropdown">
+                        <select class="footer__lang-switch js-lang-switch dropdown__select">
+                            <option value="en">EN</option>
+                            <option value="de">DE</option>
+                        </select>
+                    </div>
 
+                </div>
             </div>
+
 
 
             <!-- FOOTER -->
@@ -93,13 +112,34 @@
                 <footer class="footer">
                     <div class="footer__content">
                         <nav class="footer__navigation">
+                            <div class="footer__lang-switch footer__lang-switch--mobile">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
                             <a class="footer__link" href="#" target="_blank">F.A.Q</a>
                             <a class="footer__link" href="#" target="_blank">Contact</a>
                             <a class="footer__link" href="#" target="_blank">Terms and Conditions</a>
                             <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
                             <a class="footer__link" href="#" target="_blank">Cookie Policy</a>
                             <a class="footer__link" href="#" target="_blank">Imprint</a>
-                            <a class="footer__link" href="#" target="_blank">EN!!</a>
+                            <div class="footer__lang-switch footer__lang-switch--desktop">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
 
 
                         </nav>
@@ -116,7 +156,7 @@
 
     <script type="text/javascript">
         // function to format select2 dropdown with item numbers and reset button
-        function formatOptions(selectedItem) {
+        function formatFilter(selectedItem) {
 
             // get this data from data attributes of options, or whatever method you prefer
             var itemNumbers = {
@@ -136,9 +176,11 @@
         // select2 init
         $('.js-filter').select2({
             minimumResultsForSearch: Infinity,
-            templateResult: formatOptions,
-            templateSelection: formatOptions
+            templateResult: formatFilter,
+            templateSelection: formatFilter,
+            theme: "white"
         });
+
         // Custom Scrollbar
         $('.js-filter').on('select2:open', function (evt) {
             $('.select2-dropdown .select2-results__options').niceScroll({
@@ -166,8 +208,6 @@
         });
 
 
-
-
         // Reset button functionality
         $('.js-filter').on('change', function (evt) {
             var $resetButton = $(this).prev('.dropdown__reset-button');
@@ -179,6 +219,24 @@
             $(this).next('.js-filter').val('all').trigger('change');
 
 
+        });
+
+        //Footer Lang switch
+        // function to format select2 lang switch
+        function formatLangSwitch(selectedItem) {
+            var $formattedItem = $(
+                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+            );
+            return $formattedItem;
+        };
+
+
+
+        $('.js-lang-switch').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatLangSwitch,
+            templateSelection: formatLangSwitch,
+            theme: "dark"
         });
     </script>
 </body>

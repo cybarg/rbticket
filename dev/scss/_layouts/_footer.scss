@@ -1,6 +1,5 @@
-$footer-bg-color: #1b222e;
 .footer {
-    background-color: $footer-bg-color;
+    background-color: $darkblue;
     &__content {
         max-width: 1440px;
         margin: 0 auto;
@@ -48,6 +47,7 @@ $footer-bg-color: #1b222e;
         white-space: nowrap;
     }
     &__link {
+        
         &,
         &:active,
         &:visited {
@@ -56,16 +56,46 @@ $footer-bg-color: #1b222e;
             text-decoration: none;
         }
         @include desktop {
+            padding-left: 20px;
+        }
+        @include desktop-lg {
             padding-left: 25px;
         }
     }
     &__copyright,
     &__item,
     &__link {
-        font-size: 16px;
+        
         padding-top: 20px;
         text-align: center;
+        font-size: 14px;
         text-transform: uppercase;
+        @include desktop-lg {
+            font-size: 16px;
+        }
+        
+    }
+    &__lang-switch {
+        width: 80px;
+        @include desktop {
+            padding-top: 5px;
+            margin-left: 25px;
+        }
+    }
+    &__lang-switch--mobile {
+        margin: auto;
+        @include desktop {
+            display: none;
+        }
+    }
+    &__lang-switch--desktop {
+        display: none;
+        @include desktop {
+            display: block;
+        }
+    }
+    &__lang-switch-text {
+        padding: 12px 20px;
+        display: inline-block;
     }
 }
-
