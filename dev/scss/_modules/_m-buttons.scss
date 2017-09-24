@@ -1,0 +1,10 @@
+.button {
+     &--red {
+        @include button('red');
+    }
+    &--white {
+        @include button('white');
+    }
+    
+    
+}

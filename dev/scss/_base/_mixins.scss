@@ -1,0 +1,97 @@
+/* Positioning */
+
+@mixin acent($mode:"f") {
+    position: absolute;
+    @if $mode=="f" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if $mode=="v" {
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+    @else if $mode=="h" {
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    @else if $mode=="r" {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+    }
+}
+
+
+/* Elements */
+
+@mixin button($bg:"red") {
+    display: inline-block;
+    border-radius: 0px;
+    min-width: 220px;
+    padding: 19px 22px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: normal;
+    font-stretch: normal;
+    transition: all 0.2s ease;
+    @if $bg=="red" {
+        background-color: $rbred;
+        color: #ffffff;
+        border: none;
+        &:hover {
+            //  background-color: #00b7dc;
+            //  border: 1px solid #00b7dc;
+        }
+        &:active {
+            //  background-color: #00a2c2;
+            // border: 1px solid #00a2c2;
+        }
+        &.disabled {
+            //  color: #e5e5e5;
+            //  background-color: #cccccc;
+            //    border: 1px solid  #cccccc;
+        }
+    }
+    /*    @else if $bg=="grey" {
+        background-color: #f5f5f5;
+        color: #999999;
+        border: solid 1px #cccccc;
+        &:hover {
+            color: #00b7db;
+        }
+        &:active {
+            color: #999999;
+            background-color: #e5e5e5;
+        }
+        &.disabled {
+            background-color: #f5f5f5;
+            color: #cccccc;
+        }
+    }*/
+    @else if $bg=="white" {
+        color: #10151e;
+        background-color: #ffffff;
+        border: solid 1px #ededed;
+        &:hover {
+            //color: #00b7db;
+        }
+        &:active {
+            // background-color: #f5f5f5;
+            // color: #00b7db;
+        }
+        &.disabled {
+            //  color: #00b7db;
+        }
+    }
+    @include mobile {
+        //   margin-top: 1em;
+        // margin-bottom: 2em;
+    }
+}
