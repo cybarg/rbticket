@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>f-rbcom-rbtickets-icon-add-to-basket-30x30</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="f-rbcom-rbtickets-icon-add-to-basket-30x30" fill="#FFFFFF">
+            <g>
+                <g id="icon__bounds" opacity="0">
+                    <rect id="bounds" x="0" y="0" width="30" height="30"></rect>
+                </g>
+                <g id="icon">
+                    <path d="M17.2058824,25.5882353 C15.987579,25.5882353 15,26.5758579 15,27.7941176 C15,29.012421 15.987579,30 17.2058824,30 C18.4241857,30 19.4117647,29.012421 19.4117647,27.7941176 C19.4117647,26.5758579 18.4241857,25.5882353 17.2058824,25.5882353" id="Fill-3"></path>
+                    <path d="M8.38235294,25.5882353 C7.16404956,25.5882353 6.17647059,26.5758579 6.17647059,27.7941176 C6.17647059,29.012421 7.16404956,30 8.38235294,30 C9.60065632,30 10.5882353,29.012421 10.5882353,27.7941176 C10.5882353,26.5758579 9.60065632,25.5882353 8.38235294,25.5882353" id="Fill-3"></path>
+                    <path d="M18.8596202,20.8235769 L7.46774696,20.8235769 L6.38073516,13.4117898 L22.2402407,13.4117898 L18.8596202,20.8235769 Z M6.06548111,11.2941065 L6.06548111,11.2941484 L5.43505897,7.05890727 L0,7.05882353 L0,9.17650688 L3.55084215,9.17650688 L5.57635159,22.9411765 L20.2727614,22.9411765 L25.5882353,11.2941065 L6.06548111,11.2941065 Z" id="Fill-5"></path>
+                    <rect id="Rectangle-3" x="10" y="3" width="9" height="3"></rect>
+                    <rect id="Rectangle" x="13" y="0" width="3" height="9"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

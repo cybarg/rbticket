@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>f-rbcom-rbtickets-cart-dark-30x30</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="f-rbcom-rbtickets-cart-dark-30x30" fill="#FFFFFF">
+            <g>
+                <g id="icon__bounds" opacity="0">
+                    <rect id="bounds" x="0" y="0" width="30" height="30"></rect>
+                </g>
+                <g id="icon" transform="translate(0.000000, 1.000000)">
+                    <path d="M19.5,21 C18.1192562,21 17,22.1193056 17,23.5 C17,24.8807438 18.1192562,26 19.5,26 C20.8807438,26 22,24.8807438 22,23.5 C22,22.1193056 20.8807438,21 19.5,21" id="Fill-3"></path>
+                    <path d="M9.5,21 C8.11925617,21 7,22.1193056 7,23.5 C7,24.8807438 8.11925617,26 9.5,26 C10.8807438,26 12,24.8807438 12,23.5 C12,22.1193056 10.8807438,21 9.5,21" id="Fill-3"></path>
+                    <path d="M21.3742363,15.6000538 L8.46344655,15.6000538 L7.23149985,7.20002847 L25.2056061,7.20002847 L21.3742363,15.6000538 Z M6.87421192,4.79998735 L6.87421192,4.8000348 L6.1597335,9.49064249e-05 L0,0 L0,2.40004113 L4.02428777,2.40004113 L6.31986514,18 L22.9757962,18 L29,4.79998735 L6.87421192,4.79998735 Z" id="Fill-5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
