@@ -6,5 +6,8 @@
         @include button('white');
     }
     
+    &--transparent {
+        @include button('transparent');
+    }
     
 }

@@ -59,22 +59,25 @@
             //    border: 1px solid  #cccccc;
         }
     }
-    /*    @else if $bg=="grey" {
-        background-color: #f5f5f5;
-        color: #999999;
-        border: solid 1px #cccccc;
+    @else if $bg=="transparent" {
+        background-color: transparent;
+        color: #fff;
+        border: solid 3px rgba(255, 255, 255, 0.3);
         &:hover {
-            color: #00b7db;
+            background-color: $rbred;
+            color: #ffffff;
+            border: none;
         }
-        &:active {
-            color: #999999;
-            background-color: #e5e5e5;
-        }
-        &.disabled {
-            background-color: #f5f5f5;
-            color: #cccccc;
-        }
-    }*/
+        /*     &:active {
+         color: #999999;
+         background-color: #e5e5e5;
+     }
+     
+     &.disabled {
+         background-color: #f5f5f5;
+         color: #cccccc;
+     }*/
+    }
     @else if $bg=="white" {
         color: #10151e;
         background-color: #ffffff;

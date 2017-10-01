@@ -11,7 +11,7 @@ $dropdown-padding: 14px 5px 14px 15px;
         position: absolute;
         z-index: 10;
         right: 50px;
-        top: 5px;
+        top: 7px;
         width: 45px;
         height: 40px;
         margin: auto;
@@ -59,7 +59,7 @@ $dropdown-padding: 14px 5px 14px 15px;
 }
 
 .select2-selection--single {
-    border: none !important;
+    border: solid 1px $bordergrey;
     border-radius: 0 !important;
     height: auto !important;
     outline: none;
@@ -79,8 +79,11 @@ $dropdown-padding: 14px 5px 14px 15px;
 }
 
 .select2-dropdown {
+  
     &--above,
     &--below {
+          border: solid 1px $bordergrey;
+    border-top: none;
         .dropdown__open-button,
         .dropdown__reset-button {
             display: none;
@@ -112,7 +115,7 @@ $dropdown-padding: 14px 5px 14px 15px;
     // this affects main container only, not dropdown    
     }
     .select2-dropdown {
-        border: none !important;
+       // border: none !important;
         border-radius: 0;
         background-color: #ededed;
     

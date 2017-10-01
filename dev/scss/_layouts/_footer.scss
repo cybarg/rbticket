@@ -43,16 +43,20 @@
         }
     }
     &__copyright {
-        color: #777d88;
+        font-size: 13.5px;
+        font-weight: bold;
+        line-height: 1;
+        color: #a0a1a1;
         white-space: nowrap;
     }
     &__link {
-        
         &,
         &:active,
         &:visited {
-            color: #fff;
-            font-weight: 900;
+            font-size: 13.5px;
+            font-weight: bold;
+            line-height: 1;
+            color: #ffffff;
             text-decoration: none;
         }
         @include desktop {
@@ -65,7 +69,6 @@
     &__copyright,
     &__item,
     &__link {
-        
         padding-top: 20px;
         text-align: center;
         font-size: 14px;
@@ -73,7 +76,6 @@
         @include desktop-lg {
             font-size: 16px;
         }
-        
     }
     &__lang-switch {
         width: 80px;

@@ -9,11 +9,11 @@
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="f-rbcom-rbtickets-quantity-selector">
             <g>
-                <g id="f-rbcom-rbtickets-input-field-quantity" transform="translate(39.000000, 0.000000)" stroke="#EDEDED">
+                <g id="f-rbcom-rbtickets-input-field-quantity" transform="translate(39.000000, 0.000000)" stroke="#E2E3E5">
                     <rect id="field" x="0.5" y="0.5" width="51" height="49"></rect>
                 </g>
                 <g id="f-rbcom-rbtickets-button-quantity-plus" transform="translate(90.000000, 0.000000)">
-                    <rect id="button" stroke="#EDEDED" x="0.5" y="0.5" width="39" height="49"></rect>
+                    <rect id="button" stroke="#E2E3E5" x="0.5" y="0.5" width="39" height="49"></rect>
                     <g id="f-rbcom-rbtickets-icon-plus-15x15" transform="translate(12.000000, 18.000000)" fill="#DB0A40">
                         <g transform="translate(2.000000, 2.000000)">
                             <rect id="Rectangle-3" x="0" y="4" width="11" height="3"></rect>
@@ -24,7 +24,7 @@
                 <g id="f-rbcom-rbtickets-button-quantity-minus">
                     <g id="button">
                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                        <rect stroke="#EDEDED" stroke-width="1" x="0.5" y="0.5" width="39" height="49"></rect>
+                        <rect stroke="#E2E3E5" stroke-width="1" x="0.5" y="0.5" width="39" height="49"></rect>
                     </g>
                     <g id="f-rbcom-rbtickets-icon-minus-15x15" transform="translate(13.000000, 18.000000)" fill="#DB0A40">
                         <g transform="translate(2.000000, 6.000000)" id="Rectangle-3">
