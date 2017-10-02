@@ -74,7 +74,7 @@
             text-align: center;
         }
         &__button {
-            
+            min-width: 220px;
             margin-bottom: 10px;
             &:last-child {
                 margin-bottom: auto;
@@ -171,19 +171,7 @@
         transform: translateZ(0);
     }
     
-/*    .card {
-        &__wrapper {
-            padding-top: 40px;
-            .card__content {
-                align-content: flex-end;
-                padding-bottom: 20px;
-            }
-            @include tablet {
-                padding-top: 0;
-            }
-        }
-    }*/
-    
+
     .card--default {
         height: 250px;
         .card__content {

@@ -15,3 +15,6 @@ ol, ul {
 .js-is-hidden {
     display: none !important;
 }
+button, input, textarea {
+    outline: none;
+}
