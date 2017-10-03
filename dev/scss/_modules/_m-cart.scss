@@ -1,7 +1,7 @@
 .cart {
     &__trigger {
         position: fixed;
-        right: 20px;
+        right: 10px;
         // top: 610px; // default pos
         top: 20px; // cart-open pos
         width: 60px;
@@ -10,6 +10,9 @@
         z-index: 999;
         border-radius: 50%;
         cursor: pointer;
+           @include tablet {
+            right: 20px;
+        }
     }
     &__trigger-icon {
         @include acent;

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Overview Template</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="page-main">
+        <div class="page">
+
+            <!--HEADER - not present on Event Listing-->
+            <div class="page__panel">
+                <header class="header">
+                    <div class="header__panel">
+                        <div class="header__content">
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <!--HERO SMALL -- Event overview version -->
+            <div class="page__panel">
+
+                <div class="hero-small">
+                    <div class="hero-small__content">
+                        <img class="hero-small__logo hero-small__logo--square" src="img/f-rbcom-rbtickets-logo-dark.svg">
+                        <h1 class="hero-small__overview-title">THE WORLD’s best events AT YOUR FINGERTIPS</h1>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!--  EVENT-OVERVIEV filter-panel-->
+            <div class="page-panel">
+                <div class="filter-panel__container">
+                    <div class="filter-panel__filters">
+                        <div class="filter-list">
+                            <div class="filter-list__wrapper">
+                                <div class="filter-list__content">
+                                    <ul class="filter-list__filters">
+                                        <li class="filter-list__filter">
+                                            <div class="form-item">
+                                                <div class="dropdown dropdown__resetable">
+                                                    <span class="dropdown__reset-button js-is-hidden"></span>
+                                                    <select class="js-filter dropdown__select">
+                                                        <option value="all">All countries</option>
+                                                        <option value="at">Austria</option>
+                                                        <option value="de">Germany</option>
+                                                        <option value="hu">Hungary</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="filter-list__filter">
+                                            <div class="form-item">
+                                                <div class="dropdown dropdown__resetable">
+                                                    <span class="dropdown__reset-button js-is-hidden"></span>
+                                                    <select class="js-filter dropdown__select">
+                                                        <option value="all">All locations</option>
+                                                        <option value="where_ever">Wherever</option>
+                                                        <option value="where_ever_else">Wherever else</option>
+                                                        <option value="where_ever_else">Wherever else</option>
+                                                        <option value="where_ever_else">Wherever else</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!--       <div class="placeholder-temporary">
+
+            </div>-->
+            <!--CARD GROUP-->
+            <div class="page__panel">
+
+                <div class="caption-and-content-layout dark-theme">
+                    <div class="card-group-layout">
+                        <div class="card-group-layout__content js-card-group-container">
+                            <div class="card-group card-group--6">
+                                <div class="card-group__content js-card-container">
+
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-group__slot">
+                                        <div class="js-slot">
+                                            <a href="/at-de/events/red-bull-dolomitenmann-at" lang="de-at" class="card card--zoom card--event card--list card--default card--default">
+                                                <div class="card__preview js-image-area">
+                                                    <div class="js-card-carousel card__images">
+                                                        <div class="card__preview-carousel card__preview-carousel-1">
+                                                            <div class="card__preview-image is-active">
+                                                                <div class="js-card-image card__preview-image-wrapper">
+                                                                    <div class="image-view">
+                                                                        <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/010/2015-03-10/1331710349736_3/0010/1/400/267/1/red-bull-dolomitenmann-2015.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__preview-wrapper">
+                                                        <div class="card__content">
+                                                            <div class="card__date">
+                                                                <time datetime="2017-09-09T00:00:00" class="card__date-content">
+                                                                    <div class="card__date-item"><span class="card__date-day">09</span><span class="card__date-month">Sep</span></div>
+                                                                </time>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card__wrapper">
+                                                    <div class="card__content">
+                                                        <div class="card__inner-content">
+                                                            <h3 class="card__tag">Adventure Racing</h3>
+                                                            <h2 class="card__title">Red Bull Dolomitenmann 2017</h2></div>
+
+                                                        <div class="card__metadata-container">
+
+                                                            <div class="metadata">
+                                                                <div class="metadata__location"><img class="metadata__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Austria" title="Austria"><span>Lienz, Osttirol</span></div>
+                                                                <div class="metadata__price"><img class="metadata__price-icon" src="img/f-rbcom-rbtickets-icon-ticket-dark-15x15.svg" alt="Austria" title="Austria"><span>From 60,00 EUR</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card__buttons">
+                                                        <button class="button button--transparent card__button">More Info</button>
+                                                        <button class="button button--transparent card__button">Buy Tickets</button>
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="page__panel">
+                <footer class="footer">
+                    <div class="footer__content">
+                        <nav class="footer__navigation">
+                            <div class="footer__lang-switch footer__lang-switch--mobile">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="footer__link" href="#" target="_blank">F.A.Q</a>
+                            <a class="footer__link" href="#" target="_blank">Contact</a>
+                            <a class="footer__link" href="#" target="_blank">Terms and Conditions</a>
+                            <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Cookie Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Imprint</a>
+                            <div class="footer__lang-switch footer__lang-switch--desktop">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+                        </nav>
+                        <div class="footer__copyright">© 2017 Red Bull</div>
+                    </div>
+                </footer>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        // function to format select2 dropdown with item numbers and reset button
+        function formatFilter(selectedItem) {
+
+            // get this data from data attributes of options, or whatever method you prefer
+            var itemNumbers = {
+                at: 5,
+                de: 8,
+                hu: 2
+            };
+
+            var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
+
+            var $formattedItem = $(
+                '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
+            );
+            return $formattedItem;
+        };
+
+        // select2 init
+        $('.js-filter').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatFilter,
+            templateSelection: formatFilter,
+            theme: "white"
+        });
+
+        // Custom Scrollbar
+        $('.js-filter').on('select2:open', function (evt) {
+            $('.select2-dropdown .select2-results__options').niceScroll({
+                horizrailenabled: false,
+                zindex: 9999,
+                cursorwidth: 3,
+                cursorfixedheight: 30,
+                autohidemode: true,
+                hwacceleration: true,
+                //smoothscroll: true,
+                // sensitiverail: true,
+                railpadding: {
+                    top: 0,
+                    right: 5,
+                    left: 0,
+                    bottom: 0
+                        //bottom: topPadding * -1
+                },
+                cursorcolor: '#8a909a',
+                //  background: 'rgba(4, 14, 16, 0.1)', // will produce shadow
+                cursorborder: 'none',
+                cursorborderradius: 2.5,
+            });
+
+        });
+
+
+        // Reset button functionality
+        $('.js-filter').on('change', function (evt) {
+            var $resetButton = $(this).prev('.dropdown__reset-button');
+            $(this).val() == 'all' ? $resetButton.addClass('js-is-hidden') : $resetButton.removeClass('js-is-hidden');
+        });
+
+
+        $('.dropdown__reset-button').click(function (event) {
+            $(this).next('.js-filter').val('all').trigger('change');
+
+
+        });
+
+        //Footer Lang switch
+        // function to format select2 lang switch
+        function formatLangSwitch(selectedItem) {
+            var $formattedItem = $(
+                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+            );
+            return $formattedItem;
+        };
+
+
+
+        $('.js-lang-switch').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatLangSwitch,
+            templateSelection: formatLangSwitch,
+            theme: "dark"
+        });
+
+    </script>
+</body>
+
+</html>
