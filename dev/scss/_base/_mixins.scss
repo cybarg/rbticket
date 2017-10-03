@@ -48,7 +48,7 @@
         &:active {
             border-color: #fff;
             background-color: #fff;
-            color: $darkblue;
+            color: $rb-navyblue;
         }
     }
     @else if $bg=="transparent" {

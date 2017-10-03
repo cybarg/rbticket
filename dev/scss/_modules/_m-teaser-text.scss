@@ -1,0 +1,55 @@
+.teaser-text {
+    //color: rb-dark-grey;
+    background-color: #fff;
+    &.dark-theme {
+        color: #fff;
+        background-color: $rb-darkblue;
+    }
+    &__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__content-container {
+        margin: 0 20px;
+        padding: 20px 0 40px 0;
+        //GRID!
+        @include tablet {
+            flex: 0 0 auto;
+            margin-left: calc((99.99% - 10px)*.136363636363636 + 10px);
+            width: calc((99.99% - 10px)*16/22 - 10px);
+        }
+    }
+    &__summary {
+        padding-top: 20px;
+        line-height: 1.4;
+        font-size: 21px;
+        line-height: 1.4;
+        text-align: center;
+        @include desktop-lg {
+            font-size: 24px;
+        }
+    }
+    &__summary__link {
+        &,
+        &:visited {
+            color: $rbred;
+        }
+    }
+    &__detail {
+        display: none;
+        margin: 0 auto;
+    }
+    &__paragraph {
+        padding-top: 30px;
+        text-align: left;
+    }
+    &__toggle {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    &__detail {
+        display: block;
+    }
+    &--expanded {}
+}
