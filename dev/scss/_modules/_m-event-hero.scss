@@ -75,11 +75,11 @@
         line-height: 1.1;
         font-size: 33px;
         @include tablet {
-            font-size: 43px;
+            font-size: rem(43px);
             line-height: 1.15;
         }
         @include desktop-lg {
-            font-size: 57px;
+            font-size: rem(57px);
             line-height: 1.1;
         }
     }
@@ -88,14 +88,14 @@
         color: #fff;
         text-align: center;
         white-space: nowrap;
-        font-size: 21px;
+        font-size: rem(21px);
         font-weight: bold;
         line-height: 1;
         @include tablet {
-            font-size: 24px
+            font-size: rem(24px);
         }
         @include desktop-lg {
-            font-size: 28px;
+            font-size: rem(28px);
         }
     }
     &__location,
@@ -103,12 +103,12 @@
         display: block;
         margin-bottom: 10px;
         text-align: center;
-        font-size: 16px;
+        font-size: rem(16px);
         line-height: 1.6;
         color: #cdcecf;
         @include tablet {
             display: inline-block;
-            font-size: 18px
+            font-size: rem(18px);
         }
     }
     &__location {

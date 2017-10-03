@@ -1,16 +1,28 @@
 .card-group {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 15px 0;
     &__slot {
         margin: 10px;
+        &:hover {
+            .card__preview-image {
+                transform: scale(1.05);
+            }
+            .card__content {
+                opacity: 0;
+            }
+            .card__buttons {
+                opacity: 1;
+                visibility: visible;
+            }
+      
+        }
     }
-    @include tablet {
-        padding: 40px 0;
-        
+    &__button-container {
+        text-align: center;
+        padding-top: 22px;
     }
-    @include desktop {
-    padding: 50px 0;    
+    &__button {
+        min-width: 220px;
     }
 }
 

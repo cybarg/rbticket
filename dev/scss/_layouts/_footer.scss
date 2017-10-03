@@ -4,7 +4,7 @@
         max-width: 1440px;
         margin: 0 auto;
         font-weight: 900;
-        font-size: .75rem;
+        font-size: rem(12px);
         line-height: 1;
         text-decoration: none;
         display: flex;
@@ -43,7 +43,7 @@
         }
     }
     &__copyright {
-        font-size: 13.5px;
+        font-size: rem(13.5px);
         font-weight: bold;
         line-height: 1;
         color: #a0a1a1;
@@ -53,7 +53,7 @@
         &,
         &:active,
         &:visited {
-            font-size: 13.5px;
+           font-size: rem(13.5px);
             font-weight: bold;
             line-height: 1;
             color: #ffffff;
@@ -71,7 +71,7 @@
     &__link {
         padding-top: 20px;
         text-align: center;
-        font-size: 13.5px;
+        font-size: rem(13.5px);
         text-transform: uppercase;
         @include desktop-lg {
             //font-size: 16px;

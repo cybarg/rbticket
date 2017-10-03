@@ -1,0 +1,33 @@
+.caption-and-content-layout {
+    padding: 15px 0;
+    @include tablet {
+        padding: 40px 0;
+    }
+    @include desktop {
+        padding: 50px 0;
+    }
+    &__caption-container {
+        margin-bottom: 25px;
+        @include desktop {
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+    }
+}
+
+.panel-caption {
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    &__text {
+        display: inline;
+        border-bottom: 3px solid $bordergrey;
+        padding-bottom: 5px;
+        font-weight: 900;
+        font-size: rem(21px);
+        line-height: 1.6;
+        @include desktop-lg {
+            font-size: rem(24px);
+        }
+    }
+}

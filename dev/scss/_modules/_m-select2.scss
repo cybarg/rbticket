@@ -39,7 +39,7 @@ $dropdown-padding: 14px 5px 14px 15px;
         display: none;
         padding: 14px 0;
         color: #8a909a;
-        font-size: 16px;
+        font-size: rem(16px);
         display: none;
     }
 }
@@ -103,7 +103,7 @@ $dropdown-padding: 14px 5px 14px 15px;
 
 .select2-container {
     cursor: pointer;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 500;
 }
 

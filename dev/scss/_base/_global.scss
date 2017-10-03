@@ -1,20 +1,29 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
+
 body {
     overflow-x: hidden;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
 .js-is-hidden {
     display: none !important;
 }
-button, input, textarea {
+
+button,
+input,
+textarea {
     outline: none;
 }
+

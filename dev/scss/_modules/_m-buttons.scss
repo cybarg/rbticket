@@ -2,6 +2,9 @@
      &--cta {
         @include button('red');
     }
+    &--ctrl {
+        @include button('ctrl');
+    }
     &--white {
         @include button('white');
     }

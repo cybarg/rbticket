@@ -22,12 +22,12 @@
     &__summary {
         padding-top: 20px;
         line-height: 1.4;
-        font-size: 21px;
+        font-size: rem(21px);
         line-height: 1.4;
         text-align: center;
         margin: auto;
         @include desktop-lg {
-            font-size: 24px;
+            font-size: rem(24px);
         }
     }
     &__summary__link {

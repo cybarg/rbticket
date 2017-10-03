@@ -1,4 +1,7 @@
-/* Positioning */
+/****** HELPERS ******/
+
+
+/* Absolute Centering */
 
 @mixin acent($mode:"f") {
     position: absolute;
@@ -24,8 +27,22 @@
 }
 
 
-/* Elements */
+/* Rem Calc */
 
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+
+
+
+
+
+
+/******* ELEMENTS *******/
+
+/* Button */
 @mixin button($bg:"red") {
     display: inline-block;
     border-radius: 0px;
@@ -59,10 +76,21 @@
         &:active {
             background-color: $rbred;
             color: #ffffff;
-            border: none;
+            border: solid 3px rgba(255, 255, 255, 0);
         }
     }
     @else if $bg=="white" {
+        color: #1a1919;
+        background-color: #ffffff;
+        border: solid 3px $bordergrey;
+        &:hover,
+        &:active {
+            background-color: $rbred;
+            color: #ffffff;
+            border: solid 3px $rbred;
+        }
+    }
+    @else if $bg=="ctrl" {
         color: #10151e;
         background-color: #ffffff;
         border: solid 1px #ededed;
