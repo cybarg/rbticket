@@ -44,56 +44,36 @@
         background-color: $rbred;
         color: #ffffff;
         border: none;
-        &:hover {
-            //  background-color: #00b7dc;
-            //  border: 1px solid #00b7dc;
-        }
+        &:hover,
         &:active {
-            //  background-color: #00a2c2;
-            // border: 1px solid #00a2c2;
-        }
-        &.disabled {
-            //  color: #e5e5e5;
-            //  background-color: #cccccc;
-            //    border: 1px solid  #cccccc;
+            border-color: #fff;
+            background-color: #fff;
+            color: $darkblue;
         }
     }
     @else if $bg=="transparent" {
         background-color: transparent;
         color: #fff;
         border: solid 3px rgba(255, 255, 255, 0.3);
-        &:hover {
+        &:hover,
+        &:active {
             background-color: $rbred;
             color: #ffffff;
             border: none;
         }
-        /*     &:active {
-         color: #999999;
-         background-color: #e5e5e5;
-     }
-     
-     &.disabled {
-         background-color: #f5f5f5;
-         color: #cccccc;
-     }*/
     }
     @else if $bg=="white" {
         color: #10151e;
         background-color: #ffffff;
         border: solid 1px #ededed;
-        &:hover {
-            //color: #00b7db;
-        }
+        &:hover,
         &:active {
-            // background-color: #f5f5f5;
-            // color: #00b7db;
-        }
-        &.disabled {
-            //  color: #00b7db;
+            //color: #00b7db;
         }
     }
     @include mobile {
         //   margin-top: 1em;
         // margin-bottom: 2em;
     }
+
 }

@@ -1,5 +1,5 @@
 .button {
-     &--red {
+     &--cta {
         @include button('red');
     }
     &--white {
