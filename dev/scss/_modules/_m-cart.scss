@@ -37,6 +37,7 @@
     }
     &__box {
         position: fixed;
+        z-index: 999;
         top: 95px;
         background: #fff;
         right: 20px;

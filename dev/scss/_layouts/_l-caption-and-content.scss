@@ -13,6 +13,13 @@
             //     padding-top: 40px;
         }
     }
+    &--error {
+        @include tablet {
+            margin: auto;
+            padding-top: 50px;
+            min-height: calc(100vh - #{$hero-small-min-height-tablet} - #{$footer-height-desktop});
+        }
+    }
 }
 
 .panel-caption {

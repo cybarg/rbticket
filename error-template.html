@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error template</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="page-main">
+        <div class="page">
+
+            <!--HEADER - not present on Event Listing-->
+            <div class="page__panel">
+                <header class="header">
+                    <div class="header__panel">
+                        <div class="header__content">
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <!--HERO SMALL -- Error pageversion -->
+            <div class="page__panel">
+
+                <div class="hero-small">
+                    <div class="hero-small__content">
+
+                        <h1 class="hero-small__error-title">Ooops…</h1>
+
+                    </div>
+                </div>
+                <div class="page-panel">
+                    <div class="caption-and-content-layout caption-and-content-layout--error">
+                        <div class="caption-and-content-layout__caption-container">
+                            <div class="panel-caption">
+                                <h2 class="panel-caption__text">Transaction denied</h2>
+                            </div>
+                        </div>
+                        <div class="caption-and-content-layout__content-container">
+                            <div class="inline-content-panel-layout inline-content-panel-layout--error">
+                                <div class="inline-content-panel-layout__content ">
+                                    <div class="inline-content__content-item">
+                                        <p class="inline-paragraph">
+                                            We’e sorry, the requested transaction has been denied by your cedit card company. Please <a href="#" class="inline-paragraph__link">check your inputs and try again</a>. If that doesn’t work, <a href="#" class="inline-paragraph__link">check our F.A.Q.</a> for potential reasons or <a href="#" class="inline-paragraph__link">contact our support team.</a>
+                                        </p>
+                                    </div>
+                                    <div class="inline-content__content-item">
+                                        <img src="img/f-rbcom-rbtickets-icon-error-100x100.svg" alt="oops">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="page__panel">
+                    <footer class="footer">
+                        <div class="footer__content">
+                            <nav class="footer__navigation">
+                                <div class="footer__lang-switch footer__lang-switch--mobile">
+                                    <div class="dropdown">
+                                        <select class="js-lang-switch dropdown__select">
+                                            <option value="en">EN</option>
+                                            <option value="de">DE</option>
+                                            <option value="de">IT</option>
+                                            <option value="de">ES</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <a class="footer__link" href="#" target="_blank">F.A.Q</a>
+                                <a class="footer__link" href="#" target="_blank">Contact</a>
+                                <a class="footer__link" href="#" target="_blank">Terms and Conditions</a>
+                                <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
+                                <a class="footer__link" href="#" target="_blank">Cookie Policy</a>
+                                <a class="footer__link" href="#" target="_blank">Imprint</a>
+                                <div class="footer__lang-switch footer__lang-switch--desktop">
+                                    <div class="dropdown">
+                                        <select class="js-lang-switch dropdown__select">
+                                            <option value="en">EN</option>
+                                            <option value="de">DE</option>
+                                            <option value="de">IT</option>
+                                            <option value="de">ES</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+
+                            </nav>
+                            <div class="footer__copyright">© 2017 Red Bull</div>
+                        </div>
+                    </footer>
+                </div>
+
+
+            </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        //Footer Lang switch
+        // function to format select2 lang switch
+        function formatLangSwitch(selectedItem) {
+            var $formattedItem = $(
+                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+            );
+            return $formattedItem;
+        };
+
+
+
+        $('.js-lang-switch').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatLangSwitch,
+            templateSelection: formatLangSwitch,
+            theme: "dark"
+        });
+    </script>
+</body>
+
+</html>

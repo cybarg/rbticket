@@ -8,37 +8,23 @@
         line-height: 1;
         text-decoration: none;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
         flex-direction: column;
         padding: 30px 25px 50px;
         @include desktop {
+            height: $footer-height-desktop;
             padding: 20px 50px 20px;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
             flex-direction: row;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
             justify-content: space-between;
         }
     }
     &__navigation {
         display: flex;
         flex-wrap: wrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
         flex-direction: column;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
         @include desktop {
             margin-left: 10px;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
             flex-direction: row;
-            -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
             order: 1;
         }
     }
@@ -53,7 +39,7 @@
         &,
         &:active,
         &:visited {
-           font-size: rem(13.5px);
+            font-size: rem(13.5px);
             font-weight: bold;
             line-height: 1;
             color: #ffffff;
