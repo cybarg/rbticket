@@ -1,0 +1,124 @@
+
+.inline {
+    &-content {
+        &-panel-layout {
+            max-width: 1440px;
+            margin: auto;
+            &__content {
+                @include tablet {
+                    //GRID!
+                    // padding: 0 0 50px;
+                    box-flex: 0;
+                    flex: 0 0 auto;
+                    margin-left: calc((99.99% - 10px)*.090909090909091 + 10px);
+                    width: calc((99.99% - 10px)*18/22 - 10px);
+                }
+            }
+        }
+        &__content-item {
+            overflow: auto;
+            margin: 0 20px;
+            @include tablet {
+                box-flex: 0;
+                flex: 0 0 auto;
+                margin-left: calc((99.99% - 10px)*.090909090909091 + 10px);
+                width: calc((99.99% - 10px)*18/22 - 10px);
+            }
+            @include desktop {
+                box-flex: 0;
+                flex: 0 0 auto;
+                margin-left: calc((99.99% - 10px)*.181818181818182 + 10px);
+                width: calc((99.99% - 10px)*14/22 - 10px);
+            }
+        }
+    }
+    &-heading {
+        &--level-1 {
+            margin-top: auto;
+            margin-bottom: 20x;
+            font-weight: bold;
+            font-size: rem(21px);
+            line-height: 1.4;
+            @include desktop-lg {
+                font-size: rem(24px);
+            }
+        }
+    }
+    &-paragraph {
+        margin-bottom: 20px;
+        margin-top: auto;
+        font-size: rem(16px);
+        line-height: 1.6;
+        color: $rb-darkgrey;
+        @include desktop-lg {
+            font-size: rem(18px);
+        }
+        &__link {
+            &,
+            &:hover,
+            &:visited {
+                color: $rb-red;
+                text-decoration: underline;
+            }
+        }
+        &--emphasized {
+            font-weight: 700;
+        }
+    }
+    &-image {
+        margin: 20px auto;
+    }
+    &-quote {
+        margin: auto auto 20px auto;
+
+        &__text {
+            color: $rb-darkgrey;
+            display: block;
+            font-size: rem(24px);
+            font-weight: 500;
+            @include desktop-lg {
+                font-size: rem(32px);
+            }
+        }
+        &__author {
+            margin-top: 8px;
+            color: $rb-lightgrey;
+            font-weight: 500;
+            font-size: rem(13.5px);
+            line-height: 1.4;
+            display: block;
+        }
+    }
+    &-list {
+        list-style-type: square;
+        margin-top: auto;
+        margin-bottom: 20px;
+        &__item {
+            font-size: rem(16px);
+            line-height: 1.7;
+            color: $rb-darkgrey;
+            @include desktop-lg {
+                font-size: rem(18px);
+            }
+        }
+    }
+}
+
+.image-caption {
+    &__title {
+        margin-top: 5px;
+        font-weight: 700;
+        font-size: rem(12px);
+        line-height: 1.4;
+        color: $rb-darkgrey;
+        text-align: left;
+    }
+    &__copyright {
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: rem(10px);
+        line-height: 1.2;
+        color: $rb-lightgrey;
+        text-transform: uppercase;
+    }
+}

@@ -3,19 +3,7 @@
     margin: 0 auto;
     &__slot {
         margin: 10px;
-        &:hover {
-            .card__preview-image {
-                transform: scale(1.05);
-            }
-            .card__content {
-                opacity: 0;
-            }
-            .card__buttons {
-                opacity: 1;
-                visibility: visible;
-            }
-      
-        }
+ 
     }
     &__button-container {
         text-align: center;

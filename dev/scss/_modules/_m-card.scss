@@ -4,6 +4,18 @@
         min-width: 270px;
         height: 250px;
         overflow: hidden;
+        &:hover {
+            .card__preview-image {
+                transform: scale(1.05);
+            }
+            .card__content {
+                opacity: 0;
+            }
+            .card__buttons {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
         &__wrapper,
         &__preview,
         &__preview-wrapper {
@@ -24,7 +36,7 @@
         &__wrapper {
             max-width: 1440px;
             margin: 0 auto;
-          //  pointer-events: none;
+            //  pointer-events: none;
             .card__content {
                 align-content: flex-start;
                 padding-top: 20px;
@@ -130,12 +142,12 @@
             margin-top: auto;
         }
         &__metadata-container {
-            color: #a0a1a1;
+            color: $rb-lightgrey;
             font-size: rem(12px);
             font-weight: 500;
             line-height: 1;
         }
-  /*      &:hover {
+        /*      &:hover {
             .card__preview-image {
                 transform: scale(1.05);
             }
@@ -173,7 +185,6 @@
         transform: translateZ(0);
     }
     
-
     .card--default {
         height: 250px;
         .card__content {

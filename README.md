@@ -1,7 +1,7 @@
 # rbticket
-Contains Frontend Files for RBTicket Platform
+Contains Frontend Files for RBTicket Platform - Ticket Store Frontend for https://www.redbull.com/
 
 Current version can be found at:
 
-* http://rbt.prettylogic.rocks/base-layout-template.html
+* http://rbt.prettylogic.rocks/dev-prototype-template.html
 * http://rbt.prettylogic.rocks/event-overview.html

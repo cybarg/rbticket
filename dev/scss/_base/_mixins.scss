@@ -30,7 +30,7 @@
 /* Rem Calc */
 
 @function rem($size) {
-  $remSize: $size / 16px;
+  $remSize: $size / 18px;
   @return #{$remSize}rem;
 }
 
@@ -58,7 +58,7 @@
     font-stretch: normal;
     transition: all 0.2s ease;
     @if $bg=="red" {
-        background-color: $rbred;
+        background-color: $rb-red;
         color: #ffffff;
         border: none;
         &:hover,
@@ -74,20 +74,20 @@
         border: solid 3px rgba(255, 255, 255, 0.3);
         &:hover,
         &:active {
-            background-color: $rbred;
+            background-color: $rb-red;
             color: #ffffff;
             border: solid 3px rgba(255, 255, 255, 0);
         }
     }
     @else if $bg=="white" {
-        color: #1a1919;
+        color: $rb-darkgrey;
         background-color: #ffffff;
         border: solid 3px $bordergrey;
         &:hover,
         &:active {
-            background-color: $rbred;
+            background-color: $rb-red;
             color: #ffffff;
-            border: solid 3px $rbred;
+            border: solid 3px $rb-red;
         }
     }
     @else if $bg=="ctrl" {
