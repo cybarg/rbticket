@@ -2,8 +2,7 @@
     &__trigger {
         position: fixed;
         right: 10px;
-        // top: 610px; // default pos
-        top: 20px; // cart-open pos
+        top: 610px;  
         width: 60px;
         height: 60px;
         background: $rb-red;
@@ -12,6 +11,9 @@
         cursor: pointer;
            @include tablet {
             right: 20px;
+        }
+        &--open {
+               top: 20px; 
         }
     }
     &__trigger-icon {
