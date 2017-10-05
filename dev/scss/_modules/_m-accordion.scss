@@ -1,0 +1,69 @@
+.accordion-content-panel-layout {
+    margin: 0 20px;
+    @include tablet {
+        margin: 0 45px;
+    }
+    @include desktop {
+        width: 90%;
+        max-width: 1030px;
+        margin: auto;
+    }
+}
+
+.accordion {
+    margin-bottom: 50px;
+    &__heading {
+        margin: auto;
+        padding: 20px 70px 20px 20px;
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.6;
+        border: 1px solid $bordergrey;
+        border-radius: 0;
+        border-bottom: 0;
+        color: $rb-darkgrey;
+        background: #fff;
+        outline: none;
+        cursor: pointer;
+        font-size: rem(16px);
+        &.ui-state-active {
+            font-weight: bold;
+        }
+        &:nth-last-child(2) {
+            border-bottom: 1px solid $bordergrey;
+        }
+        @include desktop-lg {
+            font-size: 1rem;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/f-rbcom-rbtickets-icon-accordion-expanded-50x50.svg) !important;
+        &--collapsed {
+            background-image: url(../img/f-rbcom-rbtickets-icon-accordion-closed-50x50.svg) !important;
+        }
+        &--expanded {
+            background-image: url(../img/f-rbcom-rbtickets-icon-accordion-expanded-50x50.svg) !important;
+        }
+        @include tablet {
+            @include acent(v);
+            right: 25px;
+        }
+    }
+    &__dropdown {
+        padding: 20px;
+        @include tablet {
+            padding: 20px 50px;
+        }
+        border: 1px solid $bordergrey;
+        border-radius: 0;
+        border-bottom: 0;
+        &:last-child {
+            border: 1px solid $bordergrey;
+        }
+    }
+}
