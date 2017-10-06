@@ -36,7 +36,6 @@
         &__wrapper {
             max-width: 1440px;
             margin: 0 auto;
-            //  pointer-events: none;
             .card__content {
                 align-content: flex-start;
                 padding-top: 20px;
@@ -95,27 +94,18 @@
             }
         }
         &__date {
-            -webkit-box-flex: 1;
-            -o-box-flex: 1;
             box-flex: 1;
-            -ms-flex: 1 0 100%;
             flex: 1 0 100%;
             margin-bottom: 10px;
             color: #fff;
         }
         &__date-item,
         &__date-content {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
             flex-direction: row;
         }
         &__date-item {
-            -webkit-box-orient: vertical;
-            -ms-flex-direction: column;
+
             flex-direction: column;
         }
         &__date-day,
@@ -147,18 +137,6 @@
             font-weight: 500;
             line-height: 1;
         }
-        /*      &:hover {
-            .card__preview-image {
-                transform: scale(1.05);
-            }
-            .card__content {
-                opacity: 0;
-            }
-            .card__buttons {
-                opacity: 1;
-                visibility: visible;
-            }
-        }*/
     }
     
     .card--default {
@@ -176,7 +154,6 @@
             height: 100%;
             content: "";
             background: linear-gradient(0deg, rgba(0, 15, 30, .8) 0%, rgba(0, 15, 30, .1) 100%);
-            //  z-index: 1;
             pointer-events: none;
         }
     }
@@ -191,10 +168,7 @@
             margin: 0 20px;
             @include tablet {
                 position: relative;
-                display: -webkit-box;
-                display: -ms-flexbox;
                 display: flex;
-                -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
                 width: calc(100% - 40px);
                 height: 100%;
