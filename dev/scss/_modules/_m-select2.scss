@@ -15,7 +15,7 @@ $dropdown-padding: 14px 5px 14px 15px;
         width: 45px;
         height: 40px;
         margin: auto;
-        border-right: 1px solid #e2e3e5;
+        border-right: $defaultborder;
         cursor: pointer;
         pointer-events: auto;
         background: url(../img/f-rbcom-icon-dropdown-deselect-options-20x20.svg) center center no-repeat;
@@ -59,7 +59,7 @@ $dropdown-padding: 14px 5px 14px 15px;
 }
 
 .select2-selection--single {
- //   border: solid 1px $bordergrey;
+
     border-radius: 0 !important;
     height: auto !important;
     outline: none;
@@ -82,7 +82,7 @@ $dropdown-padding: 14px 5px 14px 15px;
   
     &--above,
     &--below {
-          border: solid 1px $bordergrey;
+          border: $defaultborder;
     border-top: none;
         .dropdown__open-button,
         .dropdown__reset-button {
@@ -112,7 +112,7 @@ $dropdown-padding: 14px 5px 14px 15px;
     background-color: #fff;
     color: $rb-navyblue;
      &.select2 {
-    border: solid 1px $bordergrey;  
+    border: $defaultborder;  
     }
     .select2-dropdown {
        // border: none !important;

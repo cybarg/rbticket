@@ -9,13 +9,12 @@
         margin: auto;
         line-height: 1.6;
         font-size: rem(16px);
-        //GRID!!!
         max-width: 300px;
         @include tablet {
-            max-width: 620px;
+            @include centeredMaxWidth(620px);
         }
         @include desktop {
-            max-width: 640px;
+            @include centeredMaxWidth(640px);
             font-size: 1rem;
         }
     }
@@ -25,11 +24,11 @@
         height: 200px;
         @include tablet {
             height: 415px;
-            width: 620px;
+            @include centeredMaxWidth(620px);
         }
         @include desktop {
             height: 430px;
-            width: 640px;
+            @include centeredMaxWidth(640px);
         }
     }
     &__item {

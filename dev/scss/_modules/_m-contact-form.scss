@@ -1,0 +1,65 @@
+.contact-form {
+    @include tablet {
+        @include centeredMaxWidth(620px);
+    }
+    @include desktop {
+        @include centeredMaxWidth(640px);
+    }
+    &__text {
+        text-align: center;
+    }
+    &__input-field-wrapper {
+        margin-bottom: 15px;
+        @include tablet {
+            float: left;
+            width: 300px;
+            &:nth-child(odd) {
+              float: right;
+            }
+        }
+        @include desktop {
+            width: 310px;
+        }
+        &--textarea {
+            width: 100%;
+            float: none;
+            clear: both;
+        }
+        &--submit {
+            float: none !important;
+            margin: auto;
+        }
+    }
+    &__input-field-label {
+        margin-bottom: 10px;
+        font-size: rem(13.5px);
+        font-weight: 500;
+        line-height: 1;
+        color: #8a909a;
+        span {
+            display: inline-block;
+            margin-left: 3px;
+            color: $rb-red;
+        }
+    }
+    &__input-field {
+        border: $defaultborder;
+        font-size: rem(18px);
+        padding: rem(13px);
+        display: inline-block;
+        width: 100%;
+        &--textarea {
+            resize: none;
+        }
+    }
+    .dropdown__text {
+        color: #cdcecf;
+    }
+    &__submit {
+        width: 100%;
+        @include tablet {
+            display: block;
+            @include centeredMaxWidth(220px);
+        }
+    }
+}

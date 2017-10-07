@@ -19,7 +19,7 @@
         position: relative;
         font-size: 1rem;
         line-height: 1.6;
-        border: 1px solid $bordergrey;
+        border: $defaultborder;
         border-radius: 0;
         border-bottom: 0;
         color: $rb-darkgrey;
@@ -32,7 +32,7 @@
             font-weight: bold;
         }
         &:nth-last-child(2) {
-            border-bottom: 1px solid $bordergrey;
+            border-bottom: $defaultborder;
         }
         @include desktop-lg {
             font-size: 1rem;
@@ -61,11 +61,11 @@
         @include tablet {
             padding: 20px 50px;
         }
-        border: 1px solid $bordergrey;
+        border: $defaultborder;
         border-radius: 0;
         border-bottom: 0;
         &:last-child {
-            border: 1px solid $bordergrey;
+            border: $defaultborder;
         }
     }
 }

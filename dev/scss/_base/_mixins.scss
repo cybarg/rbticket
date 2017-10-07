@@ -144,12 +144,12 @@
     @else if $bg=="white" {
         color: $rb-darkgrey;
         background-color: #ffffff;
-        border: solid 3px $bordergrey;
+        border: $thickborder;
         &:hover,
         &:active {
             background-color: $rb-red;
             color: #ffffff;
-            border: solid 3px $rb-red;
+            border: $thickborder;
         }
     }
     @else if $bg=="ctrl" {

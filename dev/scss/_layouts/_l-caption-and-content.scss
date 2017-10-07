@@ -28,7 +28,7 @@
     text-align: center;
     &__text {
         display: inline;
-        border-bottom: 3px solid $bordergrey;
+        border-bottom: $thickborder;
         padding-bottom: 5px;
         font-weight: 900;
         font-size: rem(21px);
