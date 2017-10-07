@@ -1,8 +1,7 @@
 .footer {
     background-color: $rb-navyblue;
     &__content {
-        max-width: 1440px;
-        margin: 0 auto;
+        @include centeredMaxWidth;
         font-weight: 900;
         font-size: rem(12px);
         line-height: 1;

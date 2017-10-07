@@ -4,9 +4,10 @@
         margin: 0 45px;
     }
     @include desktop {
-        width: 90%;
-        max-width: 1030px;
+        //   max-width: 1030px;
         margin: auto;
+        @include col(16/22);
+       
     }
 }
 
@@ -26,6 +27,7 @@
         outline: none;
         cursor: pointer;
         font-size: rem(16px);
+        transition: 0.2s all;
         &.ui-state-active {
             font-weight: bold;
         }

@@ -1,5 +1,41 @@
 /****** HELPERS ******/
 
+/* Grid */
+
+
+/* GRID WITHOUT GUTTERS ON THE OUTSIDE
+ *    ┏-------┬---┬-------┬---┬-------┓
+ *    |  col  | g |  col  | g |  col  |
+ */
+// Calculates the width for a grid with our default gutter
+// e.g. gridColumn(10/22) calculates the width for 10 columns in a 1/22 grid
+@mixin col($ratio, $gutter: $gutter) {
+    
+    width: calc((99.99% + #{$gutter}) * #{$ratio} - #{$gutter});
+}
+
+/* rb3Grid = 22col GRID WITH OUTSIDE GUTTERS
+ * ┏---┬-------┬---┬-------┬---┬-------┬---┓
+ * | g |  col  | g |  col  | g |  col  | g |
+ */
+
+
+@mixin rb3Grid($colNum, $offsetCols: 0, $centered: false, $offset: true) {
+    @if $centered == true {
+        $offsetCols: (22 - $colNum) /2;
+         flex: 0 0 auto;
+    }
+    @if $offset == true {
+        
+        @include rb3Offset($offsetCols/22);
+         width: calc((99.99% - #{$gutter}) * #{$colNum} /22 - #{$gutter});
+    }
+}
+
+@mixin rb3Offset($ratio) {
+    margin-left: calc((99.99% - #{$gutter}) * #{$ratio} + #{$gutter});
+}
+
 
 /* Absolute Centering */
 
@@ -27,22 +63,48 @@
 }
 
 
-/* Rem Calc */
+/* Flex Centering */
 
-@function rem($size) {
-  $remSize: $size / 18px;
-  @return #{$remSize}rem;
+@mixin align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+/* Centered Max Width */
 
+@mixin centeredMaxWidth($maxWidth: 1440px) {
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
 
+/* Clearfix */
 
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Rem Calc */
+
+@function rem($size) {
+    $remSize: $size / 18px;
+    @return #{$remSize}rem;
+}
 
 
 /******* ELEMENTS *******/
 
+
 /* Button */
+
 @mixin button($bg:"red") {
     display: inline-block;
     border-radius: 0px;
@@ -103,5 +165,4 @@
         //   margin-top: 1em;
         // margin-bottom: 2em;
     }
-
 }

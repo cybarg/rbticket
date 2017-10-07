@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Contact Template</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="page-main">
+        <div class="page">
+
+
+            <!--HEADER - not present on Event Listing-->
+            <div class="page__panel">
+                <header class="header">
+                    <div class="header__panel">
+                        <div class="header__content">
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+
+
+            <!-- HERO LARGE -- EVENT DETAIL LOGO version      -->
+            <div class="page__panel">
+                <div class="event-hero">
+                    <div class="js-event-image event-hero__preview-image-wrapper">
+                        <div class="image-view">
+                            <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/header-image-with-logo.jpg" alt="Red Bull 400 - 2015 erstmals in Bischofshofen" title="Red Bull 400 - 2015 erstmals in Bischofshofen"></div>
+                        </div>
+                    </div>
+                    <div class="event-hero__content event-hero__content--logo">
+                        <img class="event-hero__logo js-logo-region event-hero__logo--square" src="https://image.redbull.com/rbcom/010/2015-02-26/1331708157763_4/0001/1/500/1/red-bull-400.png" width="1755" height="2462">
+                        <h1 class="event-hero__title">RED BULL X-FIGHTERS</h1>
+                        <time class="event-hero__date">22 - 24 September 2017</time>
+                        <div class="event-hero__meta"><span class="event-hero__location"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">Plaza de Toros de Las Ventas, Madrid, Spain</span><span class="event-hero__start"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">Start: 18:00 (GMT)</span> </div>
+
+                        <div class="event-hero__cta-container js-ctas">
+                            <div class="event-hero__ctas">
+                                <button class="button button--cta event-hero__cta">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--            EVENT SINGLE - Dark theme teaser text block-->
+
+            <div class="page__panel">
+
+                <div class="teaser-text dark-theme">
+                    <div class="teaser-text__wrapper">
+                        <div class="teaser-text__content-container">
+                            <div class="teaser-text__expanded">
+                                <p class="teaser-text__summary">Witness a memorable battle on the 7th of July in Las Ventas. Purchase a Classic Ticket or a <a class="teaser-text__summary__link" href="#">Superfánaticos Ticket</a> for true lovers of freestyle motocross. This year, for the first time ever, make your ticket the best present possible with the Gift Box!</p>
+                            </div>
+                            <div class="teaser-text__detail"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--            EVENT SINGLE - Dark theme sharing block-->
+
+            <div class="page__panel">
+                <div>
+                    <div class="share-bar-panel dark-theme">
+                        <div class="share-bar-panel__container">
+                            <div class="share-bar share-bar--centered-at-tablet">
+                                <div class="share-bar__caption">TELL YOUR FRIENDS ABOUT THIS EVENT</div>
+                                <ul class="share-bar__buttons">
+                                    <li class="share-bar__element share-bar__element--facebook">
+                                        <a class="share-bar__button" href="#g" target="_blank" aria-label="Auf Facebook teilen"></a>
+                                    </li>
+                                    <li class="share-bar__element share-bar__element--twitter">
+                                        <a class="share-bar__button" href="#" target="_blank" aria-label="Auf Twitter teilen"></a>
+                                    </li>
+                                    <li class="share-bar__element share-bar__element--reddit">
+                                        <a class="share-bar__button" href="#" target="_blank" aria-label="Auf Reddit posten"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-panel">
+                <div class="caption-and-content-layout">
+                    <div class="caption-and-content-layout__caption-container">
+                        <div class="panel-caption">
+                            <h2 class="panel-caption__text">Need help? Get in touch!</h2>
+                        </div>
+                    </div>
+
+                    <div class="caption-and-content-layout__content-container">
+                        <div class="inline-content__content-item">
+                            <p class="inline-paragraph">
+                                Please fill in the form below. It will be forwarded to this event’s support team. Alternatively, you can <a href="#" class="inline-paragraph__link">write an email to the support team directly.</a> A staff member will get back to you as soon as possible.
+                            </p>
+                        </div>
+
+                        <div class="inline-content__content-item">
+                            <div class="contact-form">
+                                <div class="contact-form__input-field-wrapper">
+                                    <div class="contact-form__input-field-label">First Name<span>*</span></div>
+                                    <input class="contact-form__input-field js-email" type="text">
+                                </div>
+                                <div class="contact-form__input-field-wrapper">
+                                    <div class="contact-form__input-field-label">Last Name<span>*</span></div>
+                                    <input class="contact-form__input-field js-email" type="text">
+                                </div>
+                                <div class="contact-form__input-field-wrapper">
+                                    <div class="contact-form__input-field-label">Email<span>*</span></div>
+                                    <input class="contact-form__input-field js-email" type="email">
+                                </div>
+                                <div class="contact-form__input-field-wrapper">
+                                    <div class="contact-form__input-field-label">What is this about?<span>*</span></div>
+                                    <select class="js-filter dropdown__select">
+                                        <option value="all">All countries</option>
+                                        <option value="at">Austria</option>
+                                        <option value="de">Germany</option>
+                                        <option value="hu">Hungary</option>
+                                    </select>
+                                </div>
+                                   <div class="contact-form__input-field-wrapper">
+                                    <div class="contact-form__input-field-label">What is this about?<span>*</span></div>
+                                    <textarea name="message" cols="30" rows="10"></textarea>
+                                </div>
+                                    <div class="contact-form__input-field-wrapper">
+                                    <input type="submit" value="SEND" class="button button--cta">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <div class="page__panel">
+                <footer class="footer">
+                    <div class="footer__content">
+                        <nav class="footer__navigation">
+                            <div class="footer__lang-switch footer__lang-switch--mobile">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="footer__link" href="#" target="_blank">F.A.Q</a>
+                            <a class="footer__link" href="#" target="_blank">Contact</a>
+                            <a class="footer__link" href="#" target="_blank">Terms and Conditions</a>
+                            <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Cookie Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Imprint</a>
+                            <div class="footer__lang-switch footer__lang-switch--desktop">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+                        </nav>
+                        <div class="footer__copyright">© 2017 Red Bull</div>
+                    </div>
+                </footer>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        //Footer Lang switch
+        // function to format select2 lang switch
+        function formatLangSwitch(selectedItem) {
+            var $formattedItem = $(
+                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+            );
+            return $formattedItem;
+        };
+
+
+
+        $('.js-lang-switch').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatLangSwitch,
+            templateSelection: formatLangSwitch,
+            theme: "dark"
+        });
+    </script>
+    <script>
+        $(function () {
+            var icons = {
+                header: "accordion__icon accordion__icon--collapsed",
+                activeHeader: "accordion__icon accordion__icon--expanded"
+            };
+            $(".js-accordion").accordion({
+                icons: icons,
+                collapsible: true,
+                active: false
+            });
+
+        });
+    </script>
+</body>
+
+</html>

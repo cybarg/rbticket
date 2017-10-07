@@ -6,17 +6,13 @@
         background-color: $rb-darkblue;
     }
     &__wrapper {
-        max-width: 1440px;
-        margin: 0 auto;
+       @include centeredMaxWidth;
     }
     &__content-container {
         margin: 0 20px;
         padding: 20px 0 40px 0;
-        //GRID!
         @include tablet {
-            flex: 0 0 auto;
-            margin-left: calc((99.99% - 10px)*.136363636363636 + 10px);
-            width: calc((99.99% - 10px)*16/22 - 10px);
+            @include rb3Grid(16, $centered: true);
         }
     }
     &__summary {

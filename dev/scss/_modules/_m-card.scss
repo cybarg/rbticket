@@ -34,8 +34,7 @@
         }
         &__preview-wrapper,
         &__wrapper {
-            max-width: 1440px;
-            margin: 0 auto;
+            @include centeredMaxWidth;
             .card__content {
                 align-content: flex-start;
                 padding-top: 20px;

@@ -1,16 +1,11 @@
 .inline {
     &-content {
         &-panel-layout {
-            max-width: 1440px;
-            margin: auto;
+             @include centeredMaxWidth;
             &__content {
                 @include tablet {
-                    //GRID!
-                    // padding: 0 0 50px;
                     box-flex: 0;
-                    flex: 0 0 auto;
-                    margin-left: calc((99.99% - 10px)*.090909090909091 + 10px);
-                    width: calc((99.99% - 10px)*18/22 - 10px);
+                    @include rb3Grid(18, $centered: true);
                 }
             }
             &--error {
@@ -22,15 +17,11 @@
             margin: 0 20px;
             @include tablet {
                 box-flex: 0;
-                flex: 0 0 auto;
-                margin-left: calc((99.99% - 10px)*.090909090909091 + 10px);
-                width: calc((99.99% - 10px)*18/22 - 10px);
+                @include rb3Grid(18, $centered: true);
             }
             @include desktop {
                 box-flex: 0;
-                flex: 0 0 auto;
-                margin-left: calc((99.99% - 10px)*.181818181818182 + 10px);
-                width: calc((99.99% - 10px)*14/22 - 10px);
+                @include rb3Grid(14, $centered: true);
             }
         }
     }
@@ -103,9 +94,7 @@
             }
         }
     }
-
 }
-
 
 .image-caption {
     &__title {
