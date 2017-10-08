@@ -107,8 +107,9 @@
 
 @mixin button($bg:"red") {
     display: inline-block;
+    box-sizing: border-box;
     border-radius: 0px;
-    padding: 22px 16px;
+    padding: 18px 16px;
     cursor: pointer;
     font-weight: 700;
     line-height: 1;
@@ -122,11 +123,13 @@
     @if $bg=="red" {
         background-color: $rb-red;
         color: #ffffff;
-        border: none;
+        border: $thickborder;
+        border-color: $rb-red;
         &:hover,
         &:active {
-            border-color: #fff;
-            background-color: #fff;
+            border: $thickborder;
+        //background-color: #fff;
+            background-color: transparent;
             color: $rb-navyblue;
         }
     }
@@ -150,6 +153,7 @@
             background-color: $rb-red;
             color: #ffffff;
             border: $thickborder;
+            border-color: $rb-red;
         }
     }
     @else if $bg=="ctrl" {

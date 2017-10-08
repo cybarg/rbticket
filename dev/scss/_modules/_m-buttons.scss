@@ -1,6 +1,13 @@
 .button {
-     &--cta {
+    &--cta {
         @include button('red');
+    }
+    &--cta-dark-theme {
+        @include button('red');
+        &:active,
+        &:hover {
+            color: #fff;
+        }
     }
     &--ctrl {
         @include button('ctrl');
@@ -8,9 +15,7 @@
     &--white {
         @include button('white');
     }
-    
     &--transparent {
         @include button('transparent');
     }
-    
 }

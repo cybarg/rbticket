@@ -36,5 +36,12 @@
         @include desktop-lg {
             font-size: rem(24px);
         }
+        &--dark-theme {
+            color: #fff;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+    @include desktop-lg {
+        margin-bottom: 50px;
     }
 }

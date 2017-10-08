@@ -1,7 +1,7 @@
 .inline {
     &-content {
         &-panel-layout {
-             @include centeredMaxWidth;
+            @include centeredMaxWidth;
             &__content {
                 @include tablet {
                     box-flex: 0;
@@ -12,6 +12,9 @@
                 text-align: center;
             }
         }
+        &-teaser-image-layout {
+             @include centeredMaxWidth;
+        }
         &__content-item {
             overflow: auto;
             margin: 0 20px;
@@ -19,9 +22,10 @@
                 box-flex: 0;
                 @include rb3Grid(18, $centered: true);
             }
-            @include desktop {
-                box-flex: 0;
-                @include rb3Grid(14, $centered: true);
+            &--narrow {
+                @include desktop {
+                    @include rb3Grid(14, $centered: true);
+                }
             }
         }
     }
@@ -57,6 +61,9 @@
         &--emphasized {
             font-weight: 700;
         }
+        &--dark-theme {
+            color: #fff;
+        }
     }
     &-image {
         margin: 20px auto;
@@ -85,13 +92,16 @@
         list-style-type: square;
         margin-top: auto;
         margin-bottom: 20px;
+        color: $rb-darkgrey;
         &__item {
             font-size: rem(16px);
             line-height: 1.7;
-            color: $rb-darkgrey;
             @include desktop-lg {
                 font-size: rem(18px);
             }
+        }
+        &--dark-theme {
+            color: #fff;
         }
     }
 }

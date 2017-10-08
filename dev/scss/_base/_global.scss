@@ -27,6 +27,10 @@ textarea {
     outline: none;
 }
 
+.dark-theme {
+    background: $rb-darkblue;
+}
+
 // Temporary placeholder for prototypin templates, remove in production!
 .placeholder-temporary {
     height: 50vh;
