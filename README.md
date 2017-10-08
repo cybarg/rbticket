@@ -10,6 +10,7 @@ Current version can be found at:
 * http://rbt.prettylogic.rocks/single-event-v3-gallery.html
 * http://rbt.prettylogic.rocks/single-event-v4-contact.html
 * http://rbt.prettylogic.rocks/single-event-v5-teaser-image-block.html
+* http://rbt.prettylogic.rocks/single-event-v6-tickets.html
 * http://rbt.prettylogic.rocks/faq-template.html
 * http://rbt.prettylogic.rocks/error-template.html
 

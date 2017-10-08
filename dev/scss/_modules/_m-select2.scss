@@ -133,7 +133,7 @@ $dropdown-padding: 14px 5px 14px 15px;
 
 // Dark skin
 .select2-container--dark {
-    background-color: #10151e;
+    background-color: $rb-navyblue;
     color: #fff;
     &.select2 {
     // this affects main container only, not dropdown

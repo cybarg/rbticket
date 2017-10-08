@@ -1,9 +1,9 @@
 .button {
     &--cta {
-        @include button('red');
+        @include button('cta');
     }
     &--cta-dark-theme {
-        @include button('red');
+        @include button('cta');
         &:active,
         &:hover {
             color: #fff;
@@ -11,6 +11,9 @@
     }
     &--ctrl {
         @include button('ctrl');
+    }
+     &--cart {
+        @include button('cart');
     }
     &--white {
         @include button('white');

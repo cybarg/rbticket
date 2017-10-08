@@ -1,5 +1,6 @@
 /****** HELPERS ******/
 
+
 /* Grid */
 
 
@@ -7,28 +8,27 @@
  *    ┏-------┬---┬-------┬---┬-------┓
  *    |  col  | g |  col  | g |  col  |
  */
+
 // Calculates the width for a grid with our default gutter
 // e.g. gridColumn(10/22) calculates the width for 10 columns in a 1/22 grid
 @mixin col($ratio, $gutter: $gutter) {
-    
     width: calc((99.99% + #{$gutter}) * #{$ratio} - #{$gutter});
 }
+
 
 /* rb3Grid = 22col GRID WITH OUTSIDE GUTTERS
  * ┏---┬-------┬---┬-------┬---┬-------┬---┓
  * | g |  col  | g |  col  | g |  col  | g |
  */
 
-
 @mixin rb3Grid($colNum, $offsetCols: 0, $centered: false, $offset: true) {
-    @if $centered == true {
+    @if $centered==true {
         $offsetCols: (22 - $colNum) /2;
-         flex: 0 0 auto;
+        flex: 0 0 auto;
     }
-    @if $offset == true {
-        
+    @if $offset==true {
         @include rb3Offset($offsetCols/22);
-         width: calc((99.99% - #{$gutter}) * #{$colNum} /22 - #{$gutter});
+        width: calc((99.99% - #{$gutter}) * #{$colNum} /22 - #{$gutter});
     }
 }
 
@@ -79,6 +79,7 @@
     margin: 0 auto;
 }
 
+
 /* Clearfix */
 
 @mixin clearfix {
@@ -91,6 +92,7 @@
         clear: both;
     }
 }
+
 
 /* Rem Calc */
 
@@ -105,13 +107,14 @@
 
 /* Button */
 
-@mixin button($bg:"red") {
+@mixin button($bg:"cta") {
     display: inline-block;
     box-sizing: border-box;
     border-radius: 0px;
-    padding: 18px 16px;
+    padding: 19px 16px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: rem(16px);
     line-height: 1;
     text-align: center;
     letter-spacing: 0.4px;
@@ -120,7 +123,8 @@
     font-style: normal;
     font-stretch: normal;
     transition: all 0.2s ease;
-    @if $bg=="red" {
+    @if $bg=="cta" {
+        min-width: 220px;
         background-color: $rb-red;
         color: #ffffff;
         border: $thickborder;
@@ -128,12 +132,13 @@
         &:hover,
         &:active {
             border: $thickborder;
-        //background-color: #fff;
+            //background-color: #fff;
             background-color: transparent;
             color: $rb-navyblue;
         }
     }
     @else if $bg=="transparent" {
+        min-width: 220px;
         background-color: transparent;
         color: #fff;
         border: solid 3px rgba(255, 255, 255, 0.3);
@@ -145,6 +150,7 @@
         }
     }
     @else if $bg=="white" {
+        min-width: 220px;
         color: $rb-darkgrey;
         background-color: #ffffff;
         border: $thickborder;
@@ -157,16 +163,32 @@
         }
     }
     @else if $bg=="ctrl" {
-        color: #10151e;
+        height: 50px;
+        width: 40px;
         background-color: #ffffff;
-        border: solid 1px #ededed;
+        border: $defaultborder;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../img/f-rbcom-rbtickets-icon-plus-15x15.svg);
         &:hover,
         &:active {
             //color: #00b7db;
         }
     }
-    @include mobile {
-        //   margin-top: 1em;
-        // margin-bottom: 2em;
+    @else if $bg=="cart" {
+        width: 90px;
+        height: 50px;
+        background-color: $rb-red;
+        border: none;
+        background-image: url(../img/f-rbcom-rbtickets-icon-add-to-basket-30x30.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover,
+        &:active {
+            //color: #00b7db;
+        }
+        @include mobile {
+            width: 130px;
+        }
     }
 }
