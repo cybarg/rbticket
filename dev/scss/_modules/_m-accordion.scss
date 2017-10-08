@@ -1,13 +1,9 @@
 .accordion-content-panel-layout {
     margin: 0 20px;
     @include tablet {
-        margin: 0 45px;
-    }
-    @include desktop {
-        //   max-width: 1030px;
-        margin: auto;
+        min-width: 690px;
         @include col(16/22);
-       
+        @include centeredMaxWidth(1030px);
     }
 }
 

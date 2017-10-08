@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gallery Template</title>
+    <title>Single Event v5 with Teaser image block</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,28 +25,21 @@
                 </header>
             </div>
 
-            <!--HEADER - not present on Event Listing-->
-            <div class="page__panel">
-                <header class="header">
-                    <div class="header__panel">
-                        <div class="header__content">
-                        </div>
-                    </div>
-                </header>
-            </div>
 
-            <!-- HERO LARGE -- EVENT DETAIL DEFAULT version -->
+
+            <!-- HERO LARGE -- EVENT DETAIL LOGO version      -->
             <div class="page__panel">
                 <div class="event-hero">
                     <div class="js-event-image event-hero__preview-image-wrapper">
                         <div class="image-view">
-                            <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/header-image-nologo.jpg" alt="Red Bull 400 - 2015 erstmals in Bischofshofen" title="Red Bull 400 - 2015 erstmals in Bischofshofen"></div>
+                            <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/header-image-with-logo.jpg" alt="Red Bull 400 - 2015 erstmals in Bischofshofen" title="Red Bull 400 - 2015 erstmals in Bischofshofen"></div>
                         </div>
                     </div>
-                    <div class="event-hero__content event-hero__content--default">
-                        <h1 class="event-hero__title">Mixwoch</h1>
-                        <time class="event-hero__date">9 August 2017</time>
-                        <div class="event-hero__meta"><span class="event-hero__location"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">VIE i PEE, Wien, Austria</span><span class="event-hero__start"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">Start: 23:00 (GMT)</span> </div>
+                    <div class="event-hero__content event-hero__content--logo">
+                        <img class="event-hero__logo js-logo-region event-hero__logo--square" src="https://image.redbull.com/rbcom/010/2015-02-26/1331708157763_4/0001/1/500/1/red-bull-400.png" width="1755" height="2462">
+                        <h1 class="event-hero__title">RED BULL X-FIGHTERS</h1>
+                        <time class="event-hero__date">22 - 24 September 2017</time>
+                        <div class="event-hero__meta"><span class="event-hero__location"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">Plaza de Toros de Las Ventas, Madrid, Spain</span><span class="event-hero__start"><img class="event-hero__location-icon" src="img/f-rbcom-icon-meta-location-dark-15x15.svg" alt="Location" title="Location">Start: 18:00 (GMT)</span> </div>
 
                         <div class="event-hero__cta-container js-ctas">
                             <div class="event-hero__ctas">
@@ -56,95 +50,117 @@
                 </div>
             </div>
 
-            <!--IMAGE GROUP-->
+
+            <!--            EVENT SINGLE - Dark theme teaser text block-->
+
             <div class="page__panel">
 
-                <div class="caption-and-content-layout">
-                    <div class="caption-and-content-layout__caption-container">
-                        <div class="panel-caption">
-                            <h2 class="panel-caption__text">Image Gallery</h2>
-                        </div>
-                    </div>
-
-                    <div class="caption-and-content-layout__content-container">
-                        <div class="card-group-layout">
-
-                            <div class="card-group">
-                                <div class="card-group__content">
-
-                                    <div class="card-group__slot  js-card-group__slot  js-card-group__slot  js-card-group__slot">
-
-                                        <div class="image-gallery-item">
-
-                                            <div class="image-view">
-                                                <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/gallery-1.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
-                                                <div class="image-view__icon">
-                                                    <img src="img/f-rbcom-rbtickets-icon-zoom-dark-20x20.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="card-group__slot  js-card-group__slot">
-
-                                        <div class="image-gallery-item">
-                                            <div class="image-view">
-                                                <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/gallery-2.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
-                                                <div class="image-view__icon">
-                                                    <img src="img/f-rbcom-rbtickets-icon-zoom-dark-20x20.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="card-group__slot  js-card-group__slot">
-
-                                        <div class="image-gallery-item">
-                                            <div class="image-view">
-                                                <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/gallery-3.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
-                                                <div class="image-view__icon">
-                                                    <img src="img/f-rbcom-rbtickets-icon-zoom-dark-20x20.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="card-group__slot  js-card-group__slot">
-
-                                        <div class="image-gallery-item">
-                                            <div class="image-view">
-                                                <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/gallery-4.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
-                                                <div class="image-view__icon">
-                                                    <img src="img/f-rbcom-rbtickets-icon-zoom-dark-20x20.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="card-group__slot  js-card-group__slot">
-
-                                        <div class="image-gallery-item">
-                                            <div class="image-view">
-                                                <div class="image-view__container"><img class="image-view__content" src="img/dummy-images/gallery-5.jpg" alt="" title="Red Bull Dolomitenmann 2015"></div>
-                                                <div class="image-view__icon">
-                                                    <img src="img/f-rbcom-rbtickets-icon-zoom-dark-20x20.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
+                <div class="teaser-text dark-theme">
+                    <div class="teaser-text__wrapper">
+                        <div class="teaser-text__content-container">
+                            <div class="teaser-text__expanded">
+                                <p class="teaser-text__summary">Witness a memorable battle on the 7th of July in Las Ventas. Purchase a Classic Ticket or a <a class="teaser-text__summary__link" href="#">Superfánaticos Ticket</a> for true lovers of freestyle motocross. This year, for the first time ever, make your ticket the best present possible with the Gift Box!</p>
                             </div>
-
+                            <div class="teaser-text__detail"></div>
                         </div>
                     </div>
                 </div>
 
             </div>
+            <!--            EVENT SINGLE - Dark theme sharing block-->
 
+            <div class="page__panel">
+                <div>
+                    <div class="share-bar-panel dark-theme">
+                        <div class="share-bar-panel__container">
+                            <div class="share-bar share-bar--centered-at-tablet">
+                                <div class="share-bar__caption">TELL YOUR FRIENDS ABOUT THIS EVENT</div>
+                                <ul class="share-bar__buttons">
+                                    <li class="share-bar__element share-bar__element--facebook">
+                                        <a class="share-bar__button" href="#g" target="_blank" aria-label="Auf Facebook teilen"></a>
+                                    </li>
+                                    <li class="share-bar__element share-bar__element--twitter">
+                                        <a class="share-bar__button" href="#" target="_blank" aria-label="Auf Twitter teilen"></a>
+                                    </li>
+                                    <li class="share-bar__element share-bar__element--reddit">
+                                        <a class="share-bar__button" href="#" target="_blank" aria-label="Auf Reddit posten"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!--           EVENT Single Inline Content-->
+
+            <div class="page-panel">
+                <div class="caption-and-content-layout">
+                    <div class="caption-and-content-layout__caption-container">
+                        <div class="panel-caption">
+                            <h2 class="panel-caption__text">More about this event</h2>
+                        </div>
+                    </div>
+                    <div class="caption-and-content-layout__content-container">
+                        <div class="inline-content-panel-layout">
+
+                            <div class="inline-content-panel-layout__content">
+                                <div class="inline-content__content-item">
+                                    <h2 class="inline-heading inline-heading--level-1">On July 7th, Las Ventas will host the Grand Slam of FMX for the 16th time.</h2>
+                                </div>
+                                <div class="inline-content__content-item">
+                                    <p class="inline-paragraph">
+                                        What Star Wars is for movie fans that is Red Bull X-Fighters and Plaza de Toros de Las Ventas for FMX fans. This amazing bullring in Madrid has been the venue for the "Classic Battle" for the last 16 years and it has witnessed some truly titanic head-to-head fights in its time. Since 2002, the FMX elite has been flying through the air consistently at <a href="#" class="inline-paragraph__link">Las Ventas</a>, one of the world's most famous bullfighting arenas.
+                                    </p>
+                                </div>
+
+                                <div class="inline-content__content-item">
+                                    <p class="inline-paragraph">
+                                        <span class="inline-paragraph--emphasized">In 2015 Pagès proved the impossible is possible with a historic Madrid hat-trick and a year later he was able to be victorious again, setting another record. Will someone be able to stop Tom Pagès in 2017?</span>
+
+                                    </p>
+
+                                </div>
+                                <div class="inline-content__content-item">
+                                    <figure class="inline-image">
+                                        <div class="inline-image__image">
+                                            <a class="inline-image__link js-image" title="Spot on: Mark Forster begeistert die ganze Halle" href="https://image.redbull.com/rbcom/052/2017-09-26/9b6fbe69-e33c-46d0-9bba-61ee46d92d6d/0012/0/0/0/1280/1920/1600/1/cuks-konzertspektakel-mark-forster-2.jpg">
+                                                <div class="image-view image-view--fixed-ratio" style="padding-bottom: 66.6667%;">
+                                                    <div class="image-view__container"><img class="image-view__content" src="https://image.redbull.com/rbcom/052/2017-09-26/9b6fbe69-e33c-46d0-9bba-61ee46d92d6d/0012/0/0/0/1280/1920/850/1/cuks-konzertspektakel-mark-forster-2.jpg" alt="Spot on: Mark Forster begeistert die ganze Halle" title="Spot on: Mark Forster begeistert die ganze Halle"></div>
+                                                </div>
+                                            </a>
+                                            <div class="js-overlay"></div>
+                                        </div>
+                                        <figcaption class="inline-image__description js-image-caption">
+                                            <div class="image-caption">
+                                                <div class="image-caption__title">Spot on: Mark Forster begeistert die ganze Halle</div>
+                                                <div class="image-caption__copyright">© Matthias Heschl / Red Bull Content Pool</div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="inline-content__content-item">
+                                    <h2 class="inline-heading inline-heading--level-1">Riccidardo gives it everything</h2>
+                                </div>
+                                <div class="inline-content__content-item">
+                                    <ul class="inline-list">
+                                        <li class="inline-list__item">Exclusive seat at "Tendido Bajo </li>
+                                        <li class="inline-list__item">Red Bull X-Fighters 2017 official Lanyard.</li>
+                                        <li class="inline-list__item">Access to Las Ventas on event day at 12pm with Riders Meeting in the pit.</li>
+                                        <li class="inline-list__item">Access to the official Red Bull X-Fighters After Party (two drinks included)</li>
+
+                                    </ul>
+                                </div>
+                                <div class="inline-content__content-item">
+                                    <blockquote class="inline-quote"><span class="inline-quote__text">“Whoa! There’s a giant lizard on the track. I’m not joking.</span><span class="inline-quote__author">Max Verstappen</span></blockquote>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <!-- RELATED EVENTS BLOCK -->
@@ -322,62 +338,6 @@
 
             </div>
 
-
-            <!-- PHOTOSWIPE lightbox -->
-            <div class="page-panel">
-                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="pswp__bg"></div>
-                    <div class="pswp__scroll-wrap">
-                        <div class="pswp__container">
-                            <div class="pswp__item"></div>
-                            <div class="pswp__item"></div>
-                            <div class="pswp__item"></div>
-                        </div>
-
-                        <div class="pswp__ui pswp__ui--hidden">
-
-                            <div class="pswp__top-bar">
-                                <div class="pswp__counter"></div>
-
-                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                                <div class="pswp__preloader">
-                                    <div class="pswp__preloader__icn">
-                                        <div class="pswp__preloader__cut">
-                                            <div class="pswp__preloader__donut"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                                <div class="pswp__share-tooltip"></div>
-                            </div>
-
-                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                            </button>
-
-                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                            </button>
-
-                            <div class="pswp__caption">
-                                <div class="pswp__caption__center"></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
             <!-- FOOTER -->
             <div class="page__panel">
                 <footer class="footer">
@@ -422,18 +382,99 @@
 
         </div>
     </main>
+    <!-- CART
+    <div class="cart__box js-cart__box">
+        <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+        <div class="cart__checkout cart__checkout--mobile">
+            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
+        </div>
+
+        <div class="cart__content">
 
 
+            <div class="cart__item">
+                <div class="cart__item-row">
+                    <span class="cart__item-title">Tendido Bajo, Sector A</span>
+                    <button class="cart__item-clear"></button>
+                </div>
+                <div class="cart__item-row">
+                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 123,00</span>
+                </div>
+            </div>
+            <div class="cart__item">
+                <div class="cart__item-row">
+                    <span class="cart__item-title">Tendido Bajo lorem ipsum dolor sit Amet, Sector B</span>
+                    <button class="cart__item-clear"></button>
+                </div>
+                <div class="cart__item-row">
+                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 61,50</span>
+                </div>
+            </div>
+            <div class="cart__item">
+
+                <div class="cart__total">
+                    <div class="cart__item-row">
+                        <span class="cart__total-label">Grand total</span>
+                        <span class="cart__total-price">Eur 184,50</span>
+                    </div>
+                </div>
+
+                <div class="cart__vat">
+                    <div class="cart__item-row">
+                        <span class="cart__total-label">Incl. 20% VAT</span>
+                        <span class="cart__total-vat">EUR 36,90</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="cart__footer">
+                <p class="cart__footer-message">Got a coupon? You can enter your code on the last page of the checkout process.</p>
+            </div>
+        </div>
+        <div class="cart__checkout cart__checkout--default">
+            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
+        </div>
+
+    </div> 
+ -->
+
+    <!-- CART TRIGGER -->
+    <div class="cart__trigger js-cart__trigger cart__trigger--open">
+        <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
+        <span class="cart__trigger-item-count">
+            3
+        </span>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="js/photoswipe.js"></script>
-    <script src="js/photoswipe-ui-default.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="js/bootstrap-number-input.js"></script>
 
 
     <script type="text/javascript">
+        // function to format select2 dropdown with item numbers and reset button
+        function formatFilter(selectedItem) {
+
+            // get this data from data attributes of options, or whatever method you prefer
+            var itemNumbers = {
+                at: 5,
+                de: 8,
+                hu: 2
+            };
+
+            var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
+
+            var $formattedItem = $(
+                '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
+            );
+            return $formattedItem;
+        };
+
+
         //Footer Lang switch
         // function to format select2 lang switch
         function formatLangSwitch(selectedItem) {
@@ -451,65 +492,16 @@
             templateSelection: formatLangSwitch,
             theme: "dark"
         });
-    </script>
 
-
-    <script type="text/javascript">
-        // Photoswipe
-        jQuery(document).ready(function ($) {
-
-            $('.js-card-group__slot').click(function () {
-                var $imgIndex = $(this).index();
-                var pswpElement = document.querySelectorAll('.pswp')[0];
-
-                console.log($imgIndex)
-                console.log(pswpElement)
-
-                // build items array
-                var items = [
-
-                    {
-                        src: 'img/dummy-images/gallery-1.jpg',
-                        w: 950,
-                        h: 633
-                                },
-                    {
-                        src: 'img/dummy-images/gallery-2.jpg',
-                        w: 950,
-                        h: 633
-                                },
-                    {
-                        src: 'img/dummy-images/gallery-3.jpg',
-                        w: 950,
-                        h: 633
-                                },
-                    {
-                        src: 'img/dummy-images/gallery-4.jpg',
-                        w: 950,
-                        h: 633
-                                },
-                    {
-                        src: 'img/dummy-images/gallery-5.jpg',
-                        w: 950,
-                        h: 633
-                                },
-
-                                ];
-
-                var options = {
-                    index: $imgIndex // start at first slide
-                };
-
-                // Initializes and opens PhotoSwipe
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-
-                gallery.init();
-            });
-
-
+        // Cart Select
+        $('input[type="number"]').bootstrapNumber({
+            upClass: 'x button--ctrl cart__item-count-button cart__item-count-button--up',
+            downClass: 'x button button--ctrl cart__item-count-button cart__item-count-button--down',
+            //center: true/false
+            upText: '',
+            downText: ''
         });
     </script>
-
 </body>
 
 </html>

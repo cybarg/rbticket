@@ -3,6 +3,8 @@
     &__content {
         @include tablet {
             @include rb3Grid(18, $centered: true);
+            min-width: 690px;
+            margin: auto;
             @include clearfix;
         }
     }

@@ -24,11 +24,11 @@
         height: 200px;
         @include tablet {
             height: 415px;
-            @include centeredMaxWidth(620px);
+            width: 620px;
         }
         @include desktop {
             height: 430px;
-            @include centeredMaxWidth(640px);
+            width: 640px;
         }
     }
     &__item {
