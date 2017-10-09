@@ -1,0 +1,42 @@
+.header {
+    &__content {
+        @include centeredMaxWidth;
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 124px;
+        height: 40px;
+    }
+    &__logo-image {
+        width: 100%;
+        height: auto;
+    }
+    &__panel {
+        width: 100%;
+        position: fixed; // in case of sticky nest this inside --sticky
+        z-index: 10;
+    }
+    &__backlink {
+        position: relative;
+        font-size: rem(16px);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 1;
+        color: #ffffff;
+        &:before {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            content: "";
+            top: 0;
+            left: -1.2em;
+            background-image: url(../img/f-rbcom-icon-arrow-textlink-left-20x20.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
