@@ -27,11 +27,9 @@
     }
     &__button-container {
         text-align: center;
-        padding-top: 22px;
+            padding: 20px 0;
     }
-    &__button {
-        min-width: 220px;
-    }
+  
 }
 
 @media only screen and (min-width: $tablet-width) and (max-width:$desktop-width) {

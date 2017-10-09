@@ -1,0 +1,93 @@
+$tab-spacing: 15px;
+.panel-tabs__navigation {
+    background: $rb-navyblue;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.tabs-navigation {
+    @include centeredMaxWidth;
+    &__wrapper {
+        @include tablet {
+            @include rb3Grid(18, $centered: true);
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &__content {
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+        align-items: center;
+        display: inline-flex;
+        //+at('mobile')
+        // padding-left 10px
+        > div {
+            flex: 0 0 auto;
+        }
+    }
+    &__content-wrapper {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+        @include align-center;
+        flex: 0 1 auto;
+    }
+    &__tab {
+        display: block;
+        color: #fff;
+        background: none;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.018rem;
+        margin: 0 $tab-spacing 3px $tab-spacing;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        padding-top: 8px; // padding-bottom + border-bottom
+        border-color: transparent;
+        flex-shrink: 0;
+        position: relative;
+        font-size: rem(16px);
+        font-weight: bold;
+        @include mobile {
+            //  margin: 0 $mobile-spacing 3px $mobile-spacing
+            letter-spacing: initial;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            bottom: -3px;
+            border-bottom: 3px solid;
+            border-bottom-color: $rb-darkblue;
+            transition: 0.1s;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.2;
+                border-bottom: 3px solid;
+                border-bottom-color: #fff;
+            }
+        }
+        &--active {
+            &:after {
+                animation: tab-underline .2s cubic-bezier(.35, 0, 0, 1);
+                width: 100%;
+                opacity: 1;
+                border-bottom-color: $rb-red;
+                transition: none;
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                    border-bottom-color: $rb-red;
+                }
+            }
+        }
+    }
+}

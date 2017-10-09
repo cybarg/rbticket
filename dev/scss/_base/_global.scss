@@ -27,6 +27,12 @@ textarea {
     outline: none;
 }
 
+input,
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
 .dark-theme {
     background: $rb-darkblue;
 }
@@ -35,8 +41,8 @@ textarea {
 .placeholder-temporary {
     height: 50vh;
 }
-.wrapper-temporary {
 
+.wrapper-temporary {
     margin: 30px auto;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
