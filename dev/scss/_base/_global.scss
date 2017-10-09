@@ -32,6 +32,9 @@ textarea {
     border-radius: 0;
     -webkit-appearance: none;
 }
+a {
+    color: $rb-red;
+}
 
 .dark-theme {
     background: $rb-darkblue;

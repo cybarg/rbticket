@@ -1,19 +1,39 @@
+body.overlay-open {
+    overflow: hidden;
+}
+
 .cart {
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(27, 34, 46, 0.5);
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s all;
+        &--is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     &__trigger {
         position: fixed;
         right: 10px;
-        top: 610px;  
+        top: 610px;
         width: 60px;
         height: 60px;
         background: $rb-red;
         z-index: 999;
         border-radius: 50%;
         cursor: pointer;
-           @include tablet {
+        @include tablet {
             right: 20px;
         }
         &--open {
-               top: 20px; 
+            top: 20px;
         }
     }
     &__trigger-icon {
@@ -73,6 +93,9 @@
         @include tablet {
             border-bottom: $thickborder;
             margin-bottom: 20px;
+        }
+        &--empty {
+            border-bottom: 0;
         }
     }
     &__item,
