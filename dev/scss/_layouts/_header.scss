@@ -1,10 +1,14 @@
 .header {
     &__content {
         @include centeredMaxWidth;
+        padding: 0 20px;
         min-height: 60px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: center;
+        @include tablet {
+            justify-content: space-between;
+        }
     }
     &__logo {
         width: 124px;
@@ -27,6 +31,7 @@
         text-decoration: none;
         line-height: 1;
         color: #ffffff;
+        display: none;
         &:before {
             position: absolute;
             height: 20px;
@@ -37,6 +42,9 @@
             background-image: url(../img/f-rbcom-icon-arrow-textlink-left-20x20.svg);
             background-position: center;
             background-repeat: no-repeat;
+        }
+        @include tablet {
+            display: block;
         }
     }
 }

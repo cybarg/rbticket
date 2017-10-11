@@ -3,6 +3,12 @@ $tab-spacing: 15px;
     background: $rb-navyblue;
     padding-top: 14px;
     padding-bottom: 12px;
+    &--checkout {
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
 }
 
 .tabs-navigation {
@@ -89,5 +95,11 @@ $tab-spacing: 15px;
                 }
             }
         }
+        &--disabled {
+            color: $rb-lightgrey;
+        }
+    }
+    &__arrow-step {
+        vertical-align: middle;
     }
 }

@@ -33,6 +33,7 @@
         font-weight: 900;
         font-size: rem(21px);
         line-height: 1.6;
+     
         @include desktop-lg {
             font-size: rem(24px);
         }
@@ -41,6 +42,13 @@
             border-bottom: 3px solid rgba(255, 255, 255, 0.3);
         }
     }
+    &__checkout-step {
+      display: block;
+        @include tablet {
+            display: none;
+        }
+    }
+    
     @include desktop-lg {
         margin-bottom: 50px;
     }

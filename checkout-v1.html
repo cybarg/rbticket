@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout template</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="page-main">
+        <div class="page">
+
+
+            <!--HEADER -->
+            <div class="page__panel">
+                <header class="header">
+                    <div class="header__panel">
+                        <div class="header__content">
+                            <div class="header__logo">
+                                <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
+                            </div>
+                            <a href="single-event-v6-tickets.html" class="header__backlink">Back To Ticket Selection</a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <!--HERO SMALL -- Default Version -->
+            <div class="page__panel">
+
+                <div class="hero-small hero-small--checkout">
+                    <div class="hero-small__content">
+
+                        <h1 class="hero-small__default-title">Secure Checkout</h1>
+
+                    </div>
+                    <div class="hero-small__backlink-wrapper">
+                        <a href="single-event-v6-tickets.html" class="hero-small__backlink">Back To Ticket Selection</a>
+                    </div>
+                </div>
+            </div>
+            <!--            Tab Navigation below Hero-->
+            <div class="page-panel">
+
+                <div class="js-tabs-navigation panel-tabs__navigation panel-tabs__navigation--checkout">
+                    <nav class="tabs-navigation">
+                        <div class="tabs-navigation__wrapper">
+                            <div class="tabs-navigation__content-wrapper">
+                                <div class="tabs-navigation__content js-tabs-content">
+                                    <a href="dev-prototype-template.html" class="tabs-navigation__tab tabs-navigation__tab--active"><span >1. Personal data</span></a>
+                                    <span><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
+                                    <a href="single-event-v6-tickets.html" class="tabs-navigation__tab tabs-navigation__tab--disabled"><span>2. Address Details</span></a>
+                                    <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
+                                    <a href="#" class="tabs-navigation__tab tabs-navigation__tab--disabled"><span>3. Payment Options</span></a>
+                                    <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
+                                    <a href="single-event-v2-map.html" class="tabs-navigation__tab  tabs-navigation__tab--disabled"><span>4. Confirm Purchase</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+
+
+            </div>
+
+            <div class="page-panel">
+                <div class="caption-and-content-layout">
+                    <div class="caption-and-content-layout__caption-container">
+                        <div class="panel-caption">
+                            <h2 class="panel-caption__text"><span class="panel-caption__checkout-step">Step 1 of 4</span>Your personal data</h2>
+                        </div>
+                    </div>
+
+                    <div class="caption-and-content-layout__content-container">
+                        <div class="inline-content__content-item inline-content__content-item--narrow">
+                            <div class="form">
+                                <div class="form__text">
+                                    <p class="inline-paragraph">
+                                        Please fill in the form below and then press „Next“ to continue.
+                                    </p>
+                                </div>
+                                <div class="form__input-field-wrapper">
+                                    <div class="form__input-field-label">First Name<span>*</span></div>
+                                    <input class="form__input-field" type="text">
+                                </div>
+                                <div class="form__input-field-wrapper">
+                                    <div class="form__input-field-label">Last Name<span>*</span></div>
+                                    <input class="form__input-field" type="text">
+                                </div>
+                                <div class="form__input-field-wrapper">
+                                    <div class="form__input-field-label">Email<span>*</span></div>
+                                    <input class="form__input-field" type="email">
+                                    <p class="form__input-field-message">
+                                        Please make sure you enter a valid Email address. We will send you the tickets via Email.
+                                    </p>
+                                </div>
+                                <div class="form__input-field-wrapper">
+                                    <div class="form__input-field-label">Mobile Number<span>*</span></div>
+                                    <div class="form__input-field-split form__input-field-split--narrow">
+                                        <select class="js-select form__input-field form__input-field--select dropdown__select">
+                                            <option value="all">+43</option>
+                                            <option value="x">+44</option>
+                                            <option value="y">+45</option>
+                                            <option value="z">+46</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__input-field-split form__input-field-split--wide">
+                                        <input class="form__input-field" type="number">
+                                    </div>
+                                    <p class="form__input-field-message">
+                                        Please enter a valid phone number, if you would like to receive the tickets via text message too.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="inline-content__content-item inline-content__content-item--narrow">
+                            <div class="button-group button-group--narrow">
+                                <button class="button-group__btn button-group__btn--right button button--cta">Next</button>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!--   SUMMARY -->
+
+
+            <div class="page-panel">
+
+                <div class="table-layout">
+                    <div class="table-layout__caption-container">
+                        <div class="panel-caption">
+                            <h2 class="panel-caption__text panel-caption__text">Your Red Bull X-Fighters Tickets</h2>
+                        </div>
+                    </div>
+                    <div class="table-layout__content-container">
+                        <div class="table-layout__text">
+                            <p class="inline-paragraph">
+                                Do you have a coupon? You can enter your code on the last page of the checkout process.
+                            </p>
+                        </div>
+                        <table class="table-layout__table">
+                            <thead class="table-layout__head">
+                                <tr class="table-layout__table-row table-layout__table-row--head">
+                                    <th class="table-layout__headcell">Category</th>
+                                    <th class="table-layout__headcell">Price per Ticket</th>
+                                    <th class="table-layout__headcell">Quantity</th>
+                                    <th class="table-layout__headcell table-layout__headcell--align-right">Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-layout__body">
+                                <tr class="table-layout__table-row">
+                                    <td class="table-layout__datacell  table-layout__datacell--mobile-fullwidth ">Tendido Bajo, Sector A</td>
+                                    <td class="table-layout__datacell table-layout__datacell--emphasized" data-label="Price per Ticket">EUR 61,50</td>
+                                    <td class="table-layout__datacell table-layout__datacell--emphasized" data-label="Quantity">
+                                        2
+                                    </td>
+                                    <td class="table-layout__datacell table-layout__datacell--emphasized table-layout__datacell--align-right" data-label="Total Price">
+                                        EUR 123,00
+                                    </td>
+                                </tr>
+                                <tr class="table-layout__table-row">
+                                    <td class="table-layout__datacell table-layout__datacell--mobile-fullwidth ">Tendido Bajo lorem ipsum dolor sit Amet, Sector B</td>
+                                    <td class="table-layout__datacell table-layout__datacell--emphasized" data-label="Price per Ticket">EUR 61,50</td>
+                                    <td class="table-layout__datacell  table-layout__datacell--emphasized" data-label="Quantity">
+                                        1
+                                    </td>
+                                    <td class="table-layout__datacell  table-layout__datacell--emphasized table-layout__datacell--align-right" data-label="Total Price">EUR 61,50</td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot class="table-layout__footer">
+                                <tr class="table-layout__footer-row">
+                                    <td class="table-layout__footer-label table-layout__footer-label--total" colspan="3">Grand Total</td>
+                                    <td class="table-layout__total">EUR 184,50</td>
+                                </tr>
+                                <tr class="table-layout__footer-row">
+                                    <td class="table-layout__footer-label table-layout__footer-label--vat" colspan="3">Incl. 20% VAT</td>
+                                    <td class="table-layout__vat">EUR 36,90</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class="page__panel">
+                <footer class="footer">
+                    <div class="footer__content">
+                        <nav class="footer__navigation">
+                            <div class="footer__lang-switch footer__lang-switch--mobile">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="footer__link" href="#" target="_blank">F.A.Q</a>
+                            <a class="footer__link" href="#" target="_blank">Contact</a>
+                            <a class="footer__link" href="#" target="_blank">Terms and Conditions</a>
+                            <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Cookie Policy</a>
+                            <a class="footer__link" href="#" target="_blank">Imprint</a>
+                            <div class="footer__lang-switch footer__lang-switch--desktop">
+                                <div class="dropdown">
+                                    <select class="js-lang-switch dropdown__select">
+                                        <option value="en">EN</option>
+                                        <option value="de">DE</option>
+                                        <option value="de">IT</option>
+                                        <option value="de">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+                        </nav>
+                        <div class="footer__copyright">© 2017 Red Bull</div>
+                    </div>
+                </footer>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
+
+    <script type="text/javascript">
+        function formatFilter(selectedItem) {
+
+            var $formattedItem = $(
+                '<span class="dropdown__text form__select__dropdown-text">' + selectedItem.text + '</span><span class="dropdown__open-button"></span>'
+            );
+            return $formattedItem;
+        };
+        //form dropown 
+        // select2 init
+        $('.js-select').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatFilter,
+            templateSelection: formatFilter,
+            theme: "white",
+            containerCssClass: "areaCode"
+        });
+
+
+        //Footer Lang switch
+        // function to format select2 lang switch
+        function formatLangSwitch(selectedItem) {
+            var $formattedItem = $(
+                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+            );
+            return $formattedItem;
+        };
+
+
+
+        $('.js-lang-switch').select2({
+            minimumResultsForSearch: Infinity,
+            templateResult: formatLangSwitch,
+            templateSelection: formatLangSwitch,
+            theme: "dark"
+        });
+    </script>
+</body>
+
+</html>

@@ -12,7 +12,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
     &__logo {
         display: inline-block;
@@ -47,6 +46,7 @@
         color: #ffffff;
         font-size: rem(33px);
         text-transform: uppercase;
+        
         @include tablet {
             font-size: rem(43px);
         }
@@ -54,7 +54,28 @@
             font-size: rem(57px);
         }
     }
+    &__backlink-wrapper {
+        padding: 0 20px;
+        text-align: center;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__backlink {
+        @extend .header__backlink;
+           @include mobile {
+            display: inline-block;
+        }
+    }
     @include tablet {
         min-height: $hero-small-min-height-tablet;
+    }
+    &--checkout {
+        min-height: $hero-checkout-min-height-mobile;
+        padding-top: 20px;
+        @include tablet {
+            padding-top: 0;
+            min-height: $hero-checkout-min-height;
+        }
     }
 }

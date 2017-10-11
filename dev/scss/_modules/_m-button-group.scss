@@ -1,0 +1,31 @@
+.button-group {
+    overflow: hidden;
+    &--narrow {
+        @include tablet {
+            @include centeredMaxWidth(620px);
+        }
+        @include desktop {
+            @include centeredMaxWidth(640px);
+        }
+    }
+    &__btn {
+        display: block;
+        width: 100%;
+         @include tablet {
+            width: 220px;
+        }
+    }
+    &__btn--left {
+        @include tablet {
+            float: left;
+        }
+    }
+    &__btn--right {
+        @include tablet {
+            float: right;
+        }
+    }
+    &__btn--center {
+        margin: auto;
+    }
+}

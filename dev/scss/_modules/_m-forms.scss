@@ -1,4 +1,5 @@
-.contact-form {
+.form {
+    @include clearfix;
     @include tablet {
         @include centeredMaxWidth(620px);
     }
@@ -10,11 +11,12 @@
     }
     &__input-field-wrapper {
         margin-bottom: 15px;
+        overflow: hidden;
         @include tablet {
             float: left;
             width: 300px;
             &:nth-child(odd) {
-              float: right;
+                float: right;
             }
         }
         @include desktop {
@@ -30,6 +32,16 @@
             margin: auto;
         }
     }
+    &__input-field {
+        border: $defaultborder;
+        font-size: rem(18px);
+        padding: rem(13px);
+        display: inline-block;
+        width: 100%;
+        &--textarea {
+            resize: none;
+        }
+    }
     &__input-field-label {
         margin-bottom: 10px;
         font-size: rem(13.5px);
@@ -42,18 +54,35 @@
             color: $rb-red;
         }
     }
-    &__input-field {
-        border: $defaultborder;
-        font-size: rem(18px);
-        padding: rem(13px);
+    &__button-field-wrapper {
+        clear: both;
+        @include clearfix;
+    }
+    &__input-field-split {
+        float: left;
         display: inline-block;
-        width: 100%;
-        &--textarea {
-            resize: none;
+        &:nth-child(3) {
+            margin-left: 10px;
+        }
+        &--narrow {
+            width: 100px;
+        }
+        &--wide {
+            width: calc(100% - 110px);
+            @include tablet {
+                width: 190px;
+            }
+            @include desktop {
+                width: 200px;
+            }
         }
     }
-    .dropdown__text {
-        color: #cdcecf;
+    &__input-field-message {
+        clear: both;
+        float: left;
+        font-size: rem(13.5px);
+        line-height: 1.6;
+        color: #8a909a;
     }
     &__submit {
         width: 100%;
@@ -61,5 +90,18 @@
             display: block;
             @include centeredMaxWidth(220px);
         }
+    }
+}
+
+.contact {
+    .dropdown__text {
+        color: #cdcecf;
+    }
+}
+
+.areaCode {
+    .dropdown__text {
+        // color: #cdcecf;
+        padding: 13px 5px 13px 15px;
     }
 }
