@@ -11,7 +11,7 @@
     &__btn {
         display: block;
         width: 100%;
-         @include tablet {
+        @include tablet {
             width: 220px;
         }
     }
@@ -27,5 +27,41 @@
     }
     &__btn--center {
         margin: auto;
+    }
+    &__btn--previous {
+        @include mobile {
+            min-width: initial;
+            width: 115px;
+            margin: auto;
+            order: 2;
+            &,
+            &:hover,
+            &:active {
+                background: none;
+                border: none;
+                color: $rb-darkgrey;
+                position: relative;
+            }
+            &:before {
+                @include acent(v);
+                height: 20px;
+                width: 20px;
+                content: "";
+                //top: 0;
+                left: -0.2em;
+                background-image: url(../img/f-rbcom-icon-arrow-textlink-left-20x20.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &__button--next {
+        @include mobile {
+            order: 1
+        }
+    }
+    @include mobile {
+        display: flex;
+        flex-flow: column;
     }
 }

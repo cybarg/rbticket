@@ -7,6 +7,7 @@
         @include centeredMaxWidth(640px);
     }
     &__text {
+        clear: both;
         text-align: center;
     }
     &__input-field-wrapper {
@@ -22,7 +23,7 @@
         @include desktop {
             width: 310px;
         }
-        &--textarea {
+        &--full-width {
             width: 100%;
             float: none;
             clear: both;
@@ -41,6 +42,30 @@
         &--textarea {
             resize: none;
         }
+        &--radio,
+        &--checkbox {
+            position: absolute;
+            top: 0;
+            left: -9999px;
+            visibility: hidden;
+            &:checked + label {
+                &:before {}
+                &:after {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                }
+            }
+        }
+        &--inline {
+            display: inline-block;
+            border: none;
+            width: auto;
+        }
+        &--styled {
+            position: relative;
+            padding: 20px 0 20px 40px;
+            text-align: left;
+        }
     }
     &__input-field-label {
         margin-bottom: 10px;
@@ -53,6 +78,44 @@
             margin-left: 3px;
             color: $rb-red;
         }
+        &--inline {
+            display: inline-block;
+            color: $rb-darkgrey;
+            font-weight: 400;
+            font-size: rem(16px);
+            cursor: pointer;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 35px;
+                border-radius: 50%;
+                @include tablet {
+                    top: 50%;
+                }
+                
+            }
+            &:before {
+                left: 0;
+                width: 24px;
+                height: 24px;
+                margin: -15px 0 0;
+                background: #fff;
+                border: 1px solid #d0d0d0;
+            }
+            &:after {
+                left: 4px;
+                width: 16px;
+                height: 16px;
+                margin: -11px 0 0;
+                opacity: 0;
+                background: $rb-red;
+                transition: opacity 0.25s ease-in-out;
+            }
+            @include desktop {
+                font-size: 1rem;
+            }
+        }
     }
     &__button-field-wrapper {
         clear: both;
@@ -61,14 +124,12 @@
     &__input-field-split {
         float: left;
         display: inline-block;
-        &:nth-child(3) {
-            margin-left: 10px;
-        }
         &--narrow {
             width: 100px;
         }
         &--wide {
             width: calc(100% - 110px);
+            margin-left: 10px;
             @include tablet {
                 width: 190px;
             }
@@ -93,7 +154,7 @@
     }
 }
 
-.contact {
+.placeholder-option {
     .dropdown__text {
         color: #cdcecf;
     }
@@ -101,7 +162,31 @@
 
 .areaCode {
     .dropdown__text {
-        // color: #cdcecf;
         padding: 13px 5px 13px 15px;
     }
 }
+
+
+/* DEV
+
+.styled-input--square {
+    .form__input-field-label--inline {
+        &:before,
+        &:after {
+            border-radius: 0;
+        }
+    }
+}
+
+.styled-input--rounded {
+    .form__input-field-label--inline {
+        &:before {
+            border-radius: 10px;
+        }
+        &:after {
+            border-radius: 6px;
+        }
+    }
+}
+
+*/
