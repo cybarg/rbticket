@@ -5,12 +5,23 @@
         @include col(16/22);
         @include centeredMaxWidth(1030px);
     }
+    &--narrow {
+        min-width: initial;
+        display: block;
+        @include tablet {
+            @include centeredMaxWidth(620px);
+        }
+        @include desktop {
+            @include centeredMaxWidth(640px);
+        }
+    }
 }
 
 .accordion {
     margin-bottom: 50px;
     &__heading {
         margin: auto;
+        position: relative;
         padding: 20px 70px 20px 20px;
         position: relative;
         font-size: 1rem;
@@ -24,6 +35,9 @@
         cursor: pointer;
         font-size: rem(16px);
         transition: 0.2s all;
+        &--narrow {
+            padding: 0 60px 0 20px;
+        }
         &.ui-state-active {
             font-weight: bold;
         }
@@ -34,7 +48,7 @@
             font-size: 1rem;
         }
     }
-    &__icon {
+    &__arrow-icon {
         position: absolute;
         top: 25px;
         right: 15px;
@@ -52,16 +66,47 @@
             right: 25px;
         }
     }
+    &__payment-icon {
+        @include acent(v);
+        right: 15px;
+        img {
+            vertical-align: bottom;
+        }
+    }
     &__dropdown {
         padding: 20px;
-        @include tablet {
-            padding: 20px 50px;
+        &--wide {
+            @include tablet {
+                padding: 20px 50px;
+            }
         }
         border: $defaultborder;
         border-radius: 0;
         border-bottom: 0;
         &:last-child {
             border: $defaultborder;
+        }
+    }
+    &__dropdown-text {
+        margin: auto;
+        &--narrow {
+            font-size: rem(16px);
+        }
+    }
+    &__dropdown-icons {
+        margin-top: 15px;
+    }
+    &__dropdown-icon {
+        display: inline-block;
+        width: 70px;
+        height: 45px;
+        vertical-align: middle;
+        text-align: center;
+        border: $defaultborder;
+        padding: 11px;
+        margin-right: 15px;
+        img {
+            max-height: 25px
         }
     }
 }

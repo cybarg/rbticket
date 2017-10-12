@@ -1,11 +1,6 @@
 .form {
     @include clearfix;
-    @include tablet {
-        @include centeredMaxWidth(620px);
-    }
-    @include desktop {
-        @include centeredMaxWidth(640px);
-    }
+
     &__text {
         clear: both;
         text-align: center;
@@ -80,6 +75,8 @@
         }
         &--inline {
             display: inline-block;
+            margin-bottom: auto;
+            vertical-align: text-top;
             color: $rb-darkgrey;
             font-weight: 400;
             font-size: rem(16px);
@@ -93,7 +90,6 @@
                 @include tablet {
                     top: 50%;
                 }
-                
             }
             &:before {
                 left: 0;
@@ -104,13 +100,13 @@
                 border: 1px solid #d0d0d0;
             }
             &:after {
-                left: 4px;
-                width: 16px;
-                height: 16px;
-                margin: -11px 0 0;
+                left: 7px;
+                width: 10px;
+                height: 10px;
+                margin: -8px 0 0;
                 opacity: 0;
-                background: $rb-red;
-                transition: opacity 0.25s ease-in-out;
+                background: $rb-darkgrey;
+                transition: opacity 0.15s ease-in-out;
             }
             @include desktop {
                 font-size: 1rem;

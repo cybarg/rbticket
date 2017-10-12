@@ -17,5 +17,6 @@ Current version can be found at:
 * http://rbt.prettylogic.rocks/error-template.html
 * http://rbt.prettylogic.rocks/checkout-step-1.html
 * http://rbt.prettylogic.rocks/checkout-step-2.html
+* http://rbt.prettylogic.rocks/checkout-step-3.html
 * http://rbt.prettylogic.rocks/dev-prototype-template.html
 
