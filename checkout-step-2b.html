@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Checkout Step 1</title>
+    <title>Checkout Step 2b</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,9 +52,9 @@
                         <div class="tabs-navigation__wrapper">
                             <div class="tabs-navigation__content-wrapper">
                                 <div class="tabs-navigation__content js-tabs-content">
-                                    <a href="dev-prototype-template.html" class="tabs-navigation__tab tabs-navigation__tab--active"><span >1. Personal data</span></a>
+                                    <a href="dev-prototype-template.html" class="tabs-navigation__tab  tabs-navigation__tab--disabled "><span >1. Personal data</span></a>
                                     <span><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <a href="single-event-v6-tickets.html" class="tabs-navigation__tab tabs-navigation__tab--disabled"><span>2. Address Details</span></a>
+                                    <a href="single-event-v6-tickets.html" class="tabs-navigation__tab tabs-navigation__tab--active"><span>2. Additional Details</span></a>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
                                     <a href="#" class="tabs-navigation__tab tabs-navigation__tab--disabled"><span>3. Payment Options</span></a>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
@@ -73,57 +73,71 @@
                 <div class="caption-and-content-layout">
                     <div class="caption-and-content-layout__caption-container">
                         <div class="panel-caption">
-                            <h2 class="panel-caption__text"><span class="panel-caption__checkout-step">Step 1 of 4</span>Your personal data</h2>
+                            <h2 class="panel-caption__text"><span class="panel-caption__checkout-step">Step 2 of 4</span>Additional Details</h2>
                         </div>
                     </div>
 
                     <div class="caption-and-content-layout__content-container">
                         <div class="inline-content__content-item inline-content__content-item--narrow">
                             <div class="form">
-                                <div class="form__text-panel">
-                                    <p class="inline-paragraph">
+                                <div class="form__text-panel-panel">
+                                    <p class="form__message form__message--stay-small ">
                                         Please fill in the form below and then press „Next“ to continue.
                                     </p>
-                                </div>
-                                <div class="form__input-field-wrapper">
-                                    <div class="form__input-field-label">First Name<span>*</span></div>
-                                    <input class="form__input-field" type="text">
-                                </div>
-                                <div class="form__input-field-wrapper">
-                                    <div class="form__input-field-label">Last Name<span>*</span></div>
-                                    <input class="form__input-field" type="text">
-                                </div>
-                                <div class="form__input-field-wrapper">
-                                    <div class="form__input-field-label">Email<span>*</span></div>
-                                    <input class="form__input-field" type="email">
-                                    <p class="form__input-field-message">
-                                        Please make sure you enter a valid Email address. We will send you the tickets via Email.
+                                    <p class="form__message form__message--stay-small form__message--boxed">
+                                        If you want to take part in the Red Bull T-Shirt design challenge, please upload your design via the field below. This is infotext by the event manager.
                                     </p>
                                 </div>
-                                <div class="form__input-field-wrapper">
-                                    <div class="form__input-field-label">Mobile Number<span>*</span></div>
-                                    <div class="form__input-field-split form__input-field-split--narrow">
-                                        <select class="js-select form__input-field form__input-field--select dropdown__select">
-                                            <option value="all">+43</option>
-                                            <option value="x">+44</option>
-                                            <option value="y">+45</option>
-                                            <option value="z">+46</option>
-                                        </select>
-                                    </div>
-                                    <div class="form__input-field-split form__input-field-split--wide">
-                                        <input class="form__input-field" type="number">
-                                    </div>
-                                    <p class="form__input-field-message">
-                                        Please enter a valid phone number, if you would like to receive the tickets via text message too.
-                                    </p>
+                                <div class="form__input-field-wrapper form__input-field-wrapper--full-width">
+
+                                    <input type="file" name="file-upload[]" id="file-upload" class="inputfile " data-multiple-caption="{count} files selected" multiple />
+
+                                    <label for="file-upload">
+                                        <span></span>
+                                        <strong>
+                                    <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="f-rbcom-rbtickets-icon-select-file-15x15" fill="#10151E"><g transform="translate(0.000000, 8.000000)"><rect id="Rectangle" x="0" y="0" width="3" height="3"></rect>   <rect id="Rectangle-Copy" x="6" y="0" width="3" height="3"></rect>
+                                    <rect id="Rectangle-Copy" x="12" y="0" width="3" height="3"></rect></g></g></g></svg>
+                                    </strong>
+                                    </label>
+
+                                    <button class="inputfile__upload-button button button--white">Upload</button>
                                 </div>
+
+
+                                <div class="form__input-field-wrapper form__input-field-wrapper--full-width">
+                                    <div class="form__input-field-label">Your t-shirt size<span>*</span></div>
+                                    <select class="js-select form__input-field form__input-field--select dropdown__select">
+                                        <option value="all">Select an option</option>
+                                        <option value="x">S</option>
+                                        <option value="y">M</option>
+                                        <option value="z">L</option>
+                                    </select>
+
+                                </div>
+                                <div class="form__input-field-wrapper form__input-field-wrapper--full-width">
+                                    <div class="form__input-field-label">Your favorite color<span>*</span></div>
+                                    <input class="form__input-field" type="text">
+                                </div>
+                                <div class="form__input-field-wrapper form__input-field-wrapper--full-width">
+                                    <div class="form__input-field form__input-field--inline form__input-field--styled form__input-field--boxed">
+                                        <input type="checkbox" id="gift-wrap" class="form__input-field--checkbox js-form__input-field--checkbox">
+                                        <label class="form__input-field-label form__input-field-label--inline form__input-field-label--stay-small" for="gift-wrap">
+                                            I would like to receive my order wrapped as a gift
+                                        </label>
+                                    </div>
+
+                                </div>
+
+
+
 
                             </div>
 
                         </div>
                         <div class="inline-content__content-item inline-content__content-item--narrow">
                             <div class="button-group button-group--narrow">
-                                <button class="button-group__btn button-group__btn--right button button--cta">Next</button>
+                                <button class="button-group__btn button-group__btn--left button-group__btn--previous button button--cta">Previous</button>
+                                <button class="button-group__btn button-group__btn--right button-group__btn--next button button--cta">Next</button>
                             </div>
 
                         </div>
@@ -252,6 +266,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
 
     <script type="text/javascript">
+        (function ($, window, document, undefined) {
+            $('.inputfile').each(function () {
+                var $input = $(this),
+                    $label = $input.next('label'),
+                    labelVal = $label.html();
+
+                $input.on('change', function (e) {
+                    var fileName = '';
+
+                    if (this.files && this.files.length > 1)
+                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                    else if (e.target.value)
+                        fileName = e.target.value.split('\\').pop();
+
+                    if (fileName)
+                        $label.find('span').html(fileName);
+                    else
+                        $label.html(labelVal);
+                });
+
+                // Firefox bug fix
+                $input
+                    .on('focus', function () {
+                        $input.addClass('has-focus');
+                    })
+                    .on('blur', function () {
+                        $input.removeClass('has-focus');
+                    });
+            });
+        })(jQuery, window, document);
+    </script>
+
+    <script type="text/javascript">
         function formatFilter(selectedItem) {
 
             var $formattedItem = $(
@@ -266,8 +313,10 @@
             templateResult: formatFilter,
             templateSelection: formatFilter,
             theme: "white",
-            containerCssClass: "areaCode"
+            containerCssClass: "placeholder-option"
         });
+
+
 
 
         //Footer Lang switch
@@ -279,13 +328,13 @@
             return $formattedItem;
         };
 
-
-
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
+        jQuery(document).ready(function ($) {
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
         });
     </script>
 </body>

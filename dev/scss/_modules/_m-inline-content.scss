@@ -24,6 +24,7 @@
             }
             &--narrow {
                 @include tablet {
+                    width: 100%;
                     @include centeredMaxWidth(620px);
                 }
                 @include desktop {
