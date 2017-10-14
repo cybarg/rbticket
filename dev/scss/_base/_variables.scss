@@ -1,22 +1,18 @@
 //Colors
-
 $bordergrey: #e2e3e5;
 $rb-red: #db0a40;
-$rb-navyblue:  #001e3c;
+$rb-navyblue: #001e3c;
 $rb-darkblue: #000f1e;
 $rb-darkgrey: #1a1919;
 $rb-lightgrey: #a0a1a1;
-
 // Layout / Positioning
 $gutter: 10px;
-
 //Styles
 $defaultborder: 1px solid $bordergrey;
 $thickborder: 3px solid $bordergrey;
-
 // Element Sizes
-$hero-small-min-height-mobile: 120px;
-$hero-checkout-min-height-mobile: 220px;
-$hero-checkout-min-height: 260px;
-$hero-small-min-height-tablet: 260px;
+$hero-small-min-height-mobile: 220px;
+$hero-small-min-height: 260px;
+$hero-overview-min-height-mobile: 120px;
+$hero-overview-min-height-tablet: 260px;
 $footer-height-desktop: 90px;

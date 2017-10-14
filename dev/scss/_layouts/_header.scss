@@ -19,9 +19,13 @@
         height: auto;
     }
     &__panel {
+        position: absolute;
         width: 100%;
-        position: fixed; // in case of sticky nest this inside --sticky
-        z-index: 10;
+           z-index: 10;
+        @include tablet {
+            position: fixed; // in case of sticky nest this inside --sticky
+         
+        }
     }
     &__backlink {
         position: relative;

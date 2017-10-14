@@ -14,14 +14,14 @@
         }
     }
     &--fillscreen {
+        min-height: calc(100vh - #{$hero-small-min-height} - 360px);
+        padding-top: 50px;
         @include tablet {
+            min-height: calc(100vh - #{$hero-small-min-height} - #{$footer-height-desktop});
             margin: auto;
-            padding-top: 50px;
-            min-height: calc(100vh - #{$hero-small-min-height-tablet} - #{$footer-height-desktop});
         }
     }
 }
-
 
 .panel-caption {
     margin: 0 20px 25px 20px;
@@ -34,7 +34,6 @@
         font-weight: 900;
         font-size: rem(21px);
         line-height: 1.6;
-     
         @include desktop-lg {
             font-size: rem(24px);
         }
@@ -44,12 +43,11 @@
         }
     }
     &__checkout-step {
-      display: block;
+        display: block;
         @include tablet {
             display: none;
         }
     }
-    
     @include desktop-lg {
         margin-bottom: 50px;
     }

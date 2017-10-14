@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: $hero-small-min-height-mobile;
+    padding: 20px;
     background-image: url(../img/rbtickets-header-background.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -17,12 +18,12 @@
         display: inline-block;
         height: auto;
         width: auto;
-    }
-    &__logo--square {
-        width: 185px;
-        height: auto;
-        @include tablet {
-            width: 250px;
+        &--event-overview {
+            width: 185px;
+            height: auto;
+            @include tablet {
+                width: 250px;
+            }
         }
     }
     &__overview-title {
@@ -46,7 +47,6 @@
         color: #ffffff;
         font-size: rem(33px);
         text-transform: uppercase;
-        
         @include tablet {
             font-size: rem(43px);
         }
@@ -55,7 +55,7 @@
         }
     }
     &__backlink-wrapper {
-        padding: 0 20px;
+
         text-align: center;
         @include tablet {
             display: none;
@@ -63,19 +63,20 @@
     }
     &__backlink {
         @extend .header__backlink;
-           @include mobile {
+        @include mobile {
             display: inline-block;
         }
     }
-    @include tablet {
-        min-height: $hero-small-min-height-tablet;
-    }
-    &--checkout {
-        min-height: $hero-checkout-min-height-mobile;
-        padding-top: 20px;
+    &--event-overview {
+        padding-top: 0;
+        min-height: $hero-overview-min-height-mobile;
         @include tablet {
-            padding-top: 0;
-            min-height: $hero-checkout-min-height;
+            min-height: $hero-overview-min-height-tablet;
         }
     }
+    @include tablet {
+        padding: 0;
+        min-height: $hero-small-min-height;
+    }
 }
+
