@@ -1,0 +1,116 @@
+.confirm-data {
+    padding-top: 50px;
+    @include centeredMaxWidth(1030px);
+    &__message {
+        margin: 0 20px;
+        @include tablet {
+            width: 100%;
+            @include centeredMaxWidth(620px);
+        }
+        @include desktop {
+            @include centeredMaxWidth(640px);
+        }
+    }
+    &__content {
+        @include tablet {
+            margin: auto;
+            @include clearfix;
+        }
+    }
+    &__item {
+        text-align: center;
+        margin: 0 20px;
+        @include tablet {
+            width: 100%;
+            @include centeredMaxWidth(620px);
+        }
+        @include desktop {
+            float: left;
+        }
+        p {
+            margin: auto;
+     
+            @include tablet {
+                display: inline-block;
+                &:first-child {
+                    width: 110px;
+                    margin-right: 50px;
+                }
+            }
+    
+        }
+        &--narrow {
+            @include desktop {
+                width: 323px;
+                margin-right: 30px;
+                &:nth-child(3n) {
+                    margin-right: auto;
+                }
+            }
+            p {
+                @include desktop {
+                    display: block;
+                    &:first-child {
+                        width: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        &--wide {
+            @include desktop {
+                width: 500px;
+                &:nth-child(odd) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    &__field {
+        margin-bottom: 15px;
+    }
+    &__item-title {
+        @extend .panel-caption__text;
+        margin-bottom: 25px;
+        display: inline-block;
+        text-transform: uppercase;
+        @include desktop {
+            margin-bottom: 50px;
+        }
+    }
+    &__box {
+        position: relative;
+        padding: 20px;
+        border: $defaultborder;
+        text-align: left;
+    }
+    &__edit-button {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        background-image: url(../img/fb-rbcom-rbtickets-button-edit.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        @include tablet {
+            right: 20px;
+            top: 20px;
+        }
+    }
+    &__label {
+        font-size: rem(13.5px);
+        font-weight: 500;
+        line-height: 1;
+        color: #8a909a;
+    }
+    &__value {
+        font-size: rem(16px);
+        @include desktop {
+            font-size: 1rem;
+        }
+    }
+}

@@ -19,5 +19,7 @@ Current version can be found at:
 * http://rbt.prettylogic.rocks/checkout-step-2.html
 * http://rbt.prettylogic.rocks/checkout-step-2b.html
 * http://rbt.prettylogic.rocks/checkout-step-3.html
+* http://rbt.prettylogic.rocks/checkout-step-4.html
+* http://rbt.prettylogic.rocks/checkout-step-4b.html
 * http://rbt.prettylogic.rocks/dev-prototype-template.html
 
