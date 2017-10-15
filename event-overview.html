@@ -82,7 +82,7 @@
                                                         <option value="where_ever">Lorem Ipsum</option>
                                                         <option value="where_ever">Lorem Ipsum</option>
                                                         <option value="where_ever">Lorem Ipsum</option>
-                                          
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -517,90 +517,94 @@
 
 
     <script type="text/javascript">
-        // function to format Event filter select2 dropdown with item numbers and reset button
-        function formatFilter(selectedItem) {
+        jQuery(document).ready(function ($) {
 
-            // get this data from data attributes of options, or whatever method you prefer
-            var itemNumbers = {
-                at: 5,
-                de: 8,
-                hu: 2
+
+            // function to format Event filter select2 dropdown with item numbers and reset button
+            function formatFilter(selectedItem) {
+
+                // get this data from data attributes of options, or whatever method you prefer
+                var itemNumbers = {
+                    at: 5,
+                    de: 8,
+                    hu: 2
+                };
+
+                var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
+
+                var $formattedItem = $(
+                    '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
+                );
+                return $formattedItem;
             };
 
-            var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
+            // Event filter select2 init
+            $('.js-filter').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatFilter,
+                templateSelection: formatFilter,
+                theme: "white"
+            });
 
-            var $formattedItem = $(
-                '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
-            );
-            return $formattedItem;
-        };
+            // Custom Scrollbar on select2 dropdown
+            $('.js-filter').on('select2:open', function (evt) {
 
-        // Event filter select2 init
-        $('.js-filter').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatFilter,
-            templateSelection: formatFilter,
-            theme: "white"
-        });
+                var s;
+                if (!s) {
+                    s = $('.select2-dropdown .select2-results__options').niceScroll({
+                        horizrailenabled: false,
+                        zindex: 9999,
+                        cursorwidth: 3,
+                        cursorfixedheight: 30,
+                        autohidemode: false,
+                        hwacceleration: true,
+                        railpadding: {
+                            top: 0,
+                            right: 5,
+                            left: 0,
+                            bottom: 0
 
-        // Custom Scrollbar on select2 dropdown
-        $('.js-filter').on('select2:open', function (evt) {
-
-            var s;
-            if (!s) {
-                s = $('.select2-dropdown .select2-results__options').niceScroll({
-                    horizrailenabled: false,
-                    zindex: 9999,
-                    cursorwidth: 3,
-                    cursorfixedheight: 30,
-                    autohidemode: false,
-                    hwacceleration: true,
-                    railpadding: {
-                        top: 0,
-                        right: 5,
-                        left: 0,
-                        bottom: 0
-                        
-                    },
-                    cursorcolor: '#8a909a',
-                    cursorborder: 'none',
-                    cursorborderradius: 2.5,
-                });
-            }
+                        },
+                        cursorcolor: '#8a909a',
+                        cursorborder: 'none',
+                        cursorborderradius: 2.5,
+                    });
+                }
 
 
-        });
+            });
 
 
-        // Reset button functionality
-        $('.js-filter').on('change', function (evt) {
-            var $resetButton = $(this).prev('.dropdown__reset-button');
-            $(this).val() == 'all' ? $resetButton.addClass('js-is-hidden') : $resetButton.removeClass('js-is-hidden');
-        });
+            // Reset button functionality
+            $('.js-filter').on('change', function (evt) {
+                var $resetButton = $(this).prev('.dropdown__reset-button');
+                $(this).val() == 'all' ? $resetButton.addClass('js-is-hidden') : $resetButton.removeClass('js-is-hidden');
+            });
 
 
-        $('.dropdown__reset-button').click(function (event) {
-            $(this).next('.js-filter').val('all').trigger('change');
+            $('.dropdown__reset-button').click(function (event) {
+                $(this).next('.js-filter').val('all').trigger('change');
 
 
-        });
+            });
 
-        //Footer Language switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+            //Footer Language switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
 
 
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
         });
     </script>
 </body>

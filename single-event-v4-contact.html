@@ -3,14 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Event Contact Template</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
     <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -160,7 +158,7 @@
                                 </div>
                                 <div class="form__input-field-wrapper form__input-field-wrapper--full-width">
                                     <div class="form__input-field-label">Message<span>*</span></div>
-                                    <textarea class="form__input-field" name="message" cols="30" rows="10"></textarea>
+                                    <textarea class="form__input-field form__input-field--textarea" name="message" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form__input-field-wrapper form__input-field-wrapper--submit">
                                     <input type="submit" value="SEND" class="form__submit button button--cta">
@@ -223,74 +221,80 @@
         </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 
     <script type="text/javascript">
-        function formatFilter(selectedItem) {
-
-            var $formattedItem = $(
-                '<span class="dropdown__text form__select__dropdown-text">' + selectedItem.text + '</span><span class="dropdown__open-button"></span>'
-            );
-            return $formattedItem;
-        };
-        //Contact form dropdown
-        // select2 init
-        $('.js-select').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatFilter,
-            templateSelection: formatFilter,
-            theme: "white",
-            containerCssClass: "placeholder-option",
-            dropdownCssClass: "hide-default"
-        });
-
-        // Custom Scrollbar on select2 dropdown
-        $('.js-select').on('select2:open', function (evt) {
-
-            var s;
-            if (!s) {
-                s = $('.select2-dropdown .select2-results__options').niceScroll({
-                    horizrailenabled: false,
-                    zindex: 9999,
-                    cursorwidth: 3,
-                    cursorfixedheight: 30,
-                    autohidemode: false,
-                    hwacceleration: true,
-                    railpadding: {
-                        top: 0,
-                        right: 5,
-                        left: 0,
-                        bottom: 0
-
-                    },
-                    cursorcolor: '#8a909a',
-                    cursorborder: 'none',
-                    cursorborderradius: 2.5,
-                });
-            }
+        jQuery(document).ready(function ($) {
+            // Sticky Nav
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
 
 
-        });
+            function formatFilter(selectedItem) {
+
+                var $formattedItem = $(
+                    '<span class="dropdown__text form__select__dropdown-text">' + selectedItem.text + '</span><span class="dropdown__open-button"></span>'
+                );
+                return $formattedItem;
+            };
+            //Contact form dropdown
+            // select2 init
+            $('.js-select').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatFilter,
+                templateSelection: formatFilter,
+                theme: "white",
+                containerCssClass: "placeholder-option",
+                dropdownCssClass: "hide-default"
+            });
+
+            // Custom Scrollbar on select2 dropdown
+            $('.js-select').on('select2:open', function (evt) {
+
+                var s;
+                if (!s) {
+                    s = $('.select2-dropdown .select2-results__options').niceScroll({
+                        horizrailenabled: false,
+                        zindex: 9999,
+                        cursorwidth: 3,
+                        cursorfixedheight: 30,
+                        autohidemode: false,
+                        hwacceleration: true,
+                        railpadding: {
+                            top: 0,
+                            right: 5,
+                            left: 0,
+                            bottom: 0
+
+                        },
+                        cursorcolor: '#8a909a',
+                        cursorborder: 'none',
+                        cursorborderradius: 2.5,
+                    });
+                }
 
 
-        //Footer Language switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+            });
 
 
+            //Footer Language switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
         });
     </script>
 

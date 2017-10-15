@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checkout Step 3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -274,42 +273,49 @@
 
         </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
     <script type="text/javascript">
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+        // Sticky Nav
+        jQuery(document).ready(function ($) {
+
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
+
+
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
 
 
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
-        });
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
 
-        // Accordion trigger Checkbox
-        function toggleAccordionCheckbox(event, ui) {
-            var $previousCheckbox = ui.oldHeader.find('input');
-            if ($previousCheckbox) {
-                // var $previousCheckbox = ui.newHeader.find('input')
-                $previousCheckbox.prop("checked", !$previousCheckbox.prop("checked"));
+            // Accordion trigger Checkbox
+            function toggleAccordionCheckbox(event, ui) {
+                var $previousCheckbox = ui.oldHeader.find('input');
+                if ($previousCheckbox) {
+                    // var $previousCheckbox = ui.newHeader.find('input')
+                    $previousCheckbox.prop("checked", !$previousCheckbox.prop("checked"));
+                }
+                var $currentCheckbox = ui.newHeader.find('input')
+                $currentCheckbox.prop("checked", !$currentCheckbox.prop("checked"));
             }
-            var $currentCheckbox = ui.newHeader.find('input')
-            $currentCheckbox.prop("checked", !$currentCheckbox.prop("checked"));
-        }
-
-        // Accordion init
-        $(function () {
+            
+            // Accordion init
 
             $(".js-accordion").accordion({
 
@@ -322,6 +328,7 @@
             });
 
         });
+
     </script>
 </body>
 

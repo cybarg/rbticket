@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Single Event v1 with Cart</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -509,7 +508,7 @@
                 </div>
 
             </div>
-                        <!-- PHOTOSWIPE lightbox -->
+            <!-- PHOTOSWIPE lightbox -->
             <div class="page-panel">
                 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="pswp__bg"></div>
@@ -676,15 +675,22 @@
     </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-    <script src="js/bootstrap-number-input.js"></script>
-    <script src="js/photoswipe.js"></script>
-    <script src="js/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-number-input.js"></script>
+    <script type="text/javascript" src="js/photoswipe.js"></script>
+    <script type="text/javascript" src="js/photoswipe-ui-default.js"></script>
 
     <script type="text/javascript">
-        // Photoswipe
         jQuery(document).ready(function ($) {
+            // Sticky Nav
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
+
+
+            // Photoswipe
 
             $('.js-card-group__slot').click(function () {
                 var $imgIndex = $(this).index();

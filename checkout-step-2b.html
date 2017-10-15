@@ -6,7 +6,7 @@
     <title>Checkout Step 2b</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -262,11 +262,17 @@
 
         </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
 
     <script type="text/javascript">
-        (function ($, window, document, undefined) {
+        // Sticky Nav
+        jQuery(document).ready(function ($) {
+
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
+            // Form Input file
             $('.inputfile').each(function () {
                 var $input = $(this),
                     $label = $input.next('label'),
@@ -295,40 +301,17 @@
                         $input.removeClass('has-focus');
                     });
             });
-        })(jQuery, window, document);
-    </script>
-
-    <script type="text/javascript">
-        function formatFilter(selectedItem) {
-
-            var $formattedItem = $(
-                '<span class="dropdown__text form__select__dropdown-text">' + selectedItem.text + '</span><span class="dropdown__open-button"></span>'
-            );
-            return $formattedItem;
-        };
-        //form dropown 
-        // select2 init
-        $('.js-select').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatFilter,
-            templateSelection: formatFilter,
-            theme: "white",
-            containerCssClass: "placeholder-option"
-        });
+            
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
 
-
-
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
-
-        jQuery(document).ready(function ($) {
             $('.js-lang-switch').select2({
                 minimumResultsForSearch: Infinity,
                 templateResult: formatLangSwitch,

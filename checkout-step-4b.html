@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checkout Step 4b</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -85,26 +85,7 @@
 
                         <div class="confirm-data__item confirm-data__item--narrow">
                             <h3 class="confirm-data__item-title">Personal Data</h3>
-                                 <div class="confirm-data__box">
-                                 <button class="confirm-data__edit-button js-confirm-data__edit-button"></button>
-                                <div class="confirm-data__field">
-                                    <p class="confirm-data__label">Name</p>
-                                    <p class="confirm-data__value">Maximilian Mustermann</p>
-                                </div>
-                                <div class="confirm-data__field">
-                                    <p class="confirm-data__label">Email</p>
-                                    <p class="confirm-data__value">max.mustermann@gmail.com</p>
-                                </div>
-                                <div class="confirm-data__field">
-                                    <p class="confirm-data__label">Mobile Number</p>
-                                    <p class="confirm-data__value">+43 650 2312 121</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="confirm-data__item confirm-data__item--narrow">
-                            <h3 class="confirm-data__item-title">Personal Data</h3>
-                                <div class="confirm-data__box">
+                            <div class="confirm-data__box">
                                 <button class="confirm-data__edit-button js-confirm-data__edit-button"></button>
                                 <div class="confirm-data__field">
                                     <p class="confirm-data__label">Name</p>
@@ -122,9 +103,28 @@
 
                         </div>
                         <div class="confirm-data__item confirm-data__item--narrow">
-                           <h3 class="confirm-data__item-title">Personal Data</h3>
-                         <div class="confirm-data__box">
-                               <button class="confirm-data__edit-button js-confirm-data__edit-button"></button>
+                            <h3 class="confirm-data__item-title">Personal Data</h3>
+                            <div class="confirm-data__box">
+                                <button class="confirm-data__edit-button js-confirm-data__edit-button"></button>
+                                <div class="confirm-data__field">
+                                    <p class="confirm-data__label">Name</p>
+                                    <p class="confirm-data__value">Maximilian Mustermann</p>
+                                </div>
+                                <div class="confirm-data__field">
+                                    <p class="confirm-data__label">Email</p>
+                                    <p class="confirm-data__value">max.mustermann@gmail.com</p>
+                                </div>
+                                <div class="confirm-data__field">
+                                    <p class="confirm-data__label">Mobile Number</p>
+                                    <p class="confirm-data__value">+43 650 2312 121</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="confirm-data__item confirm-data__item--narrow">
+                            <h3 class="confirm-data__item-title">Personal Data</h3>
+                            <div class="confirm-data__box">
+                                <button class="confirm-data__edit-button js-confirm-data__edit-button"></button>
                                 <div class="confirm-data__field">
                                     <p class="confirm-data__label">Name</p>
                                     <p class="confirm-data__value">Maximilian Mustermann</p>
@@ -258,27 +258,38 @@
 
         </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
 
     <script type="text/javascript">
+        // Sticky Nav
+        jQuery(document).ready(function ($) {
 
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
 
 
 
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
+
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
+
+
+
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
+
         });
     </script>
 </body>

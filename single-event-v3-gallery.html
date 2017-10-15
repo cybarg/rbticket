@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gallery Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Gallery Template</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,15 +15,15 @@
         <div class="page">
 
 
-               <!--HEADER -->
+            <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
                     <div class="header__panel">
                         <div class="header__content">
-                        <div class="header__logo">
-                            <img src="img/f-rbcom-rbtickets-logo-dark.svg"  class="header__logo-image"  alt="logo">
-                        </div>
-                        <a href="event-overview.html" class="header__backlink">Back To Events</a>
+                            <div class="header__logo">
+                                <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
+                            </div>
+                            <a href="event-overview.html" class="header__backlink">Back To Events</a>
                         </div>
                     </div>
                 </header>
@@ -50,26 +50,26 @@
                     </div>
                 </div>
             </div>
-<!--            Tab Navigation below Hero-->
+            <!--            Tab Navigation below Hero-->
             <div class="page-panel">
-              
-                    <div class="js-tabs-navigation panel-tabs__navigation">
-                        <nav class="tabs-navigation">
-                            <div class="tabs-navigation__wrapper">
-                                <div class="tabs-navigation__content-wrapper">
-                                    <div class="tabs-navigation__content js-tabs-content">
-                                        <a href="dev-prototype-template.html" class="tabs-navigation__tab  tabs-navigation__tab--active"><span>Infos</span></a>
-                                        <a href="single-event-v6-tickets.html" class="tabs-navigation__tab"><span>Buy Tickets</span></a>
-                                        <a href="#" class="tabs-navigation__tab"><span>Seating Plan</span></a>
-                                        <a href="single-event-v2-map.html" class="tabs-navigation__tab"><span>Google Map</span></a>
-                                        <a href="faq-template.html" class="tabs-navigation__tab"><span>Support</span></a>                                     
-                                    </div>
-                                </div>
 
+                <div class="js-tabs-navigation panel-tabs__navigation">
+                    <nav class="tabs-navigation">
+                        <div class="tabs-navigation__wrapper">
+                            <div class="tabs-navigation__content-wrapper">
+                                <div class="tabs-navigation__content js-tabs-content">
+                                    <a href="dev-prototype-template.html" class="tabs-navigation__tab  tabs-navigation__tab--active"><span>Infos</span></a>
+                                    <a href="single-event-v6-tickets.html" class="tabs-navigation__tab"><span>Buy Tickets</span></a>
+                                    <a href="#" class="tabs-navigation__tab"><span>Seating Plan</span></a>
+                                    <a href="single-event-v2-map.html" class="tabs-navigation__tab"><span>Google Map</span></a>
+                                    <a href="faq-template.html" class="tabs-navigation__tab"><span>Support</span></a>
+                                </div>
                             </div>
-                        </nav>
-                    </div>
-                
+
+                        </div>
+                    </nav>
+                </div>
+
 
             </div>
             <!--IMAGE GROUP-->
@@ -439,47 +439,26 @@
         </div>
     </main>
 
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="js/photoswipe.js"></script>
-    <script src="js/photoswipe-ui-default.js"></script>
-
-
-
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript" src="js/photoswipe.js"></script>
+    <script type="text/javascript" src="js/photoswipe-ui-default.js"></script>
     <script type="text/javascript">
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
-
-
-
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
-        });
-    </script>
-
-
-    <script type="text/javascript">
-        // Photoswipe
+        // Sticky Nav
         jQuery(document).ready(function ($) {
+
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
+
+    
+        // Photoswipe
+ 
 
             $('.js-card-group__slot').click(function () {
                 var $imgIndex = $(this).index();
                 var pswpElement = document.querySelectorAll('.pswp')[0];
 
-                console.log($imgIndex)
-                console.log(pswpElement)
 
                 // build items array
                 var items = [
@@ -521,7 +500,23 @@
 
                 gallery.init();
             });
+            
+         
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
 
         });
     </script>

@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Single Event v1 with Cart</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -461,13 +460,22 @@
         </span>-->
     </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-    <script src="js/bootstrap-number-input.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-number-input.js"></script>
 
 
     <script type="text/javascript">
+        // Sticky Nav
+        jQuery(document).ready(function ($) {
+
+            $(".js-tabs-navigation").sticky({
+                topSpacing: 0
+            });
+
+        });
+        
         // Google maps 
 
         function mapInit() {
@@ -477,7 +485,7 @@
                 center: new google.maps.LatLng(40.432545, -3.663283),
 
             };
-             var mapOptions2 = {
+            var mapOptions2 = {
                 zoom: 16,
                 scrollwheel: false,
                 center: new google.maps.LatLng(41.432545, -4.663283),
@@ -505,8 +513,8 @@
         }
 
         mapInit();
-        
-        
+
+
         //Footer Lang switch
         // function to format select2 lang switch
         function formatLangSwitch(selectedItem) {
@@ -531,7 +539,6 @@
             upText: '',
             downText: ''
         });
-        
     </script>
 </body>
 
