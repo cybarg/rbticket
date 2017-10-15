@@ -12,7 +12,7 @@
 
 <body>
     <main id="page-main">
-        <div class="page">
+        <div class="page js-page">
 
 
             <!--HEADER -->
@@ -142,7 +142,7 @@
                                         <input type="number" class="cart__item-count" value="1">
                                     </td>
                                     <td class="table-layout__datacell" data-label="Add to Basket">
-                                        <button class="button button--cart"></button>
+                                        <button class="button button--cart js-add-to-cart"></button>
                                     </td>
                                 </tr>
                                 <tr class="table-layout__table-row">
@@ -152,7 +152,7 @@
                                         <input type="number" class="cart__item-count" value="1">
                                     </td>
                                     <td class="table-layout__datacell" data-label="Add to Basket">
-                                        <button class="button button--cart"></button>
+                                        <button class="button button--cart js-add-to-cart"></button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -189,7 +189,7 @@
                                         <input type="number" class="cart__item-count" value="1">
                                     </td>
                                     <td class="table-layout__datacell" data-label="Add to Basket">
-                                        <button class="button button--cart"></button>
+                                        <button class="button button--cart js-add-to-cart"></button>
                                     </td>
                                 </tr>
                                 <tr class="table-layout__table-row">
@@ -199,7 +199,7 @@
                                         <input type="number" class="cart__item-count" value="1">
                                     </td>
                                     <td class="table-layout__datacell" data-label="Add to Basket">
-                                        <button class="button button--cart"></button>
+                                        <button class="button button--cart js-add-to-cart"></button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -434,65 +434,71 @@
 
         </div>
     </main>
-    <!-- CART -->
-    <div class="cart__box js-cart__box">
-        <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
-        <div class="cart__checkout cart__checkout--mobile">
-            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
-        </div>
 
-        <div class="cart__content">
+    <!--    CART -->
+    <div class="cart__overlay js-cart__overlay cart__overlay">
+        <div class="cart__container">
 
 
-            <div class="cart__item">
-                <div class="cart__item-row">
-                    <span class="cart__item-title">Tendido Bajo, Sector A</span>
-                    <button class="cart__item-clear"></button>
+            <div class="cart__box js-cart__box">
+                <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+                <div class="cart__checkout cart__checkout--mobile">
+                    <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
                 </div>
-                <div class="cart__item-row">
-                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 123,00</span>
-                </div>
-            </div>
-            <div class="cart__item">
-                <div class="cart__item-row">
-                    <span class="cart__item-title">Tendido Bajo lorem ipsum dolor sit Amet, Sector B</span>
-                    <button class="cart__item-clear"></button>
-                </div>
-                <div class="cart__item-row">
-                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 61,50</span>
-                </div>
-            </div>
-            <div class="cart__item">
 
-                <div class="cart__total">
-                    <div class="cart__item-row">
-                        <span class="cart__total-label">Grand total</span>
-                        <span class="cart__total-price">Eur 184,50</span>
+                <div class="cart__content">
+
+
+                    <div class="cart__item">
+                        <div class="cart__item-row">
+                            <span class="cart__item-title">Tendido Bajo, Sector A</span>
+                            <button class="cart__item-clear"></button>
+                        </div>
+                        <div class="cart__item-row">
+                            <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 123,00</span>
+                        </div>
+                    </div>
+                    <div class="cart__item">
+                        <div class="cart__item-row">
+                            <span class="cart__item-title">Tendido Bajo lorem ipsum dolor sit Amet, Sector B</span>
+                            <button class="cart__item-clear"></button>
+                        </div>
+                        <div class="cart__item-row">
+                            <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 61,50</span>
+                        </div>
+                    </div>
+                    <div class="cart__item">
+
+                        <div class="cart__total">
+                            <div class="cart__item-row">
+                                <span class="cart__total-label">Grand total</span>
+                                <span class="cart__total-price">Eur 184,50</span>
+                            </div>
+                        </div>
+
+                        <div class="cart__vat">
+                            <div class="cart__item-row">
+                                <span class="cart__total-label">Incl. 20% VAT</span>
+                                <span class="cart__total-vat">EUR 36,90</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="cart__footer">
+                        <p class="cart__footer-message">Got a coupon? You can enter your code on the last page of the checkout process.</p>
                     </div>
                 </div>
 
-                <div class="cart__vat">
-                    <div class="cart__item-row">
-                        <span class="cart__total-label">Incl. 20% VAT</span>
-                        <span class="cart__total-vat">EUR 36,90</span>
-                    </div>
+                <div class="cart__checkout cart__checkout--default">
+                    <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
                 </div>
 
             </div>
-
-
-
-            <div class="cart__footer">
-                <p class="cart__footer-message">Got a coupon? You can enter your code on the last page of the checkout process.</p>
-            </div>
         </div>
-
-        <div class="cart__checkout cart__checkout--default">
-            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
-        </div>
-
     </div>
-
 
     <!-- CART TRIGGER -->
     <div class="cart__trigger js-cart__trigger">
@@ -502,9 +508,7 @@
         </span>
     </div>
 
-    <!--    CART OVERLAY-->
-    <div class="cart__overlay js-cart__overlay cart__overlay">
-    </div>
+
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -523,8 +527,16 @@
         $('.js-cart__trigger').click(function () {
             $(this).toggleClass('cart__trigger--open');
             $('.js-cart__box').toggleClass('cart__box--open');
-            $('body').toggleClass('overlay-open');
+            $('body, html').toggleClass('overlay-open');
             $('.js-cart__overlay').toggleClass('cart__overlay--is-visible');
+        });
+
+        // Add item to cart
+        $('.js-add-to-cart').click(function () {
+            $('.js-cart__trigger').addClass('cart__trigger--adding');
+            setTimeout(function () {
+                $('.js-cart__trigger').removeClass('cart__trigger--adding');
+            }, 500);
         });
 
         //Footer Lang switch
