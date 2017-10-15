@@ -172,7 +172,7 @@
         background-image: url(../img/f-rbcom-rbtickets-icon-plus-15x15.svg);
         &:hover,
         &:active {
-            //color: #00b7db;
+            background-color: $bordergrey;
         }
     }
     @else if $bg=="cart" {
@@ -185,7 +185,7 @@
         background-position: center;
         &:hover,
         &:active {
-            //color: #00b7db;
+            background-color: $bordergrey;
         }
         @include mobile {
             width: 130px;

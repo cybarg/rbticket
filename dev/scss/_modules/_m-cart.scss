@@ -22,18 +22,22 @@ body.overlay-open {
     &__trigger {
         position: fixed;
         right: 10px;
-        top: 610px;
+        top: 20px;
+        //  top: 610px;
         width: 60px;
         height: 60px;
         background: $rb-red;
         z-index: 999;
         border-radius: 50%;
         cursor: pointer;
+        transform: translate(0, 70vh);
+        transition: 0.5s all;
         @include tablet {
+               transform: translate(0, 590px);
             right: 20px;
         }
         &--open {
-            top: 20px;
+            transform: translate(0, 0);
         }
     }
     &__trigger-icon {
@@ -67,13 +71,24 @@ body.overlay-open {
         background-color: #ffffff;
         box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         border: $defaultborder;
+        opacity: 0;
+        visibility: hidden;
         width: calc(100% - 20px);
+        transition: 0.5s all;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 590px);
         @include tablet {
             left: auto;
-            transform: none;
+            transform: translate(0, 590px);
             width: 340px;
+        }
+        &--open {
+            transform: translate(-50%, 0);
+            opacity: 1;
+            visibility: visible;
+            @include tablet {
+                transform: translate(0, 0);
+            }
         }
     }
     &__box-header {
