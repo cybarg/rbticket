@@ -312,9 +312,10 @@
         $(function () {
 
             $(".js-accordion").accordion({
-                //   icons: icons,
+
                 collapsible: true,
                 active: false,
+                heightStyle: "content",
                 activate: function (event, ui) {
                     toggleAccordionCheckbox(event, ui)
                 }

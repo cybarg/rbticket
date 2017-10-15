@@ -15,8 +15,8 @@
     }
     &__input-field-wrapper {
         margin-bottom: 15px;
-        overflow: hidden;
         @include tablet {
+            overflow: hidden;
             float: left;
             width: 300px;
             &:nth-child(odd) {
@@ -38,6 +38,7 @@
     }
     &__input-field {
         border: $defaultborder;
+        border-bottom: $defaultborder;
         font-size: rem(18px);
         padding: rem(13px);
         display: inline-block;
@@ -185,7 +186,10 @@
         padding: 13px 5px 13px 15px;
     }
 }
+
+
 /* File uploader */
+
 .inputfile {
     width: 0.1px;
     height: 0.1px;
@@ -258,5 +262,3 @@
         }
     }
 }
-
-

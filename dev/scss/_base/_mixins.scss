@@ -133,7 +133,7 @@
         &:active {
             border: $thickborder;
             //background-color: #fff;
-            background-color: transparent;
+            background-color: $bordergrey;
             color: $rb-navyblue;
         }
     }

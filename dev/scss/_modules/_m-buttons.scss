@@ -2,13 +2,7 @@
     &--cta {
         @include button('cta');
     }
-    &--cta-dark-theme {
-        @include button('cta');
-        &:active,
-        &:hover {
-            color: #fff;
-        }
-    }
+
     &--ctrl {
         @include button('ctrl');
     }

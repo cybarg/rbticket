@@ -59,11 +59,11 @@
                                     <div class="accordion js-accordion">
                                         <h3 class="accordion__heading">I have not received my ticket / I have been unable to complete the booking process.</h3>
                                         <div class="accordion__dropdown accordion__dropdown--wide">
-                                            <p class="accordion__dropdown-text">Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                                            <p class="accordion__dropdown-text">Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
                                         </div>
                                         <h3 class="accordion__heading">My payment could not be completed / my booking was unsuccessful.</h3>
                                         <div class="accordion__dropdown accordion__dropdown--wide">
-                                            <p class="accordion__dropdown-text">Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                                            <p class="accordion__dropdown-text">Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. </p>
                                         </div>
                                         <h3 class="accordion__heading">I made an error while booking / I have unintentionally booked tickets for the wrong event / the wrong number of tickets.</h3>
                                         <div class="accordion__dropdown accordion__dropdown--wide">
@@ -200,7 +200,8 @@
             $(".js-accordion").accordion({
                 icons: icons,
                 collapsible: true,
-                active: false
+                active: false,
+                heightStyle: "content"
             });
 
         });

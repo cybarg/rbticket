@@ -90,10 +90,8 @@ body.overlay-open {
     }
     &__content {
         border-top: $thickborder;
-        @include tablet {
-            border-bottom: $thickborder;
-            margin-bottom: 20px;
-        }
+        border-bottom: $thickborder;
+        margin-bottom: 20px;
         &--empty {
             border-bottom: 0;
         }
