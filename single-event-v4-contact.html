@@ -19,15 +19,15 @@
 
 
 
-               <!--HEADER -->
+            <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
                     <div class="header__panel">
                         <div class="header__content">
-                        <div class="header__logo">
-                            <img src="img/f-rbcom-rbtickets-logo-dark.svg"  class="header__logo-image"  alt="logo">
-                        </div>
-                        <a href="event-overview.html" class="header__backlink">Back To Events</a>
+                            <div class="header__logo">
+                                <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
+                            </div>
+                            <a href="event-overview.html" class="header__backlink">Back To Events</a>
                         </div>
                     </div>
                 </header>
@@ -56,26 +56,26 @@
                     </div>
                 </div>
             </div>
-<!--            Tab Navigation below Hero-->
+            <!--            Tab Navigation below Hero-->
             <div class="page-panel">
-              
-                    <div class="js-tabs-navigation panel-tabs__navigation">
-                        <nav class="tabs-navigation">
-                            <div class="tabs-navigation__wrapper">
-                                <div class="tabs-navigation__content-wrapper">
-                                    <div class="tabs-navigation__content js-tabs-content">
-                                        <a href="dev-prototype-template.html" class="tabs-navigation__tab"><span>Infos</span></a>
-                                        <a href="single-event-v6-tickets.html" class="tabs-navigation__tab"><span>Buy Tickets</span></a>
-                                        <a href="#" class="tabs-navigation__tab"><span>Seating Plan</span></a>
-                                        <a href="single-event-v2-map.html" class="tabs-navigation__tab"><span>Google Map</span></a>
-                                        <a href="faq-template.html" class="tabs-navigation__tab   tabs-navigation__tab--active"><span>Support</span></a>                                     
-                                    </div>
-                                </div>
 
+                <div class="js-tabs-navigation panel-tabs__navigation">
+                    <nav class="tabs-navigation">
+                        <div class="tabs-navigation__wrapper">
+                            <div class="tabs-navigation__content-wrapper">
+                                <div class="tabs-navigation__content js-tabs-content">
+                                    <a href="dev-prototype-template.html" class="tabs-navigation__tab"><span>Infos</span></a>
+                                    <a href="single-event-v6-tickets.html" class="tabs-navigation__tab"><span>Buy Tickets</span></a>
+                                    <a href="#" class="tabs-navigation__tab"><span>Seating Plan</span></a>
+                                    <a href="single-event-v2-map.html" class="tabs-navigation__tab"><span>Google Map</span></a>
+                                    <a href="faq-template.html" class="tabs-navigation__tab   tabs-navigation__tab--active"><span>Support</span></a>
+                                </div>
                             </div>
-                        </nav>
-                    </div>
-                
+
+                        </div>
+                    </nav>
+                </div>
+
 
             </div>
 
@@ -120,7 +120,7 @@
                 </div>
             </div>
 
-              <!--            EVENT SINGLE - Contact Block -->
+            <!--            EVENT SINGLE - Contact Block -->
             <div class="page-panel">
                 <div class="caption-and-content-layout">
                     <div class="caption-and-content-layout__caption-container">
@@ -224,7 +224,8 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+
 
     <script type="text/javascript">
         function formatFilter(selectedItem) {
@@ -234,18 +235,47 @@
             );
             return $formattedItem;
         };
-        //contact dropown 
+        //Contact form dropdown
         // select2 init
         $('.js-select').select2({
             minimumResultsForSearch: Infinity,
             templateResult: formatFilter,
             templateSelection: formatFilter,
             theme: "white",
-            containerCssClass : "placeholder-option" 
+            containerCssClass: "placeholder-option",
+            dropdownCssClass: "hide-default"
+        });
+
+        // Custom Scrollbar on select2 dropdown
+        $('.js-select').on('select2:open', function (evt) {
+
+            var s;
+            if (!s) {
+                s = $('.select2-dropdown .select2-results__options').niceScroll({
+                    horizrailenabled: false,
+                    zindex: 9999,
+                    cursorwidth: 3,
+                    cursorfixedheight: 30,
+                    autohidemode: false,
+                    hwacceleration: true,
+                    railpadding: {
+                        top: 0,
+                        right: 5,
+                        left: 0,
+                        bottom: 0
+
+                    },
+                    cursorcolor: '#8a909a',
+                    cursorborder: 'none',
+                    cursorborderradius: 2.5,
+                });
+            }
+
+
         });
 
 
-        //Footer Lang switch
+        //Footer Language switch
         // function to format select2 lang switch
         function formatLangSwitch(selectedItem) {
             var $formattedItem = $(

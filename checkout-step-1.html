@@ -108,6 +108,7 @@
                                             <option value="x">+44</option>
                                             <option value="y">+45</option>
                                             <option value="z">+46</option>
+               
                                         </select>
                                     </div>
                                     <div class="form__input-field-split form__input-field-split--wide">
@@ -250,7 +251,7 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script type="text/javascript">
         function formatFilter(selectedItem) {
 
@@ -259,7 +260,7 @@
             );
             return $formattedItem;
         };
-        //form dropown 
+        //Contact form dropdown
         // select2 init
         $('.js-select').select2({
             minimumResultsForSearch: Infinity,
@@ -269,6 +270,33 @@
             containerCssClass: "areaCode"
         });
 
+        // Custom Scrollbar on select2 dropdown
+        $('.js-select').on('select2:open', function (evt) {
+
+            var s;
+            if (!s) {
+                s = $('.select2-dropdown .select2-results__options').niceScroll({
+                    horizrailenabled: false,
+                    zindex: 9999,
+                    cursorwidth: 3,
+                    cursorfixedheight: 30,
+                    autohidemode: false,
+                    hwacceleration: true,
+                    railpadding: {
+                        top: 0,
+                        right: 5,
+                        left: 0,
+                        bottom: 0
+
+                    },
+                    cursorcolor: '#8a909a',
+                    cursorborder: 'none',
+                    cursorborderradius: 2.5,
+                });
+            }
+
+
+        });
 
         //Footer Lang switch
         // function to format select2 lang switch
@@ -278,8 +306,6 @@
             );
             return $formattedItem;
         };
-
-
 
         $('.js-lang-switch').select2({
             minimumResultsForSearch: Infinity,

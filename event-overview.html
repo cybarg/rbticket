@@ -66,10 +66,23 @@
                                                     <span class="dropdown__reset-button js-is-hidden"></span>
                                                     <select class="js-filter dropdown__select">
                                                         <option value="all">All locations</option>
-                                                        <option value="where_ever">Wherever</option>
-                                                        <option value="where_ever_else">Wherever else</option>
-                                                        <option value="where_ever_else">Wherever else</option>
-                                                        <option value="where_ever_else">Wherever else</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                                        <option value="where_ever">Lorem Ipsum</option>
+                                          
                                                     </select>
                                                 </div>
                                             </div>
@@ -504,7 +517,7 @@
 
 
     <script type="text/javascript">
-        // function to format select2 dropdown with item numbers and reset button
+        // function to format Event filter select2 dropdown with item numbers and reset button
         function formatFilter(selectedItem) {
 
             // get this data from data attributes of options, or whatever method you prefer
@@ -522,7 +535,7 @@
             return $formattedItem;
         };
 
-        // select2 init
+        // Event filter select2 init
         $('.js-filter').select2({
             minimumResultsForSearch: Infinity,
             templateResult: formatFilter,
@@ -530,29 +543,31 @@
             theme: "white"
         });
 
-        // Custom Scrollbar
+        // Custom Scrollbar on select2 dropdown
         $('.js-filter').on('select2:open', function (evt) {
-            $('.select2-dropdown .select2-results__options').niceScroll({
-                horizrailenabled: false,
-                zindex: 9999,
-                cursorwidth: 3,
-                cursorfixedheight: 30,
-                autohidemode: true,
-                hwacceleration: true,
-                //smoothscroll: true,
-                // sensitiverail: true,
-                railpadding: {
-                    top: 0,
-                    right: 5,
-                    left: 0,
-                    bottom: 0
-                        //bottom: topPadding * -1
-                },
-                cursorcolor: '#8a909a',
-                //  background: 'rgba(4, 14, 16, 0.1)', // will produce shadow
-                cursorborder: 'none',
-                cursorborderradius: 2.5,
-            });
+
+            var s;
+            if (!s) {
+                s = $('.select2-dropdown .select2-results__options').niceScroll({
+                    horizrailenabled: false,
+                    zindex: 9999,
+                    cursorwidth: 3,
+                    cursorfixedheight: 30,
+                    autohidemode: false,
+                    hwacceleration: true,
+                    railpadding: {
+                        top: 0,
+                        right: 5,
+                        left: 0,
+                        bottom: 0
+                        
+                    },
+                    cursorcolor: '#8a909a',
+                    cursorborder: 'none',
+                    cursorborderradius: 2.5,
+                });
+            }
+
 
         });
 
@@ -570,7 +585,7 @@
 
         });
 
-        //Footer Lang switch
+        //Footer Language switch
         // function to format select2 lang switch
         function formatLangSwitch(selectedItem) {
             var $formattedItem = $(

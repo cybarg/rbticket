@@ -1,10 +1,7 @@
 .share-bar-panel {
     display: flex;
     justify-content: center;
-    &.dark-theme {
-        color: #fff;
-        background-color: $rb-darkblue;
-    }
+
     &__container {
         max-width: 1030px;
         justify-content: center;
