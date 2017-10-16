@@ -26,7 +26,11 @@
     }
     &__container {
         height: 100%;
-     //   overflow-y: scroll;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
     &__trigger {
         position: fixed;
@@ -79,7 +83,7 @@
         text-align: center;
     }
     &__box {
-        position: fixed;
+        position: absolute;
         z-index: 999;
         top: 95px;
         background: #fff;
@@ -214,10 +218,7 @@
         color: $rb-darkgrey;
     }
     &__checkout--default {
-        display: none;
-        @include tablet {
-            display: block;
-        }
+        
     }
     &__checkout--mobile {
         padding: 20px 0;
