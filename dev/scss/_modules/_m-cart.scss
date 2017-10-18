@@ -35,7 +35,7 @@
     &__trigger {
         position: fixed;
         right: 10px;
-        top: 20px;
+        top: 10px;
         //  top: 610px;
         width: 60px;
         height: 60px;
@@ -47,6 +47,7 @@
         transition: 0.5s all;
         @include tablet {
             transform: translate(0, 590px);
+            top: 20px;
             right: 20px;
         }
         &--open {
@@ -85,7 +86,7 @@
     &__box {
         position: absolute;
         z-index: 999;
-        top: 95px;
+        top: 80px;
         background: #fff;
         right: 20px;
         padding: 20px;
@@ -100,6 +101,7 @@
         transform: translate(-50%, 590px);
         @include tablet {
             left: auto;
+            top: 95px;
             transform: translate(0, 590px);
             width: 340px;
         }
@@ -217,9 +219,7 @@
         line-height: 1.6;
         color: $rb-darkgrey;
     }
-    &__checkout--default {
-        
-    }
+    &__checkout--default {}
     &__checkout--mobile {
         padding: 20px 0;
         border-top: $thickborder;

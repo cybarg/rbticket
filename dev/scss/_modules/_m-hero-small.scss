@@ -10,6 +10,9 @@
     background-position: center;
     background-size: cover;
     &__content {
+        @include mobile {
+            padding-top: 20px;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
