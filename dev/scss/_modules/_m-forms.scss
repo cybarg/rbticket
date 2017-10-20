@@ -5,18 +5,32 @@
         text-align: center;
     }
     &__message {
+        margin-top: auto;
+
         font-size: rem(16px);
         text-align: center;
+        line-height: 1.6;
+        color: $rb-darkgrey;
         &--boxed {
             padding: 20px;
             border: $defaultborder;
             text-align: left;
         }
+        @include desktop {
+            font-size: 1rem;
+            margin-bottom: 33px;
+        }
+        &--stay-small {
+            @include desktop {
+                font-size: rem(16px);
+            }
+        }
     }
     &__input-field-wrapper {
         margin-bottom: 15px;
+        @include clearfix;
         @include tablet {
-            overflow: hidden;
+            //      overflow: hidden;
             float: left;
             width: 300px;
             &:nth-child(odd) {

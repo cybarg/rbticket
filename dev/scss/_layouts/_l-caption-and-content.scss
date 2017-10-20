@@ -30,6 +30,7 @@
     &__text {
         display: inline;
         border-bottom: $thickborder;
+        color: $rb-darkgrey;
         padding-bottom: 5px;
         font-weight: 900;
         font-size: rem(21px);
@@ -49,6 +50,6 @@
         }
     }
     @include desktop-lg {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 }

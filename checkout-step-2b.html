@@ -52,13 +52,13 @@
                         <div class="tabs-navigation__wrapper">
                             <div class="tabs-navigation__content-wrapper">
                                 <div class="tabs-navigation__content js-tabs-content">
-                                    <a href="checkout-step-1.html" class="tabs-navigation__tab  tabs-navigation__tab--disabled "><span >1. Personal data</span></a>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled "><span>1. Personal data</span></p>
                                     <span><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <a href="checkout-step-2b.html" class="tabs-navigation__tab tabs-navigation__tab--active"><span>2. Additional Details</span></a>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--active"><span>2. Additional Details</span></p>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <a href="checkout-step-3.html" class="tabs-navigation__tab tabs-navigation__tab--disabled"><span>3. Payment Options</span></a>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--disabled"><span>3. Payment Options</span></p>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <a href="checkout-step-4.html" class="tabs-navigation__tab  tabs-navigation__tab--disabled"><span>4. Confirm Purchase</span></a>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled"><span>4. Confirm Purchase</span></p>
                                 </div>
                             </div>
 
@@ -301,7 +301,24 @@
                         $input.removeClass('has-focus');
                     });
             });
-            
+            //Form dropdown
+            // select2 init
+            function formatFilter(selectedItem) {
+
+                var $formattedItem = $(
+                    '<span class="dropdown__text form__select__dropdown-text">' + selectedItem.text + '</span><span class="dropdown__open-button"></span>'
+                );
+                return $formattedItem;
+            };
+            // select2 init
+            $('.js-select').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatFilter,
+                templateSelection: formatFilter,
+                theme: "white",
+                containerCssClass: "areaCode"
+            });
+
             //Footer Lang switch
             // function to format select2 lang switch
             function formatLangSwitch(selectedItem) {

@@ -19,6 +19,7 @@
         }
     }
     &__heading {
+        margin-top: auto;
         font-size: rem(21px);
         font-weight: bold;
          @include desktop {

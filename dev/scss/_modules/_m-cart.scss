@@ -1,6 +1,8 @@
 .overlay-open {
-    overflow: hidden;
+    //overflow: hidden;
+    //  padding-right: 18px;
     @include mobile {
+        overflow: hidden;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -22,36 +24,45 @@
         &--is-visible {
             opacity: 1;
             visibility: visible;
+            //  overflow-y: scroll;
         }
     }
     &__container {
-        height: 100%;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
+        @include mobile {
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     }
     &__trigger {
         position: fixed;
         right: 10px;
         top: 10px;
-        //  top: 610px;
+        transform: translate(0, 85vh);
         width: 60px;
         height: 60px;
         background: $rb-red;
         z-index: 999;
         border-radius: 50%;
         cursor: pointer;
-        transform: translate(0, 70vh);
         transition: 0.5s all;
         @include tablet {
-            transform: translate(0, 590px);
             top: 20px;
             right: 20px;
         }
+        @include desktop {
+            top: 50%;
+            transform: translate(0, 50%);
+        }
         &--open {
+            // 
             transform: translate(0, 0);
+            @include desktop {
+                top: 20px;
+            }
         }
         &--adding {
             background: $bordergrey;
@@ -181,6 +192,8 @@
         outline: none;
         font-size: rem(16px);
         font-weight: 500;
+        pointer-events: none;
+        caret-color: transparent;
         @include tablet {
             font-size: rem(18px);
         }

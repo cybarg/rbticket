@@ -1,16 +1,11 @@
 $tab-spacing: 15px;
+
 .panel-tabs__navigation {
     background: $rb-navyblue;
     padding-top: 14px;
     padding-bottom: 12px;
     position: relative;
     z-index: 10 !important;
-    &--checkout {
-        display: none;
-        @include tablet {
-            display: block;
-        }
-    }
 }
 
 .tabs-navigation {
@@ -31,8 +26,6 @@ $tab-spacing: 15px;
         flex-wrap: nowrap;
         align-items: center;
         display: inline-flex;
-
-        
         > div {
             flex: 0 0 auto;
         }
@@ -92,6 +85,13 @@ $tab-spacing: 15px;
                 border-bottom-color: #fff;
             }
         }
+        &--checkout {
+            &:hover {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
         &--active {
             &:after {
                 animation: tab-underline .2s cubic-bezier(.35, 0, 0, 1);
@@ -113,5 +113,12 @@ $tab-spacing: 15px;
     }
     &__arrow-step {
         vertical-align: middle;
+    }
+}
+
+.checkout-nav-wrap {
+    display: none;
+    @include tablet {
+        display: block;
     }
 }

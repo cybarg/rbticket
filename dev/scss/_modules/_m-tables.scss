@@ -23,6 +23,9 @@
         margin: 50px auto;
         padding: 0
     }
+    &--no-top-spacing {
+        margin-top: auto;
+    }
     &__text {
         text-align: center;
         padding: 0 20px;
