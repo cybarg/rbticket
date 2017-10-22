@@ -20,7 +20,7 @@
             <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
-                    <div class="header__panel">
+                    <div class="header__panel js-header__panel">
                         <div class="header__content">
                             <div class="header__logo">
                                 <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
@@ -180,17 +180,105 @@
         </div>
     </main>
 
+    <!-- CART Loaded
+    <div class="cart__box js-cart__box">
+        <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+        <div class="cart__checkout cart__checkout--mobile">
+            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
+        </div>
+
+        <div class="cart__content">
+
+
+            <div class="cart__item">
+                <div class="cart__item-row">
+                    <span class="cart__item-title">Tendido Bajo, Sector A</span>
+                    <button class="cart__item-clear"></button>
+                </div>
+                <div class="cart__item-row">
+                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 123,00</span>
+                </div>
+            </div>
+            <div class="cart__item">
+                <div class="cart__item-row">
+                    <span class="cart__item-title">Tendido Bajo lorem ipsum dolor sit Amet, Sector B</span>
+                    <button class="cart__item-clear"></button>
+                </div>
+                <div class="cart__item-row">
+                    <input type="number" class="cart__item-count" value="1"> <span class="cart__item-price">Eur 61,50</span>
+                </div>
+            </div>
+            <div class="cart__item">
+
+                <div class="cart__total">
+                    <div class="cart__item-row">
+                        <span class="cart__total-label">Grand total</span>
+                        <span class="cart__total-price">Eur 184,50</span>
+                    </div>
+                </div>
+
+                <div class="cart__vat">
+                    <div class="cart__item-row">
+                        <span class="cart__total-label">Incl. 20% VAT</span>
+                        <span class="cart__total-vat">EUR 36,90</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="cart__footer">
+                <p class="cart__footer-message">Got a coupon? You can enter your code on the last page of the checkout process.</p>
+            </div>
+        </div>
+        <div class="cart__checkout cart__checkout--default">
+            <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
+        </div>
+
+    </div>  -->
+
+
+
+    <!-- CART TRIGGER -->
+    <div class="cart__trigger js-cart__trigger">
+        <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
+
+    </div>
+
+    <!--    CART OVERLAY-->
+    <div class="cart__overlay js-cart__overlay cart__overlay">
+        <!--    CART EMPTY-->
+        <div class="cart__box js-cart__box">
+            <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+            <div class="cart__content cart__content--empty">
+                <div class="cart__empty">
+                    <p>Your shopping cart is currently empty. Please add tickets to proceed.</p>
+                    <a href="#">Click here to view ticket-options.</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
-            // Sticky Nav
-            $(".js-tabs-navigation").sticky({
-                topSpacing: 0
-            });
 
+            // Open Cart
+            $('.js-cart__trigger').click(function () {
+
+                $(this).toggleClass('cart__trigger--open');
+                $('.js-cart__box').toggleClass('cart__box--open');
+                $('body').toggleClass('overlay-open');
+                $('.js-cart__overlay').toggleClass('cart__overlay--is-visible');
+
+
+            });
 
             function formatFilter(selectedItem) {
 
@@ -238,22 +326,6 @@
 
             });
 
-
-            //Footer Language switch
-            // function to format select2 lang switch
-            function formatLangSwitch(selectedItem) {
-                var $formattedItem = $(
-                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-                );
-                return $formattedItem;
-            };
-
-            $('.js-lang-switch').select2({
-                minimumResultsForSearch: Infinity,
-                templateResult: formatLangSwitch,
-                templateSelection: formatLangSwitch,
-                theme: "dark"
-            });
         });
     </script>
 

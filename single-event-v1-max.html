@@ -18,7 +18,7 @@
             <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
-                    <div class="header__panel">
+                    <div class="header__panel js-header__panel">
                         <div class="header__content">
                             <div class="header__logo">
                                 <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
@@ -607,7 +607,7 @@
 
         </div>
     </main>
-    <!-- CART 
+    <!-- CART Loaded
     <div class="cart__box js-cart__box">
         <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
         <div class="cart__checkout cart__checkout--mobile">
@@ -666,14 +666,27 @@
     </div>  -->
 
 
+
     <!-- CART TRIGGER -->
-    <div class="cart__trigger js-cart__trigger cart__trigger">
+    <div class="cart__trigger js-cart__trigger">
         <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
-        <!--  <span class="cart__trigger-item-count">
-            3
-        </span>-->
+
     </div>
 
+    <!--    CART OVERLAY-->
+    <div class="cart__overlay js-cart__overlay cart__overlay">
+        <!--    CART EMPTY-->
+        <div class="cart__box js-cart__box">
+            <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+            <div class="cart__content cart__content--empty">
+                <div class="cart__empty">
+                    <p>Your shopping cart is currently empty. Please add tickets to proceed.</p>
+                    <a href="#">Click here to view ticket-options.</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -681,12 +694,19 @@
     <script type="text/javascript" src="js/bootstrap-number-input.js"></script>
     <script type="text/javascript" src="js/photoswipe.js"></script>
     <script type="text/javascript" src="js/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
-            // Sticky Nav
-            $(".js-tabs-navigation").sticky({
-                topSpacing: 0
+            // Open Cart
+            $('.js-cart__trigger').click(function () {
+
+                $(this).toggleClass('cart__trigger--open');
+                $('.js-cart__box').toggleClass('cart__box--open');
+                $('body').toggleClass('overlay-open');
+                $('.js-cart__overlay').toggleClass('cart__overlay--is-visible');
+
+
             });
 
 
@@ -740,53 +760,14 @@
                 gallery.init();
             });
 
-
-        });
-
-        // function to format select2 dropdown with item numbers and reset button
-        function formatFilter(selectedItem) {
-
-            // get this data from data attributes of options, or whatever method you prefer
-            var itemNumbers = {
-                at: 5,
-                de: 8,
-                hu: 2
-            };
-
-            var itemCount = itemNumbers[selectedItem.id] ? '(' + itemNumbers[selectedItem.id] + ')' : "";
-
-            var $formattedItem = $(
-                '<span class="dropdown__text">' + selectedItem.text + '</span><span class="dropdown__item-count"> ' + itemCount + ' </span><span class="dropdown__open-button"></span>'
-            );
-            return $formattedItem;
-        };
-
-
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
-
-
-
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
-        });
-
-        // Cart Select
-        $('input[type="number"]').bootstrapNumber({
-            upClass: 'x button--ctrl cart__item-count-button cart__item-count-button--up',
-            downClass: 'x button button--ctrl cart__item-count-button cart__item-count-button--down',
-            //center: true/false
-            upText: '',
-            downText: ''
+            // Cart Select
+            $('input[type="number"]').bootstrapNumber({
+                upClass: 'x button--ctrl cart__item-count-button cart__item-count-button--up',
+                downClass: 'x button button--ctrl cart__item-count-button cart__item-count-button--down',
+                //center: true/false
+                upText: '',
+                downText: ''
+            });
         });
     </script>
 </body>

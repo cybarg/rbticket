@@ -6,6 +6,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.2s all;
         @include tablet {
             justify-content: space-between;
         }
@@ -21,10 +22,20 @@
     &__panel {
         position: absolute;
         width: 100%;
-           z-index: 10;
+        z-index: 10;
+        transition: 0.2s background-color;
+        &--blue {
+            background-color: $rb-navyblue;
+        }
+        &--hidden {
+            @include tablet {
+                .header__content {
+                    transform: translateY( -60px);
+                }
+            }
+        }
         @include tablet {
-            position: fixed; // in case of sticky nest this inside --sticky
-         
+            position: fixed;
         }
     }
     &__backlink {

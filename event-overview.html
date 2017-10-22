@@ -18,7 +18,7 @@
             <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
-                    <div class="header__panel">
+                    <div class="header__panel js-header__panel">
                         <div class="header__content">
                         </div>
                     </div>
@@ -513,8 +513,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-
-
+    <script type="text/javascript" src="js/script.js"></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
@@ -588,23 +587,6 @@
 
             });
 
-            //Footer Language switch
-            // function to format select2 lang switch
-            function formatLangSwitch(selectedItem) {
-                var $formattedItem = $(
-                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-                );
-                return $formattedItem;
-            };
-
-
-
-            $('.js-lang-switch').select2({
-                minimumResultsForSearch: Infinity,
-                templateResult: formatLangSwitch,
-                templateSelection: formatLangSwitch,
-                theme: "dark"
-            });
         });
     </script>
 </body>

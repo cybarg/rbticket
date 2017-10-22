@@ -19,7 +19,7 @@
             <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
-                    <div class="header__panel">
+                    <div class="header__panel js-header__panel">
                         <div class="header__content">
                             <div class="header__logo">
                                 <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
@@ -205,26 +205,9 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-
-    <script type="text/javascript">
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+    <script type="text/javascript" src="js/script.js"></script>
 
 
-
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
-        });
-    </script>
 </body>
 
 </html>

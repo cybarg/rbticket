@@ -19,7 +19,7 @@
             <!--HEADER -->
             <div class="page__panel">
                 <header class="header">
-                    <div class="header__panel">
+                    <div class="header__panel js-header__panel">
                         <div class="header__content">
                             <div class="header__logo">
                                 <img src="img/f-rbcom-rbtickets-logo-dark.svg" class="header__logo-image" alt="logo">
@@ -351,7 +351,7 @@
 
         </div>
     </main>
-    <!-- CART 
+    <!-- CART Loaded
     <div class="cart__box js-cart__box">
         <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
         <div class="cart__checkout cart__checkout--mobile">
@@ -403,38 +403,53 @@
                 <p class="cart__footer-message">Got a coupon? You can enter your code on the last page of the checkout process.</p>
             </div>
         </div>
-        
         <div class="cart__checkout cart__checkout--default">
             <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
         </div>
 
-    </div> -->
+    </div>  -->
+
 
 
     <!-- CART TRIGGER -->
     <div class="cart__trigger js-cart__trigger">
         <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
-        <!--    <span class="cart__trigger-item-count">
-            3
-        </span>-->
+
+    </div>
+
+    <!--    CART OVERLAY-->
+    <div class="cart__overlay js-cart__overlay cart__overlay">
+        <!--    CART EMPTY-->
+        <div class="cart__box js-cart__box">
+            <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
+            <div class="cart__content cart__content--empty">
+                <div class="cart__empty">
+                    <p>Your shopping cart is currently empty. Please add tickets to proceed.</p>
+                    <a href="#">Click here to view ticket-options.</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-number-input.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 
     <script type="text/javascript">
-        // Sticky Nav
-        jQuery(document).ready(function ($) {
+        // Open Cart
+        $('.js-cart__trigger').click(function () {
 
-            $(".js-tabs-navigation").sticky({
-                topSpacing: 0
-            });
+            $(this).toggleClass('cart__trigger--open');
+            $('.js-cart__box').toggleClass('cart__box--open');
+            $('body').toggleClass('overlay-open');
+            $('.js-cart__overlay').toggleClass('cart__overlay--is-visible');
+
 
         });
-        
         // Google maps 
 
         function mapInit() {
@@ -472,23 +487,6 @@
         }
 
         mapInit();
-
-
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
-
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
-        });
 
         // Cart Select
         $('input[type="number"]').bootstrapNumber({
