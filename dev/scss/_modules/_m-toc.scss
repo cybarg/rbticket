@@ -1,0 +1,33 @@
+.tca {
+    padding: 20px;
+    &__content {
+        margin-bottom: 25px;
+        padding: 0 0 0 35px;
+        @include desktop {
+            padding: 0;
+            float: right;
+            max-width: 680px;
+        }
+    }
+    &__text,
+    &__label {
+        font-size: rem(16px);
+        @include desktop {
+            font-size: 1rem;
+        }
+    }
+    &__button-group {
+        clear: both;
+    }
+    @include tablet {
+        margin: 40px auto;
+        padding: 0 45px;
+        min-width: 690px;
+        max-width: 1030px;
+    }
+    @include desktop {
+        @include rb3Grid(16, $centered: true);
+        margin: auto auto 50px auto;
+        padding: 0;
+    }
+}

@@ -105,10 +105,19 @@
         @include tablet {
             padding: 30px;
             text-align: left;
-            
         }
         @include desktop {
             font-size: 1rem;
+        }
+        &--coupon {
+            margin-bottom: 0;
+            border-top: $defaultborder;
+            @include mobile {
+                padding: 20px 0;
+            }
+            @include tablet {
+                padding: 20px 30px;
+            }
         }
         &--align-right {
             @include tablet {
@@ -120,7 +129,7 @@
         text-align: right;
     }
     &__footer-row {
-        @include mobile {
+            @include mobile {
             display: flex;
             justify-content: space-between;
             padding: 0 20px;
@@ -159,6 +168,49 @@
         color: $rb-darkgrey;
         @include tablet {
             padding: 5px 30px 20px 0;
+        }
+    }
+    &__form {
+        @include mobile {
+            text-align: left;
+        }
+        @include tablet {
+            display: inline-block;
+        }
+    }
+    &__form-label {
+        display: inline-block;
+        @include mobile {
+            font-size: rem(16px);
+            margin-bottom: 15px;
+        }
+        @include tablet {
+            margin-right: 10px;
+            max-width: 40%;
+            font-size: 13.5px;
+        }
+        @include desktop {
+            font-size: rem(16px);
+        }
+        @include desktop-lg {
+            max-width: initial;
+            font-size: 1rem;
+        }
+    }
+    &__form-input {
+        @include mobile {
+            margin-bottom: 10px;
+        }
+        @include tablet {
+            width: 150px;
+        }
+    }
+    &__form-button {
+        padding: 14px 16px;
+        width: 100%;
+        @include tablet {
+            width: 200px;
+            min-width: initial;
         }
     }
 }

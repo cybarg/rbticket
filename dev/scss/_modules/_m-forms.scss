@@ -113,6 +113,7 @@
             font-weight: 400;
             font-size: rem(16px);
             cursor: pointer;
+            line-height: 1.6;
             &:before,
             &:after {
                 content: '';
@@ -123,7 +124,7 @@
                 left: -35px;
                 width: 24px;
                 height: 24px;
-                margin: -15px 0 0;
+                margin: -10px 0 0;
                 background: #fff;
                 border: 1px solid #d0d0d0;
             }
@@ -131,7 +132,7 @@
                 left: -28px;
                 width: 10px;
                 height: 10px;
-                margin: -8px 0 0;
+                margin: -3px 0 0;
                 opacity: 0;
                 background: $rb-darkgrey;
                 transition: opacity 0.15s ease-in-out;

@@ -225,10 +225,22 @@
                                     <td class="table-layout__footer-label table-layout__footer-label--vat" colspan="3">Incl. 20% VAT</td>
                                     <td class="table-layout__vat">EUR 36,90</td>
                                 </tr>
+                                <tr class="table-layout__footer-row">
+                                    <td class="table-layout__datacell table-layout__datacell--align-right table-layout__datacell--coupon" colspan="4">
+                                        <form class="table-layout__form form">
+                                            <label for="coupon" class="table-layout__form-label">If you have a coupon, enter your code and click apply. (optional)</label>
+                                            <input id="coupon" type="text" placeholder="Enter Code" class="table-layout__form-input form__input-field">
+                                            <button class="table-layout__form-button button button--white">Apply</button>
+                                        </form>
+                                    </td>
+                                </tr>
                             </tfoot>
                         </table>
 
                     </div>
+
+
+
 
 
 
@@ -237,6 +249,46 @@
             </div>
 
 
+            <!--  TCA-->
+            <div class="page-panel">
+                <div class="tca">
+                    <div class="tca__content">
+                        <div class="tca__textbox">
+                            <div class="tca__confirm">
+                                <input type="checkbox" id="toc" class="form__input-field--checkbox js-form__input-field--checkbox">
+                                <label class="tca__label form__input-field-label form__input-field-label--inline" for="toc">
+                                    I agree to the <a href="#">General Conditions of Sale for tickets.</a>
+                                </label>
+                            </div>
+                            <p class="tca__text">
+                                By proceeding, I agree that my personal data can be used by the <a href="#">Red Bull Group</a> as stated in the <a href="#">Privacy Policy</a> (e.g. for tailoring content according to my preferences).
+                            </p>
+                        </div>
+                        <div class="tca__textbox">
+                            <div class="tca__confirm">
+                                <input type="checkbox" id="newsletter" class="form__input-field--checkbox js-form__input-field--checkbox">
+                                <label class="tca__label form__input-field-label form__input-field-label--inline" for="newsletter">Sign me up for the Red Bull Newsletter!
+                                </label>
+                            </div>
+                            <p class="tca__text">
+
+                                I want to stay updated on a weekly basis on news, invitations and offers about music, sports, events and products from the <a href="#">Red Bull Group</a> (don’t worry, if you change your mind, you can unsubscribe at any time, free of charge).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tca__button-group button-group">
+                        <button class="button-group__btn button-group__btn--left button-group__btn--previous button button--cta">Previous</button>
+                        <button class="button-group__btn button-group__btn--right button-group__btn--next button button--cta">Order and Pay</button>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
             <!-- FOOTER -->
             <div class="page__panel">
                 <footer class="footer">
