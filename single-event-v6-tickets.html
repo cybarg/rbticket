@@ -393,13 +393,11 @@
 
         </div>
     </main>
-    
-        <!-- CART TRIGGER -->
-    <div class="cart__trigger js-cart__trigger">
+
+    <!-- CART OPEN TRIGGER -->
+    <div class="cart__trigger cart__trigger--open cart__trigger--onload js-cart-open">
         <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
-        <span class="cart__trigger-item-count">
-            3
-        </span>
+        <span class="cart__trigger-item-count">3</span>
     </div>
 
     <!--    CART -->
@@ -408,6 +406,16 @@
 
 
             <div class="cart__box js-cart__box">
+
+                <!-- CART CLOSE TRIGGER -->
+
+                <div class="cart__trigger js-cart-close cart__trigger--close" style="position: absolute;">
+                    <img class="cart__trigger-icon" src="img/f-rbcom-rbtickets-cart-dark-30x30.svg" alt="cart-trigger">
+                    <span class="cart__trigger-item-count">3</span>
+                </div>
+
+
+                <!-- CART CONTENT -->
                 <h3 class="cart__box-header">Red Bull X Fighters Cart</h3>
                 <div class="cart__checkout cart__checkout--mobile">
                     <button class="button button--cta cart__checkout-button">Continue to Checkout</button>
@@ -475,34 +483,36 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-number-input.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/cart.js"></script>
 
 
     <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            // Ticket Counter Number Input styling
+            $('input[type="number"]').bootstrapNumber({
+                upClass: 'x button--ctrl cart__item-count-button cart__item-count-button--up',
+                downClass: 'x button button--ctrl cart__item-count-button cart__item-count-button--down',
+                //center: true/false
+                upText: '',
+                downText: ''
+            });
 
-        // Open Cart
-        $('.js-cart__trigger').click(function () {
-            $(this).toggleClass('cart__trigger--open');
-            $('.js-cart__box').toggleClass('cart__box--open');
-            $('body, html').toggleClass('overlay-open');
-            $('.js-cart__overlay').toggleClass('cart__overlay--is-visible');
-        });
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
-        // Add item to cart
-        $('.js-add-to-cart').click(function () {
-            $('.js-cart__trigger').addClass('cart__trigger--adding');
-            setTimeout(function () {
-                $('.js-cart__trigger').removeClass('cart__trigger--adding');
-            }, 500);
-        });
-
-        // Ticket Counter Number Input styling
-        $('input[type="number"]').bootstrapNumber({
-            upClass: 'x button--ctrl cart__item-count-button cart__item-count-button--up',
-            downClass: 'x button button--ctrl cart__item-count-button cart__item-count-button--down',
-            //center: true/false
-            upText: '',
-            downText: ''
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
         });
     </script>
 </body>

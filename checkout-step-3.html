@@ -51,13 +51,13 @@
                         <div class="tabs-navigation__wrapper">
                             <div class="tabs-navigation__content-wrapper">
                                 <div class="tabs-navigation__content js-tabs-content">
-                                    <p  class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled "><span >1. Personal data</span></p>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled "><span>1. Personal data</span></p>
                                     <span><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <p  class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--disabled "><span>2. Address Details</span></p>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--disabled "><span>2. Address Details</span></p>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <p  class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--active"><span>3. Payment Options</span></p>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout tabs-navigation__tab--active"><span>3. Payment Options</span></p>
                                     <span class="tabs-navigation__arrow-step"><img src="img/f-rbcom-rbtickets-icon-arrow-checkout-steps-right-20x20.svg"  class="tabs-navigation__arrow-step" alt="arrow"></span>
-                                    <p  class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled"><span>4. Confirm Purchase</span></p>
+                                    <p class="tabs-navigation__tab tabs-navigation__tab--checkout  tabs-navigation__tab--disabled"><span>4. Confirm Purchase</span></p>
                                 </div>
                             </div>
 
@@ -276,10 +276,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
 
     <script type="text/javascript">
-
         jQuery(document).ready(function ($) {
 
             // Accordion trigger Checkbox
@@ -292,7 +291,7 @@
                 var $currentCheckbox = ui.newHeader.find('input')
                 $currentCheckbox.prop("checked", !$currentCheckbox.prop("checked"));
             }
-            
+
             // Accordion init
 
             $(".js-accordion").accordion({
@@ -305,8 +304,25 @@
                 }
             });
 
-        });
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
+
+
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
+
+        });
     </script>
 </body>
 
