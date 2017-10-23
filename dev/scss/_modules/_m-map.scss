@@ -10,7 +10,7 @@
         line-height: 1.6;
         font-size: rem(16px);
         max-width: 300px;
-        @include tablet {
+        @include tablet-alt {
             @include centeredMaxWidth(620px);
         }
         @include desktop {
@@ -22,7 +22,7 @@
         margin: auto;
         width: 300px;
         height: 200px;
-        @include tablet {
+        @include tablet-alt {
             height: 415px;
             width: 620px;
         }

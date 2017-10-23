@@ -186,25 +186,24 @@
                 heightStyle: "content"
             });
 
-        });
 
-
-        //Footer Lang switch
-        // function to format select2 lang switch
-        function formatLangSwitch(selectedItem) {
-            var $formattedItem = $(
-                '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
-            );
-            return $formattedItem;
-        };
+            //Footer Lang switch
+            // function to format select2 lang switch
+            function formatLangSwitch(selectedItem) {
+                var $formattedItem = $(
+                    '<span class="footer__lang-switch-text">' + selectedItem.text + '</span><span class="dropdown__open-button dropdown__open-button--narrow"></span>'
+                );
+                return $formattedItem;
+            };
 
 
 
-        $('.js-lang-switch').select2({
-            minimumResultsForSearch: Infinity,
-            templateResult: formatLangSwitch,
-            templateSelection: formatLangSwitch,
-            theme: "dark"
+            $('.js-lang-switch').select2({
+                minimumResultsForSearch: Infinity,
+                templateResult: formatLangSwitch,
+                templateSelection: formatLangSwitch,
+                theme: "dark"
+            });
         });
     </script>
 

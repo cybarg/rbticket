@@ -1,20 +1,38 @@
 $mobile-width: 220px;
+$tablet-alt-width: 768px; 
 $tablet-width: 780px;
+$tablet-max: 1024px;
 $desktop-width: 1154px;
 $large-width: 1440px;
 
+// alternative breakpoint added as a late request over the specs
+@mixin mobile-alt {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-alt-width - 1px}) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }
+// alternative breakpoint added as a late request over the specs
+@mixin tablet-alt {
+  @media (min-width: #{$tablet-alt-width}) {
+    @content;
+  }
+}
+
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
     @content;
   }
 }
+
+
+
 
 
 @mixin desktop {

@@ -44,7 +44,9 @@ img {
     height: auto;
 }
 
-
+main {
+    overflow-x: hidden;
+}
 
 .dark-theme {
     background: $rb-darkblue;
