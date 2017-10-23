@@ -20,3 +20,11 @@
      $('.js-cart__overlay').removeClass('cart__overlay--is-visible');
      $('.js-cart-open').removeClass('cart__trigger--is-hidden');
  });
+
+ // Add item to cart
+ $('.js-add-to-cart').click(function () {
+     $('.js-cart-open').addClass('cart__trigger--adding');
+     setTimeout(function () {
+         $('.js-cart-open').removeClass('cart__trigger--adding');
+     }, 500);
+ });

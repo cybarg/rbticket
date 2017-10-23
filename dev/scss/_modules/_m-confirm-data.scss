@@ -1,6 +1,9 @@
 .confirm-data {
-    padding-top: 50px;
     @include centeredMaxWidth(1030px);
+    margin-top: 15px;
+    @include desktop {
+        margin-top: 50px;
+    }
     &__message {
         margin: 0 20px;
         @include tablet {
@@ -29,7 +32,6 @@
         }
         p {
             margin-top: auto;
-     
             @include tablet {
                 display: inline-block;
                 &:first-child {
@@ -37,7 +39,6 @@
                     margin-right: 50px;
                 }
             }
-    
         }
         &--narrow {
             @include desktop {
@@ -80,16 +81,14 @@
         }
     }
     &__box {
-        
         position: relative;
         padding: 20px;
         margin-bottom: 25px;
         border: $defaultborder;
         text-align: left;
         @include tablet {
-             margin-bottom: 40px;
+            margin-bottom: 40px;
         }
-        
     }
     &__edit-button {
         position: absolute;
