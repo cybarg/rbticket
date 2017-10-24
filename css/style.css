@@ -1429,7 +1429,7 @@ where hide-default is used as dropdown-class */
   margin: 0 auto; }
   @media (min-width: 220px) and (max-width: 779px) {
     .tabs-navigation__wrapper {
-      width: 900px;
+      width: 850px;
       height: 67px;
       position: absolute;
       left: 50%;

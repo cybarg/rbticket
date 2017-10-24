@@ -14,7 +14,7 @@ $tab-spacing: 15px;
     @include centeredMaxWidth;
     &__wrapper {
         @include mobile {
-            width: 900px;
+            width: 850px; 
             height: 67px;
             @include acent(h);
             overflow-x: hidden;
