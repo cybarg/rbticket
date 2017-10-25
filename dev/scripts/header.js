@@ -9,11 +9,16 @@ jQuery(document).ready(function ($) {
 
 
     // Draggable nav on mobile
-    if (isMobile && $.isFunction($.fn.draggable)) {
-        $(".js-tabs-content").draggable({
-            axis: "x",
-            containment: ".tabs-navigation__wrapper"
-        });
+    if (isMobile) {
+        var tabNavWidth = $('.js-tabs-navigation').width(),
+            tabContentWidth = $('.js-tabs-content').width(),
+            scrollLeft = tabContentWidth - tabNavWidth;
+
+        $('.js-tabs-navigation').addClass('tabs-navigation--mobile');
+
+        setTimeout(function () {
+            $('.panel-tabs__navigation--pull-to-end').scrollLeft(scrollLeft);
+        }, 10);
     }
 
     if ($.isFunction($.fn.sticky)) {

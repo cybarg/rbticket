@@ -1,7 +1,7 @@
 $tab-spacing: 15px;
 .panel-tabs__navigation {
     @include mobile {
-        height: 67px;
+        //  height: 67px;
     }
     background: $rb-navyblue;
     padding-top: 14px;
@@ -12,14 +12,16 @@ $tab-spacing: 15px;
 
 .tabs-navigation {
     @include centeredMaxWidth;
+    &--mobile {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
     &__wrapper {
         @include mobile {
-            width: 850px; 
-            height: 67px;
-            @include acent(h);
-            overflow-x: hidden;
+            overflow-x: visible;
         }
-        @include tablet {
+        @include tablet-alt {
             @include rb3Grid(18, $centered: true);
             margin: 0 auto;
             position: relative;
@@ -28,13 +30,12 @@ $tab-spacing: 15px;
             width: 100%;
             padding: 0;
         }
-        &--pull-to-center {
-            @include mobile {
-                margin-left: -50%;
-            }
-        }
+
     }
     &__content {
+        @include mobile-alt {
+            overflow-x: visible;
+        }
         overflow-x: hidden;
         flex-wrap: nowrap;
         align-items: center;
@@ -42,35 +43,21 @@ $tab-spacing: 15px;
         > div {
             flex: 0 0 auto;
         }
-        // modify positioning for non draggable menus (checkout)
-        &--pull-to-center {
-            @include mobile {
-                margin-left: -50%;
-            }
-        }
-        &--pull-to-end {
-            @include mobile {
-                margin-left: -100%;
-            }
-        }
+
     }
     &__content-wrapper {
         position: relative;
-        overflow-x: hidden;
         width: 100%;
         @include align-center;
-        flex: 0 1 auto;
-        // modify initial positioning for draggable menus
-        &--pull-to-front {
-            @include mobile-alt {
-                left: 15%;
-            }
+        @include mobile-alt {
+            overflow-x: visible;
+            display: inline-block;
         }
-        &--pull-to-end {
-            @include mobile-alt {
-                right: 15%;
-            }
+        @include tablet-alt {
+            overflow-x: hidden;
+            flex: 0 1 auto;
         }
+
     }
     &__tab {
         display: block;
