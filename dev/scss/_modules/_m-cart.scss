@@ -1,11 +1,15 @@
-.overlay-open {
-    //overflow: hidden;
-    //  padding-right: 18px;
+html.overlay-open {
     @include mobile {
         overflow: hidden;
-        position: fixed;
-        width: 100%;
         height: 100%;
+    }
+}
+
+body.overlay-open {
+    @include mobile {
+        min-height: 100%;
+        height: auto;
+        overflow: hidden;
     }
 }
 
@@ -50,9 +54,7 @@
         &--onload {
             transform: translate(-95vw, -50vh);
         }
-        
         &--open {
-            
             position: fixed;
             right: 10px;
             bottom: 60px;
@@ -101,7 +103,6 @@
         background-color: #10151e;
         transition: 0.5s all;
         text-align: center;
-
         &--empty {
             opacity: 0;
             visibility: hidden;
